@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI 語音全能王 v4.0</title>
+    <style>
+        /* --- 基礎樣式 --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 10px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 95vh;
+        }
+
+        /* --- 分頁導航 --- */
+        .tabs {
+            display: flex;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            flex-shrink: 0;
+            overflow-x: auto; /* 允許橫向滑動以容納更多按鈕 */
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px 5px;
+            border: none;
+            background: #fff;
+            font-size: 13px; /* 字稍微縮小一點以塞入4個 */
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            position: relative;
+            white-space: nowrap;
+            min-width: 70px;
+        }
+
+        .tab-btn.active { color: #007bff; }
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background-color: #007bff;
+            border-radius: 3px;
+        }
+
+        /* --- 內容區域 --- */
+        .content-area {
+            padding: 15px;
+            flex: 1;
+            display: none;
+            flex-direction: column;
+            overflow-y: hidden;
+        }
+        .content-area.active { display: flex; }
+
+        /* --- 控制項 --- */
+        select, textarea {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+            background: #fff;
+        }
+        select { padding: 10px; margin-bottom: 10px; }
+        textarea { padding: 15px; resize: none; margin-bottom: 10px; flex: 1; }
+
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-shrink: 0;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        button:active { opacity: 0.8; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; background-color: #999 !important; }
+
+        .btn-start { background-color: #28a745; } 
+        .btn-stop { background-color: #dc3545; }  
+        .btn-blue { background-color: #007bff; }  
+        .btn-purple { background-color: #6f42c1; } 
+        .btn-orange { background-color: #fd7e14; } /* 字幕下載用 */
+
+        .status {
+            text-align: center;
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.85rem;
+            min-height: 20px;
+            flex-shrink: 0;
+        }
+        .pulsing { animation: pulse 1.5s infinite; color: #dc3545; font-weight: bold; }
+
+        /* --- TAB 3 翻譯卡片 --- */
+        .trans-controls {
+            display: grid; grid-template-columns: 1fr 30px 1fr; gap: 5px; align-items: center; margin-bottom: 10px; flex-shrink: 0;
+        }
+        .arrow { font-size: 1.2rem; color: #666; text-align: center; }
+        
+        #chat-history {
+            flex: 1; overflow-y: auto; background: #f8f9fa; border-radius: 10px; padding: 10px; border: 1px solid #eee; margin-top: 5px;
+        }
+
+        .chat-card {
+            background: white; border-radius: 12px; padding: 12px; margin-bottom: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid #007bff; animation: slideIn 0.3s ease-out;
+        }
+        .source-text { font-size: 0.9rem; color: #888; margin-bottom: 6px; }
+        .target-text { font-size: 1.1rem; color: #333; font-weight: 500; line-height: 1.4; }
+        .retry-btn { font-size: 0.8rem; color: #007bff; background: none; border: none; padding: 0; margin-top: 5px; cursor: pointer; text-align: right; display: block; width: 100%; }
+
+        /* --- TAB 4 字幕列表樣式 --- */
+        #srt-list {
+            flex: 1; overflow-y: auto; background: #222; color: #eee; border-radius: 10px; padding: 10px; font-family: monospace; border: 1px solid #444;
+        }
+        .srt-item {
+            border-bottom: 1px solid #444; padding: 8px 0; font-size: 0.9rem;
+        }
+        .srt-time { color: #fd7e14; font-size: 0.8rem; margin-bottom: 3px; }
+        .srt-text { color: #fff; }
+
+        @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        
+        #ios-alert {
+            display: none; background: #fff3cd; color: #856404; padding: 10px; font-size: 0.8rem; text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="ios-alert">⚠️ iPhone 用戶請務必使用 <strong>Safari</strong> 瀏覽器</div>
+
+<div class="container">
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('tab-stt')">📝 轉文字</button>
+        <button class="tab-btn" onclick="switchTab('tab-record')">🎤 錄音機</button>
+        <button class="tab-btn" onclick="switchTab('tab-trans')">🌍 翻譯</button>
+        <button class="tab-btn" onclick="switchTab('tab-srt')">🎬 字幕</button>
+    </div>
+
+    <div id="tab-stt" class="content-area active">
+        <select id="lang-stt">
+            <option value="zh-TW">🇹🇼 中文 (台灣)</option>
+            <option value="en-US">🇺🇸 English (US)</option>
+            <option value="ja-JP">🇯🇵 日本語</option>
+            <option value="ko-KR">🇰🇷 한국어</option>
+            <option value="yue-Hant-HK">🇭🇰 粵語</option>
+        </select>
+        <div class="btn-group">
+            <button class="btn-start" id="btn-stt-start" onclick="toggleSTT(true)">開始辨識</button>
+            <button class="btn-stop" id="btn-stt-stop" onclick="toggleSTT(false)" disabled>停止</button>
+        </div>
+        <div id="status-stt" class="status">準備就緒</div>
+        <textarea id="text-stt" placeholder="內容顯示於此..."></textarea>
+        <div class="btn-group" style="margin-top:auto;margin-bottom:0;">
+            <button class="btn-blue" onclick="copyToClip('text-stt')">📋 複製</button>
+            <button class="btn-purple" onclick="downloadTxt()">⬇ 下載 .txt</button>
+        </div>
+    </div>
+
+    <div id="tab-record" class="content-area">
+        <div class="status" style="margin-top:20px;">錄製聲音檔 (.webm/mp4)</div>
+        <div class="btn-group">
+            <button class="btn-start" id="btn-rec-start" onclick="startRec()">🔴 錄音</button>
+            <button class="btn-stop" id="btn-rec-stop" onclick="stopRec()" disabled>⏹ 停止</button>
+        </div>
+        <div id="status-rec" class="status">等待中...</div>
+        <div id="audio-list" style="overflow-y: auto; flex:1;"></div>
+    </div>
+
+    <div id="tab-trans" class="content-area">
+        <div class="trans-controls">
+            <select id="lang-src" style="margin:0;"><option value="zh-TW|zh" selected>🇹🇼 中文</option><option value="en-US|en">🇺🇸 English</option><option value="ja-JP|ja">🇯🇵 日本語</option><option value="ko-KR|ko">🇰🇷 한국어</option></select>
+            <div class="arrow">➡</div>
+            <select id="lang-tgt" style="margin:0;"><option value="en-US|en" selected>🇺🇸 English</option><option value="ja-JP|ja">🇯🇵 日本語</option><option value="ko-KR|ko">🇰🇷 한국어</option><option value="zh-TW|zh">🇹🇼 中文</option></select>
+        </div>
+        <div class="btn-group">
+            <button class="btn-start" id="btn-trans-start" onclick="startTrans()">🎙 開始</button>
+            <button class="btn-stop" id="btn-trans-stop" onclick="stopTrans()" disabled>停止</button>
+        </div>
+        <div id="status-trans" class="status">請說話...</div>
+        <div id="chat-history"><div style="text-align:center; color:#ccc; margin-top:20px;">(紀錄)</div></div>
+    </div>
+
+    <div id="tab-srt" class="content-area">
+        <div class="status" style="margin-bottom:10px; font-size:0.9rem;">
+            一邊播放影片，一邊按下開始說話<br>會自動產生時間軸
+        </div>
+        
+        <select id="lang-srt">
+            <option value="zh-TW">🇹🇼 中文 (台灣)</option>
+            <option value="en-US">🇺🇸 English (US)</option>
+            <option value="ja-JP">🇯🇵 日本語</option>
+        </select>
+
+        <div class="btn-group">
+            <button class="btn-start" id="btn-srt-start" onclick="startSRT()">⏱ 開始生成</button>
+            <button class="btn-stop" id="btn-srt-stop" onclick="stopSRT()" disabled>⏹ 結束</button>
+        </div>
+
+        <div id="srt-list">
+            <div style="text-align:center; color:#777; margin-top:50px;">
+                (字幕預覽區)
+            </div>
+        </div>
+
+        <div class="btn-group" style="margin-top:10px; margin-bottom:0;">
+             <button class="btn-blue" onclick="clearSRT()" style="background:#6c757d;">🗑 清除</button>
+            <button class="btn-orange" onclick="downloadSRTFile()">⬇ 下載 .srt</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // --- 0. 系統偵測 ---
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isSafari = isIOS && /Safari/.test(navigator.userAgent) && !/CriOS/.test(navigator.userAgent);
+    if (isIOS && !isSafari) document.getElementById('ios-alert').style.display = 'block';
+
+    // --- Tab 切換 ---
+    function switchTab(id) {
+        document.querySelectorAll('.content-area').forEach(e => e.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(e => e.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        
+        const btns = document.querySelectorAll('.tab-btn');
+        if(id==='tab-stt') btns[0].classList.add('active');
+        if(id==='tab-record') btns[1].classList.add('active');
+        if(id==='tab-trans') btns[2].classList.add('active');
+        if(id==='tab-srt') btns[3].classList.add('active');
+        
+        // 切換分頁時停止所有活動
+        toggleSTT(false); stopRec(); stopTrans(); stopSRT();
+    }
+
+    // ===========================
+    // 功能 1: 筆記 (STT)
+    // ===========================
+    let sttRecog = null;
+    // 共用初始化函式
+    function getRecog() {
+        const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!Speech) { alert("瀏覽器不支援"); return null; }
+        return new Speech();
+    }
+
+    if (!sttRecog) {
+        let r = getRecog();
+        if(r) {
+            r.continuous = true; r.interimResults = true;
+            r.onresult = (e) => {
+                let s = ''; for(let i=0; i<e.results.length; ++i) s += e.results[i][0].transcript;
+                const el = document.getElementById('text-stt'); el.value = s; el.scrollTop = el.scrollHeight;
+            };
+            r.onend = () => toggleSTT(false, true);
+            sttRecog = r;
+        }
+    }
+
+    function toggleSTT(start, passive = false) {
+        const btnStart = document.getElementById('btn-stt-start');
+        const btnStop = document.getElementById('btn-stt-stop');
+        const status = document.getElementById('status-stt');
+        if (start) {
+            sttRecog.lang = document.getElementById('lang-stt').value;
+            sttRecog.start();
+            btnStart.disabled = true; btnStop.disabled = false;
+            status.innerText = "🔴 聽寫中..."; status.classList.add('pulsing');
+        } else {
+            if (sttRecog && !passive) sttRecog.stop();
+            btnStart.disabled = false; btnStop.disabled = true;
+            status.innerText = "準備就緒"; status.classList.remove('pulsing');
+        }
+    }
+    
+    function downloadTxt() {
+        const text = document.getElementById('text-stt').value;
+        if (!text) return alert("沒有文字");
+        const blob = new Blob([text], { type: "text/plain" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = `note_${Date.now()}.txt`;
+        a.click();
+    }
+
+    // ===========================
+    // 功能 2: 錄音機
+    // ===========================
+    let mediaRecorder, audioChunks = [];
+    async function startRec() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            audioChunks = [];
+            document.getElementById('btn-rec-start').disabled = true;
+            document.getElementById('btn-rec-stop').disabled = false;
+            document.getElementById('status-rec').innerText = "🔴 錄音中...";
+            document.getElementById('status-rec').classList.add('pulsing');
+            mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+            mediaRecorder.onstop = () => {
+                const blob = new Blob(audioChunks, { type: 'audio/webm' });
+                const url = URL.createObjectURL(blob);
+                const list = document.getElementById('audio-list');
+                const div = document.createElement('div');
+                div.innerHTML = `<div style="background:#f8f9fa;border:1px solid #eee;padding:10px;border-radius:8px;margin-bottom:10px;"><audio controls src="${url}" style="width:100%"></audio><a href="${url}" download="rec.webm" style="display:block;text-align:right;margin-top:5px;font-size:0.9rem;">⬇ 下載聲音檔</a></div>`;
+                list.prepend(div);
+                stream.getTracks().forEach(t => t.stop());
+            };
+        } catch (e) { alert("麥克風存取失敗"); }
+    }
+    function stopRec() {
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+            mediaRecorder.stop();
+            document.getElementById('btn-rec-start').disabled = false;
+            document.getElementById('btn-rec-stop').disabled = true;
+            document.getElementById('status-rec').innerText = "錄音完成";
+            document.getElementById('status-rec').classList.remove('pulsing');
+        }
+    }
+
+    // ===========================
+    // 功能 3: 雙向翻譯
+    // ===========================
+    let transRecog = getRecog();
+    let isTranslating = false;
+    if(transRecog) {
+        transRecog.continuous = true; transRecog.interimResults = false;
+        transRecog.onresult = async (e) => {
+            const last = e.results[e.results.length - 1];
+            if (!last.isFinal) return;
+            await doTranslate(last[0].transcript);
+        };
+        transRecog.onend = () => { if (isTranslating) transRecog.start(); };
+    }
+
+    function startTrans() {
+        transRecog.lang = document.getElementById('lang-src').value.split('|')[0];
+        isTranslating = true; transRecog.start();
+        document.getElementById('btn-trans-start').disabled = true;
+        document.getElementById('btn-trans-stop').disabled = false;
+        document.getElementById('status-trans').innerText = "👂 正在聆聽...";
+    }
+    function stopTrans() {
+        isTranslating = false; transRecog.stop();
+        document.getElementById('btn-trans-start').disabled = false;
+        document.getElementById('btn-trans-stop').disabled = true;
+        document.getElementById('status-trans').innerText = "已停止";
+    }
+    async function doTranslate(text) {
+        const hist = document.getElementById('chat-history');
+        if(hist.innerText.includes("(紀錄)")) hist.innerHTML = '';
+        const srcCode = document.getElementById('lang-src').value.split('|')[1];
+        const tgtPair = document.getElementById('lang-tgt').value.split('|');
+        
+        const card = document.createElement('div');
+        card.className = 'chat-card';
+        card.innerHTML = `<div class="source-text">${text}</div><div class="target-text">🔄...</div>`;
+        hist.prepend(card);
+
+        try {
+            const res = await fetch(`https://lingva.ml/api/v1/${srcCode}/${tgtPair[1]}/${encodeURIComponent(text)}`);
+            const data = await res.json();
+            const resText = data.translation || "Error";
+            card.querySelector('.target-text').innerText = resText;
+            
+            const btn = document.createElement('button');
+            btn.className = 'retry-btn'; btn.innerText = '🔊';
+            btn.onclick = () => speakOut(resText, tgtPair[0]);
+            card.appendChild(btn);
+            speakOut(resText, tgtPair[0]);
+        } catch (e) { card.querySelector('.target-text').innerText = "❌"; }
+    }
+    function speakOut(txt, lang) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(txt); u.lang = lang; window.speechSynthesis.speak(u);
+    }
+    function copyToClip(id) {
+        document.getElementById(id).select(); document.execCommand('copy'); alert('已複製');
+    }
+
+    // ===========================
+    // 功能 4: SRT 字幕生成 (核心邏輯)
+    // ===========================
+    let srtRecog = getRecog();
+    let srtData = []; // 存字幕物件 {id, start, end, text}
+    let srtStartTime = 0; // 開始錄製的時間戳
+    let srtLastEndTime = 0; // 上一句結束的相對時間
+    let srtIsRunning = false;
+    let srtSequence = 1;
+
+    if(srtRecog) {
+        srtRecog.continuous = true; 
+        srtRecog.interimResults = true; // 開啟 interim 以便讓使用者看到即時輸入
+
+        srtRecog.onstart = () => {
+            // 只有第一次開始時設定起始時間
+            if (srtStartTime === 0) srtStartTime = Date.now();
+        };
+
+        srtRecog.onresult = (event) => {
+            let interimText = '';
+            for (let i = event.resultIndex; i < event.results.length; ++i) {
+                if (event.results[i].isFinal) {
+                    // 偵測到一句話結束 (Final)
+                    const now = Date.now();
+                    const relativeNow = now - srtStartTime; // 目前相對於開始經過的毫秒
+                    
+                    const text = event.results[i][0].transcript.trim();
+                    if (!text) return;
+
+                    // 計算開始與結束時間
+                    // 邏輯：開始時間接續上一句的結束時間 (避免重疊)，或者如果是第一句則為0
+                    // 為了避免空窗期太長，我們可以稍微調整邏輯，但最簡單的是接續
+                    let startTime = srtLastEndTime;
+                    let endTime = relativeNow;
+                    
+                    // 防呆：如果這一句講太快，確保至少有 1秒顯示時間
+                    if (endTime - startTime < 1000) endTime = startTime + 1000;
+
+                    addSRTLine(srtSequence++, startTime, endTime, text);
+                    
+                    srtLastEndTime = endTime; // 更新上一句結束時間
+                } else {
+                    interimText += event.results[i][0].transcript;
+                }
+            }
+        };
+
+        srtRecog.onend = () => {
+            if (srtIsRunning) srtRecog.start(); // 保持運行
+        };
+    }
+
+    function startSRT() {
+        if (!srtRecog) return alert("瀏覽器不支援");
+        srtData = []; 
+        srtSequence = 1;
+        srtStartTime = Date.now(); // 重置時間
+        srtLastEndTime = 0;
+        srtIsRunning = true;
+        document.getElementById('srt-list').innerHTML = '';
+        
+        srtRecog.lang = document.getElementById('lang-srt').value;
+        srtRecog.start();
+
+        document.getElementById('btn-srt-start').disabled = true;
+        document.getElementById('btn-srt-stop').disabled = false;
+    }
+
+    function stopSRT() {
+        srtIsRunning = false;
+        srtRecog.stop();
+        document.getElementById('btn-srt-start').disabled = false;
+        document.getElementById('btn-srt-stop').disabled = true;
+    }
+
+    function clearSRT() {
+        srtData = [];
+        srtSequence = 1;
+        document.getElementById('srt-list').innerHTML = '<div style="text-align:center;color:#777;margin-top:50px;">(已清除)</div>';
+    }
+
+    function addSRTLine(id, startMs, endMs, text) {
+        srtData.push({ id, start: startMs, end: endMs, text });
+        
+        const list = document.getElementById('srt-list');
+        if(id === 1) list.innerHTML = ''; // 清除預覽文字
+
+        const item = document.createElement('div');
+        item.className = 'srt-item';
+        // 顯示格式： 00:00:01 --> 00:00:05
+        const timeStr = `${msToTime(startMs)} --> ${msToTime(endMs)}`;
+        item.innerHTML = `
+            <div class="srt-time">#${id} [${timeStr}]</div>
+            <div class="srt-text">${text}</div>
+        `;
+        list.appendChild(item);
+        list.scrollTop = list.scrollHeight;
+    }
+
+    // 毫秒轉 SRT 時間格式 (HH:MM:SS,mmm)
+    function msToTime(duration) {
+        let milliseconds = parseInt((duration % 1000));
+        let seconds = Math.floor((duration / 1000) % 60);
+        let minutes = Math.floor((duration / (1000 * 60)) % 60);
+        let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+        
+        // SRT 毫秒是 3位數，不足補0
+        let msStr = milliseconds.toString().padStart(3, '0');
+
+        return `${hours}:${minutes}:${seconds},${msStr}`;
+    }
+
+    function downloadSRTFile() {
+        if (srtData.length === 0) return alert("目前沒有字幕資料");
+
+        let srtContent = "";
+        srtData.forEach(item => {
+            srtContent += `${item.id}\n`;
+            srtContent += `${msToTime(item.start)} --> ${msToTime(item.end)}\n`;
+            srtContent += `${item.text}\n\n`;
+        });
+
+        const blob = new Blob([srtContent], { type: "text/plain" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = `subtitle_${Date.now()}.srt`; // 檔名
+        a.click();
+    }
+
+</script>
+
+</body>
+</html>
