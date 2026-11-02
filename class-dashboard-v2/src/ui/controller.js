@@ -19,12 +19,12 @@ export function mountUI(store) {
     }
     $('#storage-state').textContent = state.savedAt ? `已儲存 · ${new Date(state.savedAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false})}` : '尚無儲存資料 · 請先設定班級';
   }
-  function run(command, success) {try {store.dispatch(command); message(success); return true;} catch(error) {message(error.message,true); return false;}}
+  async function run(command, success) {try {await store.dispatch(command); message(success); return true;} catch(error) {message(error.message,true); return false;}}
   $('#open-settings').onclick = () => {$('#form-error').textContent=''; $('#settings').showModal();};
   $('#close-settings').onclick = () => {$('#settings').close(); resetForm();};
   $('#cancel-edit').onclick = resetForm;
-  $('#class-form').onsubmit = event => {event.preventDefault(); run({type:'SET_CLASS_NAME',name:$('#class-input').value},'班級設定已儲存。');};
-  $('#student-form').onsubmit = event => {event.preventDefault(); if(run({type:editId ? 'UPDATE_STUDENT':'ADD_STUDENT',id:editId,seat:Number($('#seat-input').value),name:$('#name-input').value},'學生資料已儲存。')) resetForm();};
+  $('#class-form').onsubmit = async event => {event.preventDefault(); run({type:'SET_CLASS_NAME',name:$('#class-input').value},'班級設定已儲存。');};
+  $('#student-form').onsubmit = async event => {event.preventDefault(); if(await run({type:editId ? 'UPDATE_STUDENT':'ADD_STUDENT',id:editId,seat:Number($('#seat-input').value),name:$('#name-input').value},'學生資料已儲存。')) resetForm();};
   store.subscribe(render); render(store.getState());
   if (store.loadError) {message(`讀取失敗：${store.loadError.message} 原資料未變更，已停用設定寫入。`,true); $('#storage-state').textContent = '資料異常 · 寫入已鎖定'; $('#settings').querySelectorAll('input,form button').forEach(el => el.disabled = true);}
   window.addEventListener('storage', event => {if(event.key === 'class-dashboard-v2') message('其他分頁的資料已變更，請重新整理後再操作。',true);});
