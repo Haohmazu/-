@@ -1,16 +1,26 @@
 # Class Dashboard 2.0｜教室日常
 
-第三階段增量版本 `2.0-stage3.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API 或執行期外部套件。
+4A 展示與操作增量版本 `2.0-stage4A.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API 或執行期外部套件。
 
 ## 正式專案與發布規則
 
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-stage3`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-stage4a`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
+
+## 4A 展示與操作
+
+- 原生 Fullscreen API：進入／退出、Esc、狀態及拒絕提示，不重載、不重設工具。全螢幕狀態不寫入資料，也不假定重整後仍全螢幕。
+- 四種專注模式：大型時鐘、大型倒數（含剩餘進度條）、今日課表、大型抽號。重用原本工具元素與狀態，返回主畫面按鈕清楚保留。
+- 三種布局：標準、時鐘優先、課表優先；四種字體：小／中／大／特大；三種主題：深海預設、明亮、高對比。皆經集中狀態入口保存與完整備份還原。
+- 投影隱私：開啟時關閉教師設定，阻擋學生名單、匯入、還原與所有設定入口，須明確關閉才能開啟。重整仍保留。其他分頁啟用隱私時，本頁會先關閉敏感設定並要求重新整理。
+- 快速工具列、輸入安全快捷鍵、觸控目標、持續錯誤通知、reduced-motion。沒有音樂／影片引擎或影音按鈕；只留不顯示的擴充位置供未來另行確認。
+
+投影隱私只是畫面保護，不是登入、權限驗證或資料加密；學生資料仍在瀏覽器資料與完整備份中。不要把它當作阻止他人讀取電腦資料的機制。
 
 ## 已完成的教室功能
 
@@ -28,9 +38,18 @@
 
 ## Windows 11 日常操作
 
-用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成第三階段。** 新版頁尾應顯示 `2.0-stage3.0`。
+用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 4A。** 新版頁尾應顯示 `2.0-stage4A.0`。
 
-教師設定有四個真正分頁：
+### 4A 快速操作（Windows 11）
+
+1. 快速工具列選「大型時鐘／大型倒數／今日課表／大型抽號」。每種模式都使用原有課表、倒數與抽號紀錄。按「返回主畫面」恢復。
+2. 「進入全螢幕」使用瀏覽器 API；按按鈕或 Esc 退出。可先進入專注再全螢幕，也可在全螢幕切換專注。退出全螢幕不退出專注，也不停止計時。
+3. 切換字體、主題及布局會自動保存。字體會依容器與畫面高度限制，避免過大數字擋住按鈕；某些短螢幕的字級會達相同安全上限。手機及特大字模式可正常垂直捲動。
+4. 投影時開啟「投影隱私」。要操作名單、匯入或還原，先明確按「關閉投影隱私」，再開啟教師設定；關閉設定後可再啟用隱私。
+5. 快捷鍵：1 時鐘、2 倒數、3 今日課表、4 抽號、0 返回主畫面、F 全螢幕、S 教師設定。倒數專注模式的空白鍵為開始／暫停／繼續。非輸入狀態按 Esc 可返回主畫面；全螢幕內 Esc 先退出全螢幕。按鍵在文字、輸入法組字、按鈕／選單／原生控制項、對話框及 Ctrl/Alt/Meta/Shift 組合時不攔截。
+6. 全螢幕被拒絕時，查看工具列提示，改用 Chrome／Edge 直接開啟網站。沒有用 CSS 冒充全螢幕。儲存失敗時偏好不會套用成成功狀態，也不會清除資料。
+
+第三階段教師設定仍有四個真正分頁：
 
 1. **班級與學生**：改班名、逐筆新增及編輯、學生名單範本與匯入。座號 1–50 不重複，姓名選填、最多 40 字。匯入預覽中，重疊座號需逐列選擇明確的既有身分；不按姓名推測。不在匯入表內的學生及歷史不刪除。
 2. **作息與課表**：選擇或建立民國學年／學期、編輯作息、單一課程、課表範本／匯入、單日調課。作息表下按「儲存整份作息」才提交整份編輯；重疊或刪除仍被課表引用的時段會被拒絕。新學期可沿用固定課表，但不沿用單日調課，也不重設學生。
@@ -55,7 +74,7 @@ CSV 使用 UTF-8；範本含 BOM，適合 Windows Excel。XLSX 支援第一張�
 
 ## 資料版本及保護
 
-資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 4`。版本 1→2→3 的既有遷移鏈保留，3→4 僅加入作息、學期課表與教室工具，保留 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
+資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 5`。版本 1→2→3→4 的既有遷移鏈保留，4→5 只新增 display 展示偏好，保留 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
 
 讀取及記憶體升版不會寫回。重要變更依序為命令 → 計算下一狀態 → 全部驗證 → localStorage 寫入成功 → 更新畫面。失敗不宣告成功。Web Locks 使用同一個 `class-dashboard-v2-write` 名稱；還會比對原始資料快照，拒絕過期分頁、同 revision 外部改寫及過期匯入預覽。舊版無法解析新版 schema，不能交互覆蓋；升級前後仍建議關閉其他舊分頁並保留備份。
 
@@ -87,9 +106,9 @@ set CHROMIUM_PATH=C:\Program Files\Google\Chrome\Application\chrome.exe
 npm run test:browser
 ```
 
-Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。舊任務 UI／命令測試保留為 `tests/legacy/` 的歷史文字，不算本版通過測試；本版以真實 schema 3 fixture 驗證歷史保留與拒絕任務操作。
+Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。舊任務 UI／命令測試保留為 `tests/legacy/` 的歷史文字，不算本版通過測試；本版以真實 schema 3、4 fixture 驗證歷史保留、升版與拒絕任務操作。
 
-本次結果：**34 項 Node 測試通過，完整 Chromium 第三階段流程通過，34 個本機 HTTP 資源與版本清單一致。** 詳細 22 項驗收對照、限制與 Windows 人工步驟見 [第三階段驗收紀錄](docs/stage3-acceptance.md)。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
+本次結果：**43 項 Node 測試通過，Chromium 第三階段回歸與 4A 展示流程通過，39 個本機 HTTP 資源與版本清單一致。** 詳細測試、模擬與實機限制、Windows 人工步驟見 [4A 驗收紀錄](docs/stage4a-acceptance.md)；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
 
 ## 版本與 GitHub Pages
 
@@ -103,11 +122,12 @@ npm run check:deployment
 
 `version.json` 列出每一個 HTML/CSS/JS SHA-256，測試會拒絕未更新清單。公開檢查工具連線失敗回傳 2、內容不一致回傳 1、全數一致回傳 0；合併前正式站和開發版本來就不同，不能為了通過檢查擅自發布。可用 `node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/` 檢查本機資源。
 
-目前起點 main 為 PR #2 合併的 `2.0-stage2.1` / schema 3，本次分支為第三階段。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
+目前起點 main 為 PR #3 合併的 `2.0-stage3.0` / schema 4，本次分支為 `2.0-stage4A.0` / schema 5。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
 
 ## 原始碼分工
 
 - `index.html`、`styles/main.css`：首頁展示、四分頁設定與響應式布局。
+- `src/display/`、`src/ui/display.js`、`styles/display.css`：展示偏好、驗證／命令、原生全螢幕、快捷鍵、投影隱私與單一展示控制入口。
 - `src/core/`：初始模型、版本遷移、驗證、唯一命令入口、Web Locks。
 - `src/features/classroom.js`：班級與學生；task-validation/settlement 只驗證歷史，不執行操作。
 - `src/school/`：臺灣時間、作息／課表、計時器、教室工具命令及驗證。
@@ -118,7 +138,7 @@ npm run check:deployment
 
 ## 已知限制及後續邊界
 
-本次停在第三階段，不自動進入第四階段。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
+本次只交付 4A，完成後停止；未取得使用者確認前不進入 4B。多媒體播放器、影音清單與計時連動均未開發，頁面沒有假裝可用的多媒體按鈕。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
 沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 
