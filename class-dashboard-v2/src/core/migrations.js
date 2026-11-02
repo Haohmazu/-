@@ -1,6 +1,6 @@
-import {displayDefaults} from '../display/model.js?v=2.0-stage4A.0';
-import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-stage4A.0';
-import {validateState} from './validation.js?v=2.0-stage4A.0';
+import {displayDefaults} from '../display/model.js?v=2.0-stage4B.0';
+import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-stage4B.0';
+import {validateState} from './validation.js?v=2.0-stage4B.0';
 // No speculative v1 aquarium conversion: preserve the original storage key.
 export function decodeState(raw) {
   let state;

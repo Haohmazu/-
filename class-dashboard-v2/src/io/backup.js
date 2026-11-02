@@ -1,4 +1,4 @@
-import {decodeState} from '../core/migrations.js?v=2.0-stage4A.0';
+import {decodeState} from '../core/migrations.js?v=2.0-stage4B.0';
 export function makeBackup(state,at=new Date().toISOString()) {return JSON.stringify({app:'class-dashboard-v2',formatVersion:1,exportedAt:at,data:state},null,2);}
 export function parseBackup(text) {
   if(typeof text!=='string'||new TextEncoder().encode(text).length>8*1024*1024)throw Error('備份檔案上限 8 MB。');
