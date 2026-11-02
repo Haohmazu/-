@@ -3,6 +3,8 @@ export const activeRound = state => state.rounds.find(r => r.status === 'ACTIVE'
 export function applyTaskCommand(state, c, newId, at) {
   const fail = text => {throw new Error(text);};
   const round = activeRound(state);
+  if(c.roundId && c.roundId!==round?.id) fail('任務已變更，請重新整理後操作。');
+  if(c.expectedRevision!==undefined && c.expectedRevision!==state.revision) fail('預覽後資料已變更，請重新操作。');
   const student = () => state.students.find(s => s.id === c.studentId) || fail('找不到學生。');
   switch(c.type) {
     case 'SET_PARTICIPATION': {
@@ -25,7 +27,18 @@ export function applyTaskCommand(state, c, newId, at) {
       if(!participants.length) fail('至少需要一位有效參與學生。');
       const threshold=c.threshold ?? participants.length;
       if(!Number.isInteger(threshold)||threshold<1||threshold>participants.length) fail('門檻需介於 1 與本輪參與人數之間。');
-      state.rounds.push({id:newId(),templateId:t.id,name:t.name,participants,threshold,startedAt:at,endedAt:null,status:'ACTIVE',checkins:[],audit:[],evolution:null});break;
+      state.rounds.push({id:newId(),templateId:t.id,name:t.name,participants,threshold,startedAt:at,endedAt:null,status:'ACTIVE',checkins:[],audit:[],evolution:null,settlement:{version:1,status:'UNSETTLED',result:null}});break;
+    }
+    case 'REVISE_PARTICIPANTS': {
+      if(!round) fail('沒有進行中的任務。');
+      if(!Array.isArray(c.participants)||!c.participants.length||new Set(c.participants).size!==c.participants.length||c.participants.some(id=>!state.students.some(s=>s.id===id))) fail('參與名單必須包含不重複的既有學生。');
+      if(!Number.isInteger(c.threshold)||c.threshold<1||c.threshold>c.participants.length) fail('門檻需介於 1 與修訂後人數之間。');
+      const removedChecks=round.checkins.filter(x=>!c.participants.includes(x.studentId));
+      if(removedChecks.length && c.confirmRemoveChecked!==true) fail('移除已打卡學生需要教師明確確認。');
+      const before={participants:[...round.participants],threshold:round.threshold,checkins:structuredClone(round.checkins)};
+      round.participants=[...c.participants];round.threshold=c.threshold;
+      round.checkins=round.checkins.filter(x=>c.participants.includes(x.studentId));
+      round.audit.push({type:'REVISE_PARTICIPANTS',at,before,after:{participants:[...round.participants],threshold:round.threshold,checkins:structuredClone(round.checkins)},confirmedRemoveChecked:removedChecks.length>0});break;
     }
     case 'CHECK_IN': case 'UNCHECK': case 'UNDO_CHECK': {
       if(!round) fail('沒有進行中的任務。');
@@ -46,7 +59,7 @@ export function applyTaskCommand(state, c, newId, at) {
           round.checkins=round.checkins.filter(x=>x.studentId!==c.studentId);
         }
       }
-      round.audit.push({type:c.type,at,studentId:c.studentId??null,before});break;
+      round.audit.push({type:c.type,at,studentId:c.studentId??null,source:c.type==='CHECK_IN'?c.source:'TEACHER',before});break;
     }
     case 'CANCEL_TASK':
       if(!round) fail('沒有進行中的任務。');

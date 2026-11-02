@@ -1,0 +1,26 @@
+{
+  "version": "2.0-stage2.1",
+  "schemaVersion": 3,
+  "assets": {
+    "index.html": "6dffa63595c7681c96f58f8f9e01b3cc145691cdfa8b2585f25df21edc6fbb21",
+    "styles/main.css": "193977e95b1cbad4d0bf56da91a9b9537ef1c6436711f899b4a193ed97a5140b",
+    "src/app.js": "4d27133a6937fec66d1ad11162cc8d48f5215d318dcf2c50dec79406b3262fb9",
+    "src/core/browser-commands.js": "4d1cdae4057445571857f37c55f166a6dbb824e09809181cd695e993d3d5a403",
+    "src/core/migrations.js": "64855349851b94db3972abe360e0a1cf5ab32481ebaba97577614cae36c0fe18",
+    "src/core/model.js": "f9c0d3300fdf3e9ee6e33669295422e94fd63e72d88ef19fb91c87bd0d4b0761",
+    "src/core/store.js": "0e6b682c9009e437c1ee43a311335b3b9faed351ba7b8e0482845db7435afbbf",
+    "src/core/validation.js": "3f8afc5157ef63fbd1d76b92c786933047be6669f0b58a419cc5634e8d558d89",
+    "src/features/classroom.js": "f4ee0a7149c5cfa33b4e29a27979a83439d662b6a230a2e5d6b9144afc61276f",
+    "src/features/settlement.js": "88568032456f594fd0684a685a80e46dcb804069966e8915d2589fb5bc45bdea",
+    "src/features/statistics.js": "d505b9bf9b3367ec71cd8614cf936d0dc5e00c0080ebec4bfe390f8347f285db",
+    "src/features/task-validation.js": "4fe405d03493a82bdd761a4671c26ae92285edcc838669e4ceec61cebd2fc102",
+    "src/features/tasks.js": "d2641d96b7ccefd57566b4b52a1bad83b02ebd6a6ab9bbc23fcc8c319d788abc",
+    "src/io/roster.js": "610f8d51bd19d7011098c22b7c0ef9dfb906ec5b974f91fc793163550cf81f8c",
+    "src/io/xlsx.js": "5eeb536e831906812217971f24a0c37cc7a3b735f20ef298866b3080e80de19a",
+    "src/io/zip.js": "41002c0d973a1ebe9962403ea582cc45a4cd8e5ce398c4f2e04808891251bc7c",
+    "src/ui/clock.js": "c3f5d5be2378567b3bd789f9cff9e47b015f79e43ed6021271aed8cf1aff6315",
+    "src/ui/controller.js": "e2cd61fd313e61224ddc1e2d14d1662b94a54802cfdabaaae33226a0fa8ad516",
+    "src/ui/roster-import.js": "419d778f88946c38d9005fd8bb6d07d384b8e5679efb8207ea721386618ec09e",
+    "src/ui/tasks.js": "b8886b9beaf49b059c724ccb05aadcd5049dcb526f6bd675ced7b221d22e595a"
+  }
+}
