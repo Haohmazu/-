@@ -20,6 +20,7 @@ export function mountUI(store) {
     $('#storage-state').textContent = state.savedAt ? `已儲存 · ${new Date(state.savedAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false})}` : '尚無儲存資料 · 請先設定班級';
   }
   async function run(command, success) {try {await store.dispatch(command); message(success); return true;} catch(error) {message(error.message,true); return false;}}
+  document.querySelectorAll('[data-scroll]').forEach(button=>button.onclick=()=>document.getElementById(button.dataset.scroll).scrollIntoView({block:'start'}));
   $('#open-settings').onclick = () => {$('#form-error').textContent=''; $('#settings').showModal();};
   $('#close-settings').onclick = () => {$('#settings').close(); resetForm();};
   $('#cancel-edit').onclick = resetForm;
