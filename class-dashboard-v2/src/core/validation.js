@@ -1,3 +1,4 @@
+import {validateTasks} from '../features/task-validation.js';
 import {DATA_VERSION} from './model.js';
 export function validateState(s) {
   const fail = message => { throw new Error(message); };
@@ -13,5 +14,6 @@ export function validateState(s) {
     if (typeof st.name !== 'string' || st.name.length > 40) fail('學生姓名最多 40 個字。');
     ids.add(st.id); seats.add(st.seat);
   }
+  validateTasks(s);
   return s;
 }
