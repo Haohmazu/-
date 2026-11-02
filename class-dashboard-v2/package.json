@@ -1,0 +1,1 @@
+{"name":"class-dashboard-v2","private":true,"type":"module","scripts":{"test":"node --test tests/core.test.js","test:browser":"node tests/browser.cjs"}}
