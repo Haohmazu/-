@@ -1,6 +1,7 @@
-import {validateSchool} from '../school/validation.js?v=2.0-stage3.0';
-import {validateTasks} from '../features/task-validation.js?v=2.0-stage3.0';
-import {DATA_VERSION} from './model.js?v=2.0-stage3.0';
+import {validateDisplay} from '../display/model.js?v=2.0-stage4A.0';
+import {validateSchool} from '../school/validation.js?v=2.0-stage4A.0';
+import {validateTasks} from '../features/task-validation.js?v=2.0-stage4A.0';
+import {DATA_VERSION} from './model.js?v=2.0-stage4A.0';
 export function validateState(s) {
   const fail = message => { throw new Error(message); };
   if (!s || s.schemaVersion !== DATA_VERSION) fail('資料版本不支援，請保留原資料並聯絡開發者。');
@@ -25,5 +26,6 @@ export function validateState(s) {
   }
   validateTasks(s);
   validateSchool(s);
+  validateDisplay(s.display);
   return s;
 }

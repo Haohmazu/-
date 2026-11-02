@@ -1,7 +1,7 @@
-import {$,el,button,run,notify} from './dom.js?v=2.0-stage3.0';
-import {remainingTime} from '../school/timer.js?v=2.0-stage3.0';
-import {taiwanParts,durationText} from '../school/time.js?v=2.0-stage3.0';
-import {createTimerSound} from './sound.js?v=2.0-stage3.0';
+import {$,el,button,run,notify} from './dom.js?v=2.0-stage4A.0';
+import {remainingTime} from '../school/timer.js?v=2.0-stage4A.0';
+import {taiwanParts,durationText} from '../school/time.js?v=2.0-stage4A.0';
+import {createTimerSound} from './sound.js?v=2.0-stage4A.0';
 export function mountTools(store){
   const sound=createTimerSound();let finishing=false,finishAttempt,noteSignature,participationSignature,timerSignature,preferenceSignature;
   const timer=type=>run(store,{type});
@@ -31,7 +31,7 @@ export function mountTools(store){
     const eligible=s.students.filter(st=>s.participation[date]?.[st.id]!==false&&!s.picker.drawn.includes(st.id));
     const seat=id=>s.students.find(st=>st.id===id)?.seat;$('#draw-result').textContent=s.picker.lastId?String(seat(s.picker.lastId)).padStart(2,'0'):'—';$('#picker-remaining').textContent=`第 ${s.picker.round} 輪 · 剩餘 ${eligible.length} 人${eligible.length?'':' · 請重新開始或檢查參與設定'}`;$('#picker-drawn').textContent=`已抽：${s.picker.drawn.map(seat).join('、')||'尚無'}`;$('#draw-student').disabled=!eligible.length;
   }
-  function paintTimer(s,at=Date.now()){const t=s.timer,remaining=remainingTime(t,at);$('#timer-display').textContent=durationText(remaining);$('#timer-status').textContent=t.status==='RUNNING'?(remaining?'計時中':'時間到，正在保存結果…'):{IDLE:'準備就緒',PAUSED:'已暫停',FINISHED:'時間到！'}[t.status];$('#timer-status').classList.toggle('finished',t.status==='FINISHED');$('#timer-start').textContent=t.status==='PAUSED'?'繼續':'開始';$('#timer-start').disabled=!['IDLE','PAUSED'].includes(t.status)||!remaining;$('#timer-pause').disabled=t.status!=='RUNNING';
+  function paintTimer(s,at=Date.now()){const t=s.timer,remaining=remainingTime(t,at);$('#timer-display').textContent=durationText(remaining);const progress=$('#timer-progress');if(progress){progress.max=t.durationMs;progress.value=Math.min(t.durationMs,remaining);progress.setAttribute('aria-valuetext',`剩餘 ${Math.round(Math.min(1,remaining/t.durationMs)*100)}%`);}$('#timer-status').textContent=t.status==='RUNNING'?(remaining?'計時中':'時間到，正在保存結果…'):{IDLE:'準備就緒',PAUSED:'已暫停',FINISHED:'時間到！'}[t.status];$('#timer-status').classList.toggle('finished',t.status==='FINISHED');$('#timer-start').textContent=t.status==='PAUSED'?'繼續':'開始';$('#timer-start').disabled=!['IDLE','PAUSED'].includes(t.status)||!remaining;$('#timer-pause').disabled=t.status!=='RUNNING';
   }
   async function tick(at=Date.now()){
     const s=store.getDisplayState(),t=s.timer,remaining=remainingTime(t,at);

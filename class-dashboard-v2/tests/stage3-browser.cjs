@@ -15,7 +15,7 @@ const base=process.env.TEST_URL||'http://127.0.0.1:8000/class-dashboard-v2/';
   const open=async panel=>{if(!await page.locator('#settings').evaluate(e=>e.open))await page.locator('#open-settings').click();await page.locator(`[data-panel="${panel}"]`).click();};
   const file=(id,name,text)=>page.locator(id).setInputFiles({name,mimeType:name.endsWith('.json')?'application/json':'text/csv',buffer:Buffer.from(text)});
   assert.equal((await state()).schemaVersion,3,'讀取不應自動寫回');assert.equal(await page.getByRole('button',{name:'任務管理',exact:true}).count(),0);assert.equal(await page.locator('#task-panel').count(),0);assert.equal(await page.locator('.journey,.water').count(),0);
-  await open('class-settings');await page.locator('#class-input').fill('三年二班教室');await page.getByRole('button',{name:'儲存班級名稱'}).click();await wait(()=>document.querySelector('#class-name').textContent==='三年二班教室');assert.equal((await state()).schemaVersion,4);assert.deepEqual((await state()).rounds,old.rounds);
+  await open('class-settings');await page.locator('#class-input').fill('三年二班教室');await page.getByRole('button',{name:'儲存班級名稱'}).click();await wait(()=>document.querySelector('#class-name').textContent==='三年二班教室');assert.equal((await state()).schemaVersion,5);assert.deepEqual((await state()).rounds,old.rounds);
   // CSV roster preview and explicit identity mapping.
   await file('#roster-file','學生名單.csv','\uFEFF座號,姓名\r\n'+Array.from({length:30},(_,i)=>`${i+1},${i===3?'<img src=x onerror=alert(1)>':`同學${i+1}`}`).join('\r\n'));
   await page.getByText('已讀取檔案，尚未匯入。',{exact:true}).waitFor();for(let i=1;i<=3;i++)await page.getByLabel(`座號 ${i} 身分對應`,{exact:true}).selectOption(`stable-${i}`);

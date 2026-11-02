@@ -1,7 +1,7 @@
-import {$,el,button,option,run} from './dom.js?v=2.0-stage3.0';
-import {activeTerm,lessons,courseAt,currentSchoolTime,todaySchedule} from '../school/schedule.js?v=2.0-stage3.0';
-import {taiwanParts,durationText} from '../school/time.js?v=2.0-stage3.0';
-import {WEEKDAYS} from '../io/timetable.js?v=2.0-stage3.0';
+import {$,el,button,option,run} from './dom.js?v=2.0-stage4A.0';
+import {activeTerm,lessons,courseAt,currentSchoolTime,todaySchedule} from '../school/schedule.js?v=2.0-stage4A.0';
+import {taiwanParts,durationText} from '../school/time.js?v=2.0-stage4A.0';
+import {WEEKDAYS} from '../io/timetable.js?v=2.0-stage4A.0';
 export function mountSchedule(store){
   let mode='today',schoolSignature,viewSignature;
   const fillCourses=()=>{const s=store.getState(),term=activeTerm(s);$('#course-subject').value=term.weekly[$('#course-weekday').value]?.[$('#course-period').value]??'';};
@@ -33,6 +33,7 @@ export function mountSchedule(store){
     $('#current-course').textContent=now.current?`${now.current.subject}${now.current.temporary?'（臨時調課）':''}`:now.status;
     $('#school-countdown').textContent=now.period?`${now.current?'距離下課':'本時段剩餘'} ${durationText(now.remainingMs)}`:'依學校作息自動顯示';
     $('#next-course').textContent=now.next?`下一節 ${now.next.start} · ${now.next.subject}${now.next.temporary?'（臨時調課）':''}`:(parts.weekday===0||parts.weekday===6?'週末不套用平日課表':'今日沒有下一節課');
+    const scheduleNext=$('#schedule-next-course');if(scheduleNext)scheduleNext.textContent=$('#next-course').textContent;
     const sig=JSON.stringify([s.school,parts.date,now.period?.id,mode]);if(viewSignature===sig)return;viewSignature=sig;
     $('#schedule-table').classList.toggle('week',mode==='week');$('#schedule-table').replaceChildren();
     if(mode==='today'&&!todaySchedule(s,at).length){$('#schedule-table').append(el('p','今天是週末，沒有平日課表。'));return;}

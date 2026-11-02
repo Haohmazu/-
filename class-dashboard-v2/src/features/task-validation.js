@@ -1,4 +1,4 @@
-import {validateSettlement} from './settlement.js?v=2.0-stage3.0';
+import {validateSettlement} from './settlement.js?v=2.0-stage4A.0';
 export function validateTasks(s) {
   const fail=()=>{throw new Error('任務資料不一致，請保留原資料。');};
   const validTime=t=>typeof t==='string' && Number.isFinite(Date.parse(t));
