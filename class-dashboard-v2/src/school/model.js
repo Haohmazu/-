@@ -1,4 +1,4 @@
-import {taiwanParts} from './time.js?v=2.0-stage4B.0';
+import {taiwanParts} from './time.js?v=2.0-stage4C.0';
 export function schoolDefaults(at=Date.now()) {
   const periods = [
     ['p1','第一節','08:40','09:20','LESSON'],['b1','下課','09:20','09:30','BREAK'],

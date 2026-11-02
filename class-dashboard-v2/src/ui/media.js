@@ -1,15 +1,14 @@
-import {$,el,button} from './dom.js?v=2.0-stage4B.0';
-import {parseSource,youtubeEmbed} from '../media/sources.js?v=2.0-stage4B.0';
-import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-stage4B.0';
+import {mountLibrary} from './library.js?v=2.0-stage4C.0';
+import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-stage4C.0';
+import {$,el,button} from './dom.js?v=2.0-stage4C.0';
+import {parseSource} from '../media/sources.js?v=2.0-stage4C.0';
+import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-stage4C.0';
 function time(value){if(!Number.isFinite(value)||value<0)return '--:--';return `${Math.floor(value/60)}:${String(Math.floor(value%60)).padStart(2,'0')}`;}
-export function mountMedia(){
+export function mountMedia(store){
   const dialog=$('#media-center'),audio=$('#media-audio'),video=$('#media-video'),youtubeHost=$('#youtube-host');
   if(!dialog||!audio||!video||!youtubeHost)throw Error('多媒體頁面版本不一致，請按 Ctrl＋F5 重新整理；既有資料不需清除。');
   let tab='music',queueSignature='',opener,uiError=false,scrubbing=false,lastVideoId;
-  const youtube={
-    mount(item){const frame=el('iframe');frame.src=youtubeEmbed(item.videoId);frame.title=`YouTube 官方播放器：${item.name}`;frame.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';youtubeHost.replaceChildren(frame);},
-    unmount(){for(const frame of youtubeHost.querySelectorAll('iframe')){try{frame.src='about:blank';}finally{frame.remove();}}}
-  };
+  const youtube=createYouTubeAdapter(youtubeHost,text=>message(text,true));
   const engine=createMediaCoordinator({audio,video,youtube});
   const message=(text,error=false)=>{uiError=error;$('#media-message').textContent=text;$('#media-message').classList.toggle('error',error);};
   async function action(fn){message('');try{await fn();return true;}catch(e){message(e.message,true);return false;}}
@@ -22,6 +21,7 @@ export function mountMedia(){
     engine.closeDialog();if(document.fullscreenElement&&dialog.contains(document.fullscreenElement))document.exitFullscreen().catch(()=>{});
     if(opener?.isConnected&&!opener.closest('[hidden]'))opener.focus();else $('#open-media').focus();
   }
+  const library=mountLibrary({store,engine,playSaved:(item,{background=false}={})=>{if(!background)selectTab(item.kind);return engine.play(`saved:${item.id}`);},message});
   $('#open-media').onclick=open;$('#mini-open').onclick=open;$('#close-media').onclick=()=>{engine.closeDialog();dialog.close();};dialog.addEventListener('cancel',()=>engine.closeDialog());dialog.addEventListener('close',closed);
   // Native dialog cancel/Esc closes the top layer; display shortcuts already ignore open dialogs.
   function selectTab(next){if(!['music','video'].includes(next))return;tab=next;engine.switchTab(tab);for(const b of dialog.querySelectorAll('[data-media-tab]')){const selected=b.dataset.mediaTab===tab;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;}for(const panel of dialog.querySelectorAll('[data-media-panel]'))panel.hidden=panel.dataset.mediaPanel!==tab;render(engine.getState());}
@@ -34,12 +34,12 @@ export function mountMedia(){
   $('#media-original').onclick=()=>engine.stop();
   $('#media-play').onclick=()=>action(()=>engine.play());$('#media-pause').onclick=()=>engine.pause();$('#media-stop').onclick=()=>action(()=>engine.stop());
   $('#media-previous').onclick=()=>action(()=>engine.previous());$('#media-next').onclick=()=>action(()=>engine.next());
-  $('#media-volume').oninput=()=>action(()=>engine.setVolume(Number($('#media-volume').value)));
-  $('#media-mute').onchange=()=>engine.setMuted($('#media-mute').checked);
+  $('#media-volume').oninput=()=>library.setPreferences({volume:Number($('#media-volume').value)});
+  $('#media-mute').onchange=()=>library.setPreferences({muted:$('#media-mute').checked});
   $('#media-progress').onpointerdown=()=>{scrubbing=true;};window.addEventListener('pointerup',()=>{scrubbing=false;});$('#media-progress').onpointercancel=()=>{scrubbing=false;};
   $('#media-progress').onchange=()=>action(()=>engine.seek(Number($('#media-progress').value)));
-  $('#media-rate').onchange=async()=>{if(!await action(()=>engine.setRate(Number($('#media-rate').value))))$('#media-rate').value=String(engine.getState().rate);};
-  $('#media-repeat').onchange=()=>engine.setRepeat($('#media-repeat').value);$('#media-shuffle').onchange=()=>engine.setShuffle($('#media-shuffle').checked);
+  $('#media-rate').onchange=async()=>{if(!await library.setPreferences({rate:Number($('#media-rate').value)}))$('#media-rate').value=String(engine.getState().rate);};
+  $('#media-repeat').onchange=()=>library.setPreferences({repeat:$('#media-repeat').value});$('#media-shuffle').onchange=()=>library.setPreferences({shuffle:$('#media-shuffle').checked});
   $('#video-fullscreen').onclick=()=>action(async()=>{if(!document.fullscreenEnabled||!video.requestFullscreen)throw Error('此頁面不支援影片全螢幕，請直接用 Chrome / Edge 開啟網站。');try{await video.requestFullscreen();}catch{throw Error('瀏覽器未允許影片全螢幕。請直接點按按鈕，或改用 Chrome／Edge 開啟網站。');}});
   $('#mini-play').onclick=()=>action(()=>engine.play());$('#mini-pause').onclick=()=>engine.pause();$('#mini-stop').onclick=()=>action(()=>engine.stop());
   function render(s){
@@ -63,9 +63,9 @@ export function mountMedia(){
     if(!current||current.kind!=='video'||s.status==='STOPPED')lastVideoId=null;
     else if(dialog.open&&sameTab&&current.id!==lastVideoId){lastVideoId=current.id;(current.source==='youtube'?youtubeHost:video).scrollIntoView({block:'center'});}
     const signature=JSON.stringify([s.queues,current?.id]);if(signature!==queueSignature){queueSignature=signature;for(const kind of ['music','video']){
-      const list=$(`#${kind}-queue`);list.replaceChildren();for(const item of s.queues[kind]){const li=el('li');li.append(el('span',`${item.name} · ${item.source==='local'?'本機（需重新選檔）':item.source==='youtube'?'YouTube':'HTTPS'}`),button('播放',()=>action(()=>engine.play(item.id))));li.lastChild.setAttribute('aria-label',`播放 ${item.name}`);if(item.id===current?.id)li.setAttribute('aria-current','true');list.append(li);}if(!s.queues[kind].length)list.append(el('li','尚無暫存媒體。'));
+      const list=$(`#${kind}-queue`);list.replaceChildren();for(const item of s.queues[kind].filter(item=>!item.libraryId)){const li=el('li');li.append(el('span',`${item.name} · ${item.source==='local'?'本機（需重新選檔）':item.source==='youtube'?'YouTube':'HTTPS'}`),button('播放',()=>action(()=>engine.play(item.id))));li.lastChild.setAttribute('aria-label',`播放 ${item.name}`);if(item.id===current?.id)li.setAttribute('aria-current','true');list.append(li);}if(!s.queues[kind].some(item=>!item.libraryId))list.append(el('li','尚無暫存媒體。'));
     }}
-    const mini=$('#music-mini');mini.hidden=dialog.open||current?.kind!=='music'||s.status==='STOPPED';$('#mini-name').textContent=current?.kind==='music'?current.name:'';$('#mini-status').textContent=$('#media-status').textContent;$('#mini-play').disabled=s.status==='PLAYING';$('#mini-pause').disabled=!['PLAYING','BUFFERING','LOADING'].includes(s.status);
+    const mini=$('#music-mini');mini.hidden=dialog.open||current?.kind!=='music'||s.status==='STOPPED';$('#mini-name').textContent=current?.kind==='music'?current.name:'';$('#mini-status').textContent=$('#media-status').textContent;$('#mini-error').textContent=s.error;$('#mini-play').disabled=s.status==='PLAYING';$('#mini-pause').disabled=!['PLAYING','BUFFERING','LOADING'].includes(s.status);
   }
   engine.subscribe(render);render(engine.getState());
   // Closing audio is allowed to keep playing; show the miniature controls after the close event.
