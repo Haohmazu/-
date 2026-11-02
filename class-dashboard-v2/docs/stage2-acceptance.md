@@ -60,3 +60,39 @@ Node 32/32 通過，三組 Chromium headless 流程通過，HTML/CSS/JS 共 20 �
 8. PR 核准合併並完成 Pages 部署後，確認頁尾 2.0-stage2.1，再執行公開版本檢查。
 
 未驗證：Windows 原生 Chrome/Edge、真實觸控、Microsoft Excel 真機、正式 Pages 資源。進化僅資料契約：不發魚、無收藏、沒有虛構的已取得狀態。依使用者指令在第二階段停止，不進入第三階段。外部備份還原與舊版遷移不在本次範圍，先以測試資料驗收。
+
+## 本次實際修改檔案
+
+- `README.md`
+- `docs/stage2-acceptance.md`
+- `index.html`
+- `package.json`
+- `src/app.js`
+- `src/core/migrations.js`
+- `src/core/model.js`
+- `src/core/store.js`
+- `src/core/validation.js`
+- `src/features/settlement.js`
+- `src/features/statistics.js`
+- `src/features/task-validation.js`
+- `src/features/tasks.js`
+- `src/io/roster.js`
+- `src/io/xlsx.js`
+- `src/io/zip.js`
+- `src/ui/controller.js`
+- `src/ui/roster-import.js`
+- `src/ui/tasks.js`
+- `styles/main.css`
+- `tests/core.test.js`
+- `tests/fixtures/students-openpyxl.xlsx`
+- `tests/fixtures/students-shared.xlsx`
+- `tests/stage2-browser.cjs`
+- `tests/stage2.test.js`
+- `tests/version.test.js`
+- `tools/check-deployment.mjs`
+- `tools/release.mjs`
+- `version.json`
+
+## GitHub 交付狀態
+
+開發分支已成功推送。建立 PR 的實際請求 `gh pr create` 於 `https://api.github.com/graphql` 收到 Forbidden，因此本環境未建立 PR；不可將分支或建立 PR 的預填頁連結當成已存在的 PR。使用者可由 GitHub 提供的 pull/new/develop/class-dashboard-v2-stage2-complete 入口建立審查，不需重新上傳檔案。main 與正式網站保持不變。
