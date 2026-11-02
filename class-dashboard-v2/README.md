@@ -1,18 +1,18 @@
 # Class Dashboard 2.0｜教室日常
 
-4B 統一多媒體中心版本 `2.0-stage4B.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API 或執行期外部套件。
+4C 影音清單與智慧播放版本 `2.0-stage4C.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
 
 ## 正式專案與發布規則
 
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-stage4b`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-stage4c`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
 
-## 4B 多媒體中心（Windows 11）
+## 多媒體中心（Windows 11）
 
 1. 在 Chrome／Edge 點快速工具列「多媒體中心」。大型播放器只存在網頁內對話框，背景的課表與倒數持續運作。
 2. 「音樂」可一次選多個本機 MP3／WAV 等檔案，再點暫存佇列的播放；也可輸入名稱與 HTTPS 直接音訊網址，按「加入音樂並播放」。選檔本身不自動播放。
@@ -23,13 +23,17 @@
 7. 關閉影片視窗（含 Esc）、切到音樂或改播其他來源，會先停止影片並移除 src／iframe，不留下隱藏音源。同一時間只有一個主要播放器。若開啟合法原始來源，會先停止本站的來源；新分頁之後由瀏覽器與該網站管理。
 8. 「清空暫存佇列」需確認；只移除本頁暫存，不刪電腦原始檔。佇列中的本機 Blob URL 保留供本次重播，停止時先卸載解碼來源，清空／離開頁面再回收不再需要的 Blob。
 
-**4B 暫存不等於預存清單：重新整理後檔案與網址需重新加入。** 目前不把任何媒體清單、音量／循環偏好、Blob URL 或檔案內容寫入 localStorage／JSON。4C 才會在使用者確認後加入持久化清單及計時連動；本階段資料版本維持 5，不需要新遷移。
+### 4C 預存清單與智慧連動
 
-線上來源只接受 HTTPS 且不含網址帳號密碼。不是直接媒體的網站頁面無法當作音訊／影片解碼；只有明確支援的 YouTube 才建立 iframe，不嵌入任意網頁。YouTube 可能有廣告、登入／年齡／地區／版權或禁止嵌入限制，本站不下載或繞過，不宣稱全部影片可播。載入失敗會保留暫存來源與原因，可改加入正確網址或開啟合法原始頁面。
+1. 多媒體中心 →「新增／編輯影音網址」→ 填名稱、音樂／影片、HTTPS 網址及分類 →「儲存影音網址」。選擇音樂時需直接音訊來源；YouTube 請選影片。儲存只保存網址，不下載檔案，也不立即播放。
+2. 用「清單」選全部、音樂、影片或最愛，搭配分類／搜尋；點「播放」沿用共用播放器。可以編輯、加入最愛、刪除及上／下移。篩選時的移動是相對於目前可見的相鄰項目；保存順序以單一陣列為準，播放不因搜尋而改變。
+3. 「管理分類」可新增、改名或確認後刪除；刪分類不刪影音，會移至保留的「其他」分類。分類上限 50，網址上限 500。名稱與匯入文字只作文字呈現，不作 HTML。
+4. 網址、名稱、類型、分類、最愛及順序會保存；音量／靜音／倍速／循環／隨機偏好也保存。本機檔案及下方的暫存網址仍只在本次頁面有效，重新整理需重新選檔；不儲存 Blob URL 或影音檔案。
+5. 「計時器與影音連動」預設不自動播放。可選已儲存音樂，設定開始／繼續播放、暫停計時是否暫停音樂、計時結束繼續／暫停／停止音樂，以及結束時暫停影片。保存設定不立即播放；新一次「開始／繼續」才觸發。重整／還原不自動播放。已在播放同一首音樂時不從頭重播，暫停後繼續也保留位置。
+6. 結束／暫停規則適用當時的影音，不限連動選曲。YouTube 結束時暫停使用官方 IFrame API；API 未就緒時會卸載影片，避免留下聲音。本站不宣稱掌握其實際播放狀態。網路／平台阻擋時顯示原因，計時照常；提示音和影音音量獨立。
+7. 編輯正在播放的名稱不重播；更換其來源、類型或刪除，成功保存後才停止舊來源。刪除連動選曲或把它改成影片，會取消音樂連動選擇。儲存失敗保留原清單與既有播放；偏好失敗則恢復上次保存值。
+8. 教師設定 → 資料管理 → 完整 JSON 備份包含網址庫、分類、最愛、順序、偏好與連動設定，同時保留學生、課表和舊任務歷史。還原仍需驗證、預覽及確認；不是遠端同步。
 
-來源會依瀏覽器規則連線到你選的網站；本機檔案不會上傳，播放器不讀取或傳送學生資料。投影隱私不會遮蔽你主動展示的影片／檔名。媒體音量與計時提示音獨立；沒有自動計時連動。連線被拒時教室基本工具仍可操作。
-
-實際已測本機 WAV、MP3、WebM、MP4 解碼；受控 HTTPS 回應與官方 iframe 流程也有測試，但外部音訊／影片／YouTube 實際連線均被此環境拒絕，尚待學校網路實播，不能把模擬當作已驗證第三方播放。
 
 ## 4A 展示與操作
 
@@ -57,7 +61,7 @@
 
 ## Windows 11 日常操作
 
-用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 4B。** 新版頁尾應顯示 `2.0-stage4B.0`。
+用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 4C。** 新版頁尾應顯示 `2.0-stage4C.0`。
 
 ### 4A 快速操作（Windows 11）
 
@@ -93,7 +97,7 @@ CSV 使用 UTF-8；範本含 BOM，適合 Windows Excel。XLSX 支援第一張�
 
 ## 資料版本及保護
 
-資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 5`。版本 1→2→3→4 的既有遷移鏈保留，4→5 只新增 display 展示偏好，保留 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
+資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 6`。版本 1→2→3→4 的既有遷移鏈保留，4→5 新增 display 展示偏好，5→6 只新增 mediaLibrary 網址庫、分類、偏好與預設停用的計時連動，保留 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
 
 讀取及記憶體升版不會寫回。重要變更依序為命令 → 計算下一狀態 → 全部驗證 → localStorage 寫入成功 → 更新畫面。失敗不宣告成功。Web Locks 使用同一個 `class-dashboard-v2-write` 名稱；還會比對原始資料快照，拒絕過期分頁、同 revision 外部改寫及過期匯入預覽。舊版無法解析新版 schema，不能交互覆蓋；升級前後仍建議關閉其他舊分頁並保留備份。
 
@@ -127,7 +131,7 @@ npm run test:browser
 
 Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。舊任務 UI／命令測試保留為 `tests/legacy/` 的歷史文字，不算本版通過測試；本版以真實 schema 3、4 fixture 驗證歷史保留、升版與拒絕任務操作。
 
-本次結果：**54 項 Node 測試通過，Chromium 第三階段、4A 與 4B 流程通過，43 個本機 HTTP 資源與版本清單一致。** 4B 的實際解碼、網路模擬、第三方限制與 Windows 人工步驟見 [4B 驗收紀錄](docs/stage4b-acceptance.md)；[4A 驗收紀錄](docs/stage4a-acceptance.md) 保留展示證據；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
+本次結果：**66 項 Node 測試通過，Chromium 第三階段、4A、4B 及 4C 流程通過，48 個本機 HTTP 資源與版本清單一致。** 詳細批次證據見 [4C 驗收紀錄](docs/stage4c-acceptance.md)。 4B 的實際解碼、網路模擬、第三方限制與 Windows 人工步驟見 [4B 驗收紀錄](docs/stage4b-acceptance.md)；[4A 驗收紀錄](docs/stage4a-acceptance.md) 保留展示證據；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
 
 ## 版本與 GitHub Pages
 
@@ -141,12 +145,13 @@ npm run check:deployment
 
 `version.json` 列出每一個 HTML/CSS/JS SHA-256，測試會拒絕未更新清單。公開檢查工具連線失敗回傳 2、內容不一致回傳 1、全數一致回傳 0；合併前正式站和開發版本來就不同，不能為了通過檢查擅自發布。可用 `node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/` 檢查本機資源。
 
-目前起點 main 為 PR #4 合併的 `2.0-stage4A.0` / schema 5，本次分支為 `2.0-stage4B.0` / schema 5。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
+目前起點 main 為 PR #5 合併的 `2.0-stage4B.0` / schema 5（2ab1baa），本次分支為 `2.0-stage4C.0` / schema 6。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
 
 ## 原始碼分工
 
 - `index.html`、`styles/main.css`：首頁展示、四分頁設定與響應式布局。
-- `src/media/`、`src/ui/media.js`、`styles/media.css`：單一暫態播放協調器、安全網址、音訊／影片／官方嵌入、Modal 與迷你列；不連到教室 store。
+- `src/media/`、`src/ui/media.js`、`styles/media.css`：單一暫態播放協調器、安全網址、音訊／影片／官方 API 嵌入、Modal 與迷你列；播放器不持有 store，UI 及計時連動橋接只讀取成功保存的資料。
+- `src/library/`、`src/ui/library.js`：網址庫資料模型、命令、驗證、分類／最愛／排序／搜尋及保存偏好。
 - `src/display/`、`src/ui/display.js`、`styles/display.css`：展示偏好、驗證／命令、原生全螢幕、快捷鍵、投影隱私與單一展示控制入口。
 - `src/core/`：初始模型、版本遷移、驗證、唯一命令入口、Web Locks。
 - `src/features/classroom.js`：班級與學生；task-validation/settlement 只驗證歷史，不執行操作。
@@ -158,7 +163,7 @@ npm run check:deployment
 
 ## 已知限制及後續邊界
 
-本次只交付 4B，完成後停止；未取得使用者確認前不進入 4C。持久化影音清單、分類、最愛、排序、計時連動與獨立瀏覽器視窗均未開發。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
+本次只交付 4C，完成後停止，不自行進入 4D。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
 沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 

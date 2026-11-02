@@ -1,6 +1,7 @@
-import {displayDefaults} from '../display/model.js?v=2.0-stage4B.0';
-import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-stage4B.0';
-import {validateState} from './validation.js?v=2.0-stage4B.0';
+import {libraryDefaults} from '../library/model.js?v=2.0-stage4C.0';
+import {displayDefaults} from '../display/model.js?v=2.0-stage4C.0';
+import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-stage4C.0';
+import {validateState} from './validation.js?v=2.0-stage4C.0';
 // No speculative v1 aquarium conversion: preserve the original storage key.
 export function decodeState(raw) {
   let state;
@@ -9,5 +10,6 @@ export function decodeState(raw) {
   if (state?.schemaVersion === 2) state = {...state, schemaVersion:3, rosterImports:[], rounds:state.rounds.map(round=>({...round, settlement:{version:1,status:'UNSETTLED',result:null}}))};
   if (state?.schemaVersion === 3) state = {...state,schemaVersion:4,school:schoolDefaults(),...toolDefaults()};
   if(state?.schemaVersion===4)state={...state,schemaVersion:5,display:displayDefaults()};
+  if(state?.schemaVersion===5)state={...state,schemaVersion:6,mediaLibrary:libraryDefaults()};
   return validateState(state);
 }
