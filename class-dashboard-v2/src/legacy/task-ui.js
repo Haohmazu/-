@@ -1,5 +1,5 @@
-import {activeRound,taiwanDay} from '../features/tasks.js?v=2.0-stage2.1';
-import {roundStatistics,taskStatistics} from '../features/statistics.js?v=2.0-stage2.1';
+import {activeRound,taiwanDay} from './task-commands.js?v=2.0-stage3.0';
+import {roundStatistics,taskStatistics} from './task-statistics.js?v=2.0-stage3.0';
 export function mountTasks(store) {
  const panel=document.querySelector('#task-panel'),teacher=document.querySelector('#task-settings'),statsPanel=document.querySelector('#task-stats');
  const el=(tag,text)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;};

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 3,
+  "revision": 12,
+  "savedAt": "2026-11-02T01:00:00.000Z",
+  "classroom": {
+    "name": "三年二班"
+  },
+  "students": [
+    {
+      "id": "stable-1",
+      "seat": 1,
+      "name": "測試同學1"
+    },
+    {
+      "id": "stable-2",
+      "seat": 2,
+      "name": "測試同學2"
+    },
+    {
+      "id": "stable-3",
+      "seat": 3,
+      "name": "測試同學3"
+    }
+  ],
+  "participation": {},
+  "templates": [
+    {
+      "id": "reading",
+      "name": "每日閱讀"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "stable-4",
+      "templateId": "reading",
+      "name": "每日閱讀",
+      "participants": [
+        "stable-1",
+        "stable-2",
+        "stable-3"
+      ],
+      "threshold": 3,
+      "startedAt": "2026-11-02T01:00:00.000Z",
+      "endedAt": "2026-11-02T01:00:00.000Z",
+      "status": "CANCELLED",
+      "checkins": [
+        {
+          "studentId": "stable-1",
+          "at": "2026-11-02T01:00:00.000Z",
+          "source": "STUDENT"
+        }
+      ],
+      "audit": [
+        {
+          "type": "CHECK_IN",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-1",
+          "source": "STUDENT",
+          "before": []
+        },
+        {
+          "type": "CANCEL_TASK",
+          "at": "2026-11-02T01:00:00.000Z"
+        }
+      ],
+      "evolution": null,
+      "settlement": {
+        "version": 1,
+        "status": "UNSETTLED",
+        "result": null
+      }
+    },
+    {
+      "id": "stable-5",
+      "templateId": "reading",
+      "name": "每日閱讀",
+      "participants": [
+        "stable-1",
+        "stable-2",
+        "stable-3"
+      ],
+      "threshold": 3,
+      "startedAt": "2026-11-02T01:00:00.000Z",
+      "endedAt": null,
+      "status": "ACTIVE",
+      "checkins": [
+        {
+          "studentId": "stable-1",
+          "at": "2026-11-02T01:00:00.000Z",
+          "source": "STUDENT"
+        },
+        {
+          "studentId": "stable-2",
+          "at": "2026-11-02T01:00:00.000Z",
+          "source": "TEACHER"
+        }
+      ],
+      "audit": [
+        {
+          "type": "CHECK_IN",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-1",
+          "source": "STUDENT",
+          "before": []
+        },
+        {
+          "type": "CHECK_IN",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-2",
+          "source": "TEACHER",
+          "before": [
+            {
+              "studentId": "stable-1",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "STUDENT"
+            }
+          ]
+        },
+        {
+          "type": "UNCHECK",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-2",
+          "source": "TEACHER",
+          "before": [
+            {
+              "studentId": "stable-1",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "STUDENT"
+            },
+            {
+              "studentId": "stable-2",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "TEACHER"
+            }
+          ]
+        },
+        {
+          "type": "UNDO_CHECK",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": null,
+          "source": "TEACHER",
+          "before": [
+            {
+              "studentId": "stable-1",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "STUDENT"
+            }
+          ]
+        }
+      ],
+      "evolution": null,
+      "settlement": {
+        "version": 1,
+        "status": "UNSETTLED",
+        "result": null
+      }
+    }
+  ],
+  "rosterImports": []
+}

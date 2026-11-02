@@ -1,65 +1,85 @@
-# Class Dashboard 2.0｜第二階段驗收版
+# Class Dashboard 2.0｜教室日常
 
-原生 HTML、CSS、JavaScript ES Modules，無資料庫、後端、付費服務或執行期外部套件。繁體中文介面，適用 Chrome / Edge。
+第三階段增量版本 `2.0-stage3.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API 或執行期外部套件。
 
-## 正式目標及發布規則
+## 正式專案與發布規則
 
-- 儲存庫：https://github.com/haohmazu/-
-- 唯一開發範圍：`class-dashboard-v2/`，不修改根目錄其他網站。
-- 正式網址：https://haohmazu.github.io/-/class-dashboard-v2/
-- 第一版 `ckj1022-art/classdashboard` 僅供功能參考，絕不提交到該儲存庫。
-- 開發分支測試、推送及 PR 審查；教師確認前不合併 `main`，不更新正式網站。
-- 本次版本 `2.0-stage2.1`、資料版本 `schemaVersion: 3`。第一、二版資料在記憶體中升版，成功儲存才寫回；保留學生 ID 與任務紀錄。舊網站 `aquarium-classroom-v1` 資料完全不動，未提供舊版魚種遷移。
+- Repository：https://github.com/haohmazu/-
+- 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
+- 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
+- 開發分支：`develop/class-dashboard-v2-stage3`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
-## 已完成
+**本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
 
-- 第一階段班級設定、50 位學生逐筆新增及編輯、固定內部 ID、臺灣時鐘、響應式畫面。
-- 任務範本增刪改、單一 ACTIVE 任務、名稱快照、固定參與 ID 名單與 1–參與人數之間的門檻。
-- 學生打卡、教師補登、取消打卡、最近一次未結算打卡操作復原。成功保存才更新 UI，重複打卡拒絕、不重複累計。
-- 今日參與與本輪名單分離。跨日不重設輪次 ID、參與名單或打卡。
-- 本輪參與名單與門檻修訂。須確認，移除已打卡者會明列移除筆數，再取消其本輪有效打卡；前後快照保留於 audit。修訂後不可用打卡復原跨越此次名單修改。
-- 由有效紀錄重算完成人數、未完成人數、完成率、個人累計、輪次歷史、取消及修正紀錄。取消輪次保留明細，但排除個人有效累計；未取消 ACTIVE 打卡計入累計。
-- CSV / XLSX 名單範本下載、本機讀檔、預覽、身分對應、確認後原子匯入。保留未列入學生及歷史。相同姓名不自動配對。
-- 進化結算資料介面與驗證規則；本階段不發魚、不標示已取得、不會達門檻就假裝 COMPLETED。
-- Web Locks 跨分頁寫入互斥、過期分頁拒絕、格式損壞保護、讀寫錯誤提示、初始化錯誤及寫入鎖可用性提示。
-- HTML/CSS/JS 資源版本參數與 SHA-256 版本清單，保留 GitHub Pages 相對路徑。
+## 已完成的教室功能
 
-## Windows 11 操作
+- 班級名稱、50 位學生逐筆增改、CSV/XLSX 名單預覽及明確身分對應匯入，保留固定學生 ID。姓名只在教師設定顯示。
+- 臺灣日期、大型 24 小時制時鐘，每秒更新，返回分頁即同步。
+- 共用學校作息：授課、下課／午休、其他時段；手動編輯、合理時間及重疊檢查。
+- 每學年／學期的星期一至五固定課表，單節編輯，新學期可複製目前固定課表；舊學期保留。
+- 目前課程、下課倒數、下一節開始時間與科目、今日完整課表、整週課表；週末不套用星期一。
+- 標準三欄 CSV/XLSX 課表範本、本機讀檔、預覽與確認匯入。科目只引用作息 ID，不重複保存上課時間。
+- 單日調課按日期及節次獨立保存、可取消；不改固定週課表或下週科目。
+- 獨立通用倒數：自訂分秒、常用預設、開始／暫停／繼續／重設、增減時間、結束文字與可選提示音。依 deadline 計算，重整與切換分頁不會累積誤差。
+- 電子聯絡簿：新增、編輯、刪除、完成、上移下移排序、確認後清除完成事項，自動保存。
+- 隨機抽號：今日參與排除、本輪不重複、已抽及剩餘人數、手動確認重新開始，重整與跨日保留。
+- 完整 JSON 備份下載、驗證／預覽／明確確認後還原。包含現行工具與第二階段歷史，錯誤與失敗不破壞現有資料。
 
-### 正式站
+## Windows 11 日常操作
 
-使用 Chrome / Edge 開啟正式網址。此次分支尚未合併時，正式站仍為上一版；不會因開啟 PR 自動更新。新版頁尾應為 `2.0-stage2.1`。
+用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成第三階段。** 新版頁尾應顯示 `2.0-stage3.0`。
 
-1. 右上「教師設定」，上方可跳至「班級與學生」「任務管理」「任務統計」，內容仍在同一個可捲動視窗。
-2. 班級與學生：設定班名；可逐筆新增或編輯學生。姓名選填，主畫面僅顯示座號。
-3. 下載 CSV / XLSX 範本，依標題「座號」「姓名」填入 1–50 的不重複整數座號；姓名最多 40 字。CSV 需 UTF-8（範本含 BOM，Windows Excel 可正常開啟）。
-4. 選取名單檔案，看到預覽代表尚未匯入。與既有座號重疊時，必須逐列選擇既有學生 ID 對應；如果是不同學生，先處理既有座號或使用其他空座號。其他列預設新增，仍需整體勾選身分確認。
-5. 檢查「新增／更新筆數」並勾選確認，再按「正式匯入」。未列入者保留，不會刪除舊學生或歷史。同一學生不可對應多列。可透過逐列顯式 ID 對應交換座號；不按姓名猜測身分。
-6. 任務管理：設定今日參與、選範本與門檻（留空預設有效人數），按開始任務。中央座號可打卡；教師設定可補登、取消、復原及取消整輪。
-7. 調整本輪：展開「修訂本輪參與名單與門檻」，勾選學生與輸入門檻，確認對話框會列出人數、門檻變化及要取消的打卡筆數。今日參與設定不會代替本輪修訂。
-8. 任務統計：查看累計與歷史，展開輪次即可看補登來源、修正紀錄、名單修訂前後座號與門檻。
+教師設定有四個真正分頁：
 
-若無法設定：查看頁面底部初始化／寫入鎖提示，以及表單旁錯誤訊息。Web Locks 需要 HTTPS（或本機 localhost）與支援的瀏覽器。其他分頁已修改時，重新整理再操作；資料損壞時不要清除 localStorage，請保留原資料再求助。不能僅憑畫面載入就認定寫入正常。
+1. **班級與學生**：改班名、逐筆新增及編輯、學生名單範本與匯入。座號 1–50 不重複，姓名選填、最多 40 字。匯入預覽中，重疊座號需逐列選擇明確的既有身分；不按姓名推測。不在匯入表內的學生及歷史不刪除。
+2. **作息與課表**：選擇或建立民國學年／學期、編輯作息、單一課程、課表範本／匯入、單日調課。作息表下按「儲存整份作息」才提交整份編輯；重疊或刪除仍被課表引用的時段會被拒絕。新學期可沿用固定課表，但不沿用單日調課，也不重設學生。
+3. **教室工具**：設定倒數分鐘／秒數及提示音、編輯聯絡事項、今日抽號參與及重設抽號輪次。首頁可直接操作開始／暫停等計時按鈕與抽號。
+4. **資料管理**：顯示儲存狀態與版本、下載完整備份、選取 JSON → 檢查預覽 → 勾選覆蓋確認 → 正式還原。備份含學生個人資料，請妥善保存；下載不是遠端同步，請確認檔案確實儲存到指定位置。
 
-### 本機試用開發分支
+課表在首頁可切換今日／整週。整週表顯示固定課表；臨時調課在今日及目前／下一節顯示「臨時」。週末顯示休息日。選定的學期會持續使用，學期切換由教師明確操作，不按日期偷偷替換。
 
-教師不需自行安裝資料庫。開發者或協助人員下載本分支後，在儲存庫根目錄開啟命令提示字元（需要 Python 3）：
+重新整理不會清空資料。請勿清除瀏覽器網站資料。換瀏覽器、電腦、網址來源或連接埠時是不同資料，需要透過完整 JSON 備份移轉。抽號狀態直到手動重設才開始新一輪，不會因日期改變偷偷重抽。
+
+## 課表標準範本
+
+| 星期 | 節次 | 科目 |
+| --- | --- | --- |
+| 星期一 | 第一節 | 國語 |
+| 星期一 | 第二節 | 數學 |
+| 星期二 | 第一節 | 自然 |
+
+可交換三個欄位的順序；星期接受「星期一」至「星期五」或 1–5。節次名稱必須對應目前作息中的授課時段。科目 1–40 字。匯入只更新預覽列出的課程，其他既有課程保留。重複星期＋節次、無效星期、未知節次與空科目會拒絕。手動編輯科目留空可清除。
+
+CSV 使用 UTF-8；範本含 BOM，適合 Windows Excel。XLSX 支援第一張工作表、一般數字及 inline/sharedStrings；不做任意排課版型辨識。拒絕公式、合併儲存格、巨集、加密、外部連結、ZIP64 與超限內容。檔案上限 2 MB、最多 128 個 ZIP 項目、單項解壓 2 MB、總解壓 8 MB，校驗 CRC。採原生 DOMParser / DecompressionStream，不使用第三方 XLSX 解析套件。不支援原生 deflate-raw 的瀏覽器請更新或改用 CSV。檔案只在本機處理，不上傳第三方。
+
+## 資料版本及保護
+
+資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 4`。版本 1→2→3 的既有遷移鏈保留，3→4 僅加入作息、學期課表與教室工具，保留 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
+
+讀取及記憶體升版不會寫回。重要變更依序為命令 → 計算下一狀態 → 全部驗證 → localStorage 寫入成功 → 更新畫面。失敗不宣告成功。Web Locks 使用同一個 `class-dashboard-v2-write` 名稱；還會比對原始資料快照，拒絕過期分頁、同 revision 外部改寫及過期匯入預覽。舊版無法解析新版 schema，不能交互覆蓋；升級前後仍建議關閉其他舊分頁並保留備份。
+
+資料損壞不會初始化覆蓋：一般寫入鎖定，資料管理可先下載「原始資料保護副本」，再預覽並明確確認還原有效完整備份。讀取本身被瀏覽器禁止時，需修復瀏覽器設定並重新整理。不要以清除 localStorage 當作修復。
+
+JSON 格式為 `{app:'class-dashboard-v2',formatVersion:1,exportedAt,data}`，上限 8 MB，拒絕未來資料版本、錯誤格式及不一致模型。還原也經寫入鎖、過期預覽檢查及原子保存，revision 會使用目前 revision+1，不回到備份舊編號。不存在自動還原或背景清理任務。還原備份會依教師確認取代全部資料，建議先下載目前備份。
+
+## 本機開發與驗收（可選）
+
+使用者開啟正式站不需要安裝任何程式。要在合併前試用開發分支，可請協助人員下載分支，在儲存庫根目錄的命令提示字元執行（需 Python 3）：
 
 ```bat
 py -m http.server 8000
 ```
 
-用 Chrome / Edge 開啟 `http://localhost:8000/class-dashboard-v2/`。保持命令視窗開啟，結束時 Ctrl+C。不要雙擊 HTML；ES Modules 不適合 `file://`。不同網址來源、埠、瀏覽器與電腦各有獨立資料。頁面已載入後可離線操作；尚無 Service Worker，斷網重新載入不保證可用。
+用瀏覽器開啟 `http://localhost:8000/class-dashboard-v2/`，保持命令視窗開啟，結束時 Ctrl+C。若從此子目錄啟動伺服器，網址改用根路徑。不要直接雙擊 HTML，ES Modules 不適合 file://。
 
-## 測試與版本清單
-
-核心需 Node.js 20+，無須安裝執行期套件：
+核心測試需 Node.js 20+，在此目錄執行：
 
 ```bat
 npm test
 ```
 
-在此目錄執行；瀏覽器測試需先啟動上述伺服器，另安裝測試用 Playwright：
+瀏覽器測試需要先啟動伺服器，以及測試用 Playwright（不是網站執行期依賴）：
 
 ```bat
 npm install --no-save --package-lock=false playwright
@@ -67,36 +87,39 @@ set CHROMIUM_PATH=C:\Program Files\Google\Chrome\Application\chrome.exe
 npm run test:browser
 ```
 
-Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。
+Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。舊任務 UI／命令測試保留為 `tests/legacy/` 的歷史文字，不算本版通過測試；本版以真實 schema 3 fixture 驗證歷史保留與拒絕任務操作。
+
+本次結果：**34 項 Node 測試通過，完整 Chromium 第三階段流程通過，34 個本機 HTTP 資源與版本清單一致。** 詳細 22 項驗收對照、限制與 Windows 人工步驟見 [第三階段驗收紀錄](docs/stage3-acceptance.md)。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
+
+## 版本與 GitHub Pages
+
+所有資源維持 `./` 相對路徑，HTML/CSS/JS 加相同版本參數。更改執行期程式後更新 release.mjs 與介面版本常數，再執行：
 
 ```bat
 npm run version:prepare
-node tools/check-deployment.mjs
+npm test
+npm run check:deployment
 ```
 
-修改執行期程式後，先更新 release.mjs 的版本常數及對應 UI/測試版本，再產生 `version.json`；清單測試會拒絕未更新的內容。檢查工具逐一比較公開 HTML/CSS/JS SHA-256；連線失敗回傳 2，內容不一致回傳 1，一致回傳 0。合併前預期正式網站與分支不一致，不要為了通過比對擅自發布。
+`version.json` 列出每一個 HTML/CSS/JS SHA-256，測試會拒絕未更新清單。公開檢查工具連線失敗回傳 2、內容不一致回傳 1、全數一致回傳 0；合併前正式站和開發版本來就不同，不能為了通過檢查擅自發布。可用 `node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/` 檢查本機資源。
 
-本次 32 項核心測試及三組 Chromium 流程通過；完整驗收與部署檢查結果見 [第二階段驗收紀錄](docs/stage2-acceptance.md)。未驗證 Windows 原生 Chrome / Edge、真實觸控、真實 Microsoft Excel 開啟範本及公開 Pages 實際資源版本。
+目前起點 main 為 PR #2 合併的 `2.0-stage2.1` / schema 3，本次分支為第三階段。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
 
-## 檔案架構
+## 原始碼分工
 
-- `index.html`、`styles/main.css`：主畫面、教師導覽、表單、響應式布局。
-- `src/app.js`：初始化、錯誤與瀏覽器寫入鎖提示。
-- `src/core/{model,validation,migrations,store,browser-commands}.js`：模型、驗證、升版、唯一狀態入口及寫入互斥。
-- `src/features/{classroom,tasks,task-validation,statistics,settlement}.js`：班級、任務、衍生統計與未發獎結算契約。
-- `src/io/{roster,zip,xlsx}.js`：CSV、名單規劃及有大小／CRC 限制的 ZIP/XLSX 子集讀寫；沒有第三方執行期解析套件。
-- `src/ui/{controller,clock,tasks,roster-import}.js`：UI 與時鐘；匯入內容以 textContent 呈現。
-- `tests/`：核心、瀏覽器與格式測試、XLSX 測試素材；`tools/`、`version.json`：部署版本檢查。
-- [第一版原始碼調查](docs/reference-audit.md)、[第二階段驗收](docs/stage2-acceptance.md)。
+- `index.html`、`styles/main.css`：首頁展示、四分頁設定與響應式布局。
+- `src/core/`：初始模型、版本遷移、驗證、唯一命令入口、Web Locks。
+- `src/features/classroom.js`：班級與學生；task-validation/settlement 只驗證歷史，不執行操作。
+- `src/school/`：臺灣時間、作息／課表、計時器、教室工具命令及驗證。
+- `src/io/`：名單、課表、CSV／安全 XLSX 子集、完整 JSON 備份。
+- `src/ui/`：班級設定、時鐘、作息課表、匯入、工具、提示音及備份介面。
+- `src/legacy/`：暫停的任務操作程式，正式頁面不載入。
+- `tests/`、`tools/`：自動化、歷史資料 fixture、驗收與版本工具。
 
-## XLSX 支援範圍與限制
+## 已知限制及後續邊界
 
-第一張工作表，座號／姓名兩欄（可交換欄序），支援 ZIP store/deflate、inlineStr/sharedStrings 與數字儲存格。採瀏覽器原生 DOMParser、DecompressionStream；檔案上限 2 MB、最多 128 個 ZIP 項目、單項解壓 2 MB、總解壓 8 MB，校驗 CRC，拒絕 ZIP64、加密、外部連結、巨集、公式及合併儲存格。不是通用 Excel 編輯器，複雜版型請貼到範本。壓縮檔在可支援原生 deflate-raw 的最新版 Chrome/Edge 解析；不支援時改 CSV。CSV/XLSX 不會上傳至第三方。
+本次停在第三階段，不自動進入第四階段。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
-## 結算介面（供第四階段）
+沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 
-`round.settlement = {version:1,status:'UNSETTLED',result:null}`。真正結算的結果契約為 `{roundId,rewardId:'round:'+roundId,speciesId,rarity:'COMMON'|'RARE'|'LEGENDARY',settledAt}`。`SETTLED` 必須搭配 `COMPLETED`、達門檻、相同輪次 ID 與 endedAt。每輪唯一 rewardId 可作冪等鍵；第四階段仍須實作安全隨機抽選及單次原子提交，不可從動畫發獎。本階段沒有結算命令或魚種收藏。舊 `evolution` 暫保留 null，權威契約使用 settlement。
-
-## 尚未開發
-
-依本次範圍停在第二階段驗收。未做課表、計時器、完整水族箱／圖鑑、外部 JSON 備份還原、學期管理及第一版資料遷移。此版仍無真正登入權限；自動儲存不是外部備份，請先以測試資料驗收。
+尚未在 Windows 實機 Chrome/Edge、Microsoft Excel、觸控白板、真實喇叭與正式 Pages 做最終驗收；不可把 Linux Chromium 自動化當作這些已通過。
