@@ -5,7 +5,7 @@
   "scripts": {
     "version:prepare": "node tools/release.mjs",
     "test": "node --test tests/*.test.js",
-    "test:browser": "node tests/browser.cjs && node tests/tasks-browser.cjs && node tests/stage2-browser.cjs",
+    "test:browser": "node tests/stage3-browser.cjs",
     "check:deployment": "node tools/check-deployment.mjs"
   }
 }

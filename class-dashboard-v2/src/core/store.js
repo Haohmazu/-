@@ -1,31 +1,41 @@
-import {importRoster} from '../io/roster.js?v=2.0-stage2.1';
-import {applyTaskCommand} from '../features/tasks.js?v=2.0-stage2.1';
-import {createInitialState, STORAGE_KEY} from './model.js?v=2.0-stage2.1';
-import {decodeState} from './migrations.js?v=2.0-stage2.1';
-import {validateState} from './validation.js?v=2.0-stage2.1';
-import {applyClassroomCommand} from '../features/classroom.js?v=2.0-stage2.1';
-export function createStore({storage, newId = () => crypto.randomUUID(), now = () => new Date().toISOString()}) {
-  let state, locked = false, loadError = null;
-  const listeners = new Set();
-  try { const raw = storage.getItem(STORAGE_KEY); state = raw === null ? createInitialState() : decodeState(raw); }
-  catch (error) {state = createInitialState(); locked = true; loadError = error;}
+import {importRoster} from '../io/roster.js?v=2.0-stage3.0';
+import {parseBackup} from '../io/backup.js?v=2.0-stage3.0';
+import {applySchoolCommand} from '../school/commands.js?v=2.0-stage3.0';
+import {createInitialState, STORAGE_KEY} from './model.js?v=2.0-stage3.0';
+import {decodeState} from './migrations.js?v=2.0-stage3.0';
+import {validateState} from './validation.js?v=2.0-stage3.0';
+import {applyClassroomCommand} from '../features/classroom.js?v=2.0-stage3.0';
+const secureRandom=()=>crypto.getRandomValues(new Uint32Array(1))[0]/4294967296;
+export function createStore({storage,newId=()=>crypto.randomUUID(),now=()=>new Date().toISOString(),random=secureRandom}) {
+  let state,locked=false,loadError=null,baseline;
+  const listeners=new Set();
+  try {baseline=storage.getItem(STORAGE_KEY);state=baseline===null?createInitialState():decodeState(baseline);}
+  catch(error){state=createInitialState();locked=true;loadError=error;}
   return {
-    getState: () => structuredClone(state),
-    get loadError() {return loadError;},
-    subscribe(fn) {listeners.add(fn); return () => listeners.delete(fn);},
-    dispatch(command) {
-      if (locked) throw new Error('資料讀取異常，已停止寫入以保護原資料。請勿清除瀏覽器資料。');
-      // Reject stale tabs before any write; synchronous localStorage commit is authoritative.
-      let stored;
-      try {stored = storage.getItem(STORAGE_KEY);} catch {throw new Error('無法讀取本機儲存，操作未保存。');}
-      if (stored !== null && decodeState(stored).revision !== state.revision) throw new Error('其他分頁已更新資料，請重新整理後再操作。');
-      if (stored === null && state.revision !== 0) throw new Error('本機資料已在其他地方移除，請重新整理。');
-      const handler = command.type === 'IMPORT_STUDENTS' ? importRoster : ['SET_CLASS_NAME','ADD_STUDENT','UPDATE_STUDENT'].includes(command.type) ? applyClassroomCommand : applyTaskCommand;
-      const next = handler(structuredClone(state), command, newId, now());
-      next.revision++; next.savedAt = now(); validateState(next);
-      try {storage.setItem(STORAGE_KEY, JSON.stringify(next));} catch {throw new Error('儲存失敗，操作未保存。請檢查瀏覽器儲存空間或隱私設定。');}
-      state = next;
-      for (const fn of listeners) {try {fn(structuredClone(state));} catch (error) {console.error('畫面更新失敗', error);}}
+    getState:()=>structuredClone(state),
+    getDisplayState:()=>{const {rounds,templates,rosterImports,...display}=state;return structuredClone(display);},
+    get loadError(){return loadError;},
+    getRecoveryText:()=>baseline,
+    subscribe(fn){listeners.add(fn);return()=>listeners.delete(fn);},
+    dispatch(command){
+      const restoring=command?.type==='RESTORE_BACKUP'&&command.confirmed===true;
+      if(locked&&!restoring)throw Error('資料讀取異常，已停止寫入。請保留原始資料，並使用已驗證備份還原。');
+      let stored;try{stored=storage.getItem(STORAGE_KEY);}catch{throw Error('無法讀取本機儲存，操作未保存。');}
+      // Compare complete raw state, so same-revision manual edits and old-version writes cannot slip through.
+      if(baseline===undefined||stored!==baseline)throw Error('其他分頁已更新資料或資料來源已改變，請重新整理後操作。');
+      let next;const at=now();
+      if(command?.type==='RESTORE_BACKUP'){
+        if(!restoring)throw Error('還原前請先預覽並確認覆蓋資料。');
+        if(command.expectedRevision!==state.revision)throw Error('預覽後資料已變更，請重新預覽。');
+        next=parseBackup(command.text).state;
+      }else{
+        const handler=command?.type==='IMPORT_STUDENTS'?importRoster:['SET_CLASS_NAME','ADD_STUDENT','UPDATE_STUDENT'].includes(command?.type)?applyClassroomCommand:applySchoolCommand;
+        next=handler(structuredClone(state),command,newId,at,random);
+      }
+      next.revision=state.revision+1;next.savedAt=at;validateState(next);
+      const raw=JSON.stringify(next);try{storage.setItem(STORAGE_KEY,raw);}catch{throw Error('儲存失敗，操作未保存。請檢查瀏覽器儲存空間或隱私設定。');}
+      state=next;baseline=raw;locked=false;loadError=null;
+      for(const fn of listeners){try{fn(structuredClone(state));}catch(error){console.error('畫面更新失敗',error);}}
       return structuredClone(state);
     }
   };

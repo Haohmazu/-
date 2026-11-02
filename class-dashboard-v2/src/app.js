@@ -1,19 +1,18 @@
-import {mountRosterImport} from './ui/roster-import.js?v=2.0-stage2.1';
-import {withBrowserLock} from './core/browser-commands.js?v=2.0-stage2.1';
-import {mountTasks} from './ui/tasks.js?v=2.0-stage2.1';
-import {createStore} from './core/store.js?v=2.0-stage2.1';
-import {mountUI} from './ui/controller.js?v=2.0-stage2.1';
-import {startClock} from './ui/clock.js?v=2.0-stage2.1';
-// Defer storage access to the store so denied localStorage is handled safely.
-const storage = {getItem: key => window.localStorage.getItem(key), setItem: (key,value) => window.localStorage.setItem(key,value)};
-const store=withBrowserLock(createStore({storage}), navigator.locks);
-try {
- mountUI(store);
- mountTasks(store);
- mountRosterImport(store);
- startClock();
- document.querySelector('#startup-status').textContent = store.loadError ? '本機資料異常，寫入已鎖定；請保留資料並提供上方錯誤訊息。' : `2.0-stage2.1 已載入 · ${navigator.locks?.request ? '安全寫入鎖可用' : '瀏覽器不支援安全寫入鎖，無法儲存設定，請改用最新版 Chrome / Edge'}`;
-} catch(error) {
- document.querySelector('#startup-status').textContent=`系統初始化失敗：${error.message}。請提供此訊息，不要清除本機資料。`;
- console.error(error);
-}
+import {withBrowserLock} from './core/browser-commands.js?v=2.0-stage3.0';
+import {createStore} from './core/store.js?v=2.0-stage3.0';
+import {mountUI} from './ui/controller.js?v=2.0-stage3.0';
+import {mountRosterImport} from './ui/roster-import.js?v=2.0-stage3.0';
+import {mountSchedule} from './ui/schedule.js?v=2.0-stage3.0';
+import {mountTimetableImport} from './ui/timetable-import.js?v=2.0-stage3.0';
+import {mountTools} from './ui/tools.js?v=2.0-stage3.0';
+import {mountBackup} from './ui/backup.js?v=2.0-stage3.0';
+import {startClock} from './ui/clock.js?v=2.0-stage3.0';
+// Paused task reducers and task UI are deliberately not imported.
+const storage={getItem:key=>window.localStorage.getItem(key),setItem:(key,value)=>window.localStorage.setItem(key,value)};
+const store=withBrowserLock(createStore({storage}),navigator.locks);
+try{
+  mountUI(store);mountRosterImport(store);const tickSchedule=mountSchedule(store);mountTimetableImport(store);const tickTools=mountTools(store);mountBackup(store);startClock();
+  const tick=()=>{tickSchedule();tickTools();};setInterval(tick,1000);document.addEventListener('visibilitychange',tick);
+  const status=()=>document.querySelector('#startup-status').textContent=store.loadError?'原資料異常，請保留原始副本並從資料管理還原已驗證備份。':`2.0-stage3.0 已載入 · ${navigator.locks?.request?'安全寫入鎖可用':'瀏覽器不支援寫入鎖，請使用 HTTPS 與最新版 Chrome / Edge。'}`;
+  store.subscribe(status);status();
+}catch(error){document.querySelector('#startup-status').textContent=`系統初始化失敗：${error.message}。請保留此訊息，不要清除本機資料。`;console.error(error);}
