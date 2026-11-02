@@ -1,5 +1,5 @@
-import {displayDefaults} from '../display/model.js?v=2.0-stage4A.0';
-import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-stage4A.0';
+import {displayDefaults} from '../display/model.js?v=2.0-stage4B.0';
+import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-stage4B.0';
 export const DATA_VERSION = 5;
 export const STORAGE_KEY = 'class-dashboard-v2';
 export function createInitialState() {

@@ -5,8 +5,9 @@
   "scripts": {
     "version:prepare": "node tools/release.mjs",
     "test": "node --test tests/*.test.js",
-    "test:browser": "node tests/stage3-browser.cjs && node tests/stage4a-browser.cjs",
+    "test:browser": "node tests/stage3-browser.cjs && node tests/stage4a-browser.cjs && node tests/stage4b-browser.cjs",
     "check:deployment": "node tools/check-deployment.mjs",
-    "test:4a": "node tests/stage4a-browser.cjs"
+    "test:4a": "node tests/stage4a-browser.cjs",
+    "test:4b": "node tests/stage4b-browser.cjs"
   }
 }
