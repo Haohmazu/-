@@ -1,4 +1,4 @@
-import {lessons} from '../school/schedule.js?v=2.0-stage4D.0';
+import {lessons} from '../school/schedule.js?v=2.0-integration-IB.0';
 export const WEEKDAYS=['星期一','星期二','星期三','星期四','星期五'];
 export function timetableTemplate(state) {
   const periods=lessons(state);if(!periods.length)throw Error('請先建立至少一個授課節次。');

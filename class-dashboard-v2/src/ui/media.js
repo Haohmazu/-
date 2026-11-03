@@ -1,8 +1,9 @@
-import {mountLibrary} from './library.js?v=2.0-stage4D.0';
-import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-stage4D.0';
-import {$,el,button} from './dom.js?v=2.0-stage4D.0';
-import {parseSource} from '../media/sources.js?v=2.0-stage4D.0';
-import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-stage4D.0';
+import {openOverlay} from './overlay.js?v=2.0-integration-IB.0';
+import {mountLibrary} from './library.js?v=2.0-integration-IB.0';
+import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-integration-IB.0';
+import {$,el,button} from './dom.js?v=2.0-integration-IB.0';
+import {parseSource} from '../media/sources.js?v=2.0-integration-IB.0';
+import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-integration-IB.0';
 function time(value){if(!Number.isFinite(value)||value<0)return '--:--';return `${Math.floor(value/60)}:${String(Math.floor(value%60)).padStart(2,'0')}`;}
 export function mountMedia(store){
   const dialog=$('#media-center'),audio=$('#media-audio'),video=$('#media-video'),youtubeHost=$('#youtube-host');
@@ -15,7 +16,7 @@ export function mountMedia(store){
   function open(){
     const source=engine.getState().current;if(source)selectTab(source.kind);
     if($('#settings').open)$('#settings').close();
-    if(!dialog.open){opener=document.activeElement;dialog.showModal();$('#close-media').focus();}render(engine.getState());
+    if(!dialog.open){opener=document.activeElement;openOverlay(dialog,opener);$('#close-media').focus();}render(engine.getState());
   }
   function closed(){
     engine.closeDialog();if(document.fullscreenElement&&dialog.contains(document.fullscreenElement))document.exitFullscreen().catch(()=>{});
@@ -65,7 +66,7 @@ export function mountMedia(store){
     const signature=JSON.stringify([s.queues,current?.id]);if(signature!==queueSignature){queueSignature=signature;for(const kind of ['music','video']){
       const list=$(`#${kind}-queue`);list.replaceChildren();for(const item of s.queues[kind].filter(item=>!item.libraryId)){const li=el('li');li.append(el('span',`${item.name} · ${item.source==='local'?'本機（需重新選檔）':item.source==='youtube'?'YouTube':'HTTPS'}`),button('播放',()=>action(()=>engine.play(item.id))));li.lastChild.setAttribute('aria-label',`播放 ${item.name}`);if(item.id===current?.id)li.setAttribute('aria-current','true');list.append(li);}if(!s.queues[kind].some(item=>!item.libraryId))list.append(el('li','尚無暫存媒體。'));
     }}
-    const mini=$('#music-mini');mini.hidden=dialog.open||current?.kind!=='music'||s.status==='STOPPED';$('#mini-name').textContent=current?.kind==='music'?current.name:'';$('#mini-status').textContent=$('#media-status').textContent;$('#mini-error').textContent=s.error;$('#mini-play').disabled=s.status==='PLAYING';$('#mini-pause').disabled=!['PLAYING','BUFFERING','LOADING'].includes(s.status);
+    const mini=$('#music-mini');mini.hidden=dialog.open||current?.kind!=='music'||s.status==='STOPPED';$('#mini-name').textContent=current?.kind==='music'?(current.name.length>18?current.name.slice(0,18)+'…':current.name):'';$('#mini-name').title=current?.name??'';$('#mini-status').textContent=$('#media-status').textContent;$('#mini-error').textContent=s.error;$('#mini-play').disabled=s.status==='PLAYING';$('#mini-pause').disabled=!['PLAYING','BUFFERING','LOADING'].includes(s.status);
   }
   engine.subscribe(render);render(engine.getState());
   // Closing audio is allowed to keep playing; show the miniature controls after the close event.

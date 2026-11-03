@@ -1,6 +1,6 @@
-import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-stage4D.0';
-import {createFullscreenController} from '../display/fullscreen.js?v=2.0-stage4D.0';
-import {shortcutFor} from '../display/shortcuts.js?v=2.0-stage4D.0';
+import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-integration-IB.0';
+import {createFullscreenController} from '../display/fullscreen.js?v=2.0-integration-IB.0';
+import {shortcutFor} from '../display/shortcuts.js?v=2.0-integration-IB.0';
 export function mountDisplay(store){
   let lastFocus,lastPrivacy,lastDraw,externalPrivacy=false;
   const privateNow=()=>externalPrivacy||store.getDisplayState().display.privacy;
@@ -19,7 +19,7 @@ export function mountDisplay(store){
     const d=s.display,privacy=d.privacy||externalPrivacy;
     document.body.dataset.focus=d.focus;document.body.dataset.layout=d.layout;document.body.dataset.font=d.font;document.body.dataset.theme=d.theme;document.body.dataset.privacy=String(privacy);
     $('#focus-mode').value=d.focus;$('#display-layout').value=d.layout;$('#display-font').value=d.font;$('#display-theme').value=d.theme;$('#return-home').hidden=d.focus==='home';
-    $('#projection-privacy').textContent=privacy?'關閉投影隱私（設定前請先關閉）':'開啟投影隱私';$('#projection-privacy').setAttribute('aria-pressed',String(privacy));
+    $('#projection-privacy').textContent=privacy?'關閉投影隱私':'開啟投影隱私';$('#projection-privacy').setAttribute('aria-pressed',String(privacy));
     for(const selector of ['#open-settings','#open-roster','[data-open]'])document.querySelectorAll(selector).forEach(b=>b.disabled=privacy);
     if(privacy){if($('#settings').open)$('#settings').close();if(lastPrivacy!==privacy){$('#notice').textContent='';$('#form-error').textContent='';notify('投影隱私已開啟。請先明確關閉投影隱私，才能查看名單、匯入預覽及還原明細。');}}
     if(d.focus==='schedule'&&lastFocus!==d.focus)$('#view-today').click();

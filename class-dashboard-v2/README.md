@@ -1,15 +1,25 @@
 # Class Dashboard 2.0｜教室日常
 
-第四階段整合驗收版本 `2.0-stage4D.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+I-B 首頁與外觀整合版本 `2.0-integration-IB.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
 
-4D 沿用 4A 展示、4B 單一播放協調器及 4C 網址庫，補齊資料安全、資源與操作回歸；修正 YouTube 暫時載入失敗可重試、改播清單項目清除舊錯誤，以及收藏／排序後的鍵盤焦點。未恢復任務或水族箱。
+I-B 在 4D 基礎上整合單屏首頁、三頁籤及六風格／十八配色，沿用原時鐘、課表、倒數、抽號與播放核心。未恢復任務或水族箱，未提前開發 I-C。
+
+## I-B 首頁與外觀（Windows 11）
+
+- 常見桌機可用畫面以單屏首頁顯示時間、目前課程、下一節、活動計時及抽號；「今日課表／整週課表／班級事項」在同一卡片切換。切頁不保存新業務狀態，不停止音樂、重設倒數或抽號。
+- 「查看完整課表／事項」開啟可捲動的完整內容視窗；摘要不刪資料，完整課表沿用同一 DOM。抽號的「抽號紀錄」可看所有已抽及今日剩餘座號，不顯示姓名。
+- 「外觀設定」選六種風格、十八套配色；即時預覽，按「確認套用並保存」才寫入。取消或 Esc 恢復保存值。首次使用保留原外觀；可隨時選「保留原有外觀」。
+- 「可讀性」保留原三主題：原配色／深海、明亮、高對比。新配色在明亮時會轉為可讀的明亮版本，高對比優先於裝飾。字體與三種布局仍可選，緊湊首頁數字及表格依容器設定安全上限；既有專注及完整內容可放大閱讀。
+- 背景音樂迷你列保留播放控制；長檔名只顯摘要，可重新開啟多媒體查看全名。工具列資訊精簡，完整全螢幕提示／版本及通知可在頁尾「系統狀態」查看，重要操作錯誤仍顯示在工具列。
+- 手機／極高縮放（可用寬不足 960px 或高不足 620px）改為可捲動閱讀，不裁切按鈕。超長科目、節次名稱或重要資訊超出固定高度時也明示切換閱讀布局；單屏保證範圍與邊界見驗收文件。
+- 提示音仍沿用原功能，沒有提前實作 I-C 的卡片聚焦、新音效／試聽。詳細人工驗收見 [I-B 操作與測試](docs/integration-ib-acceptance.md)。
 
 ## 正式專案與發布規則
 
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-stage4d`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-integration-ib`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
@@ -65,7 +75,7 @@
 
 完整圖文前的文字操作流程見 [Windows 11 操作與人工驗收](docs/windows11-guide.md)；發布與路徑確認見 [GitHub Pages 部署說明](docs/github-pages.md)。
 
-用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 4D。** 新版頁尾應顯示 `2.0-stage4D.0`。
+用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 I-B。** 新版頁尾應顯示 `2.0-integration-IB.0`。
 
 ### 4A 快速操作（Windows 11）
 
@@ -101,7 +111,7 @@ CSV 使用 UTF-8；範本含 BOM，適合 Windows Excel。XLSX 支援第一張�
 
 ## 資料版本及保護
 
-資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 6`。版本 1→2→3→4 的既有遷移鏈保留，4→5 新增 display 展示偏好，5→6 只新增 mediaLibrary 網址庫、分類、偏好與預設停用的計時連動，保留 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
+資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 7`。版本 1→2→3→4 的既有遷移鏈保留，4→5 新增 display 展示偏好，5→6 只新增 mediaLibrary 網址庫、分類、偏好與預設停用的計時連動；6→7 僅新增 appearance 外觀配對（預設 legacy/default），保留原 display 與 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
 
 讀取及記憶體升版不會寫回。重要變更依序為命令 → 計算下一狀態 → 全部驗證 → localStorage 寫入成功 → 更新畫面。失敗不宣告成功。Web Locks 使用同一個 `class-dashboard-v2-write` 名稱；還會比對原始資料快照，拒絕過期分頁、同 revision 外部改寫及過期匯入預覽。舊版無法解析新版 schema，不能交互覆蓋；升級前後仍建議關閉其他舊分頁並保留備份。
 
@@ -135,7 +145,7 @@ npm run test:browser
 
 Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。舊任務 UI／命令測試保留為 `tests/legacy/` 的歷史文字，不算本版通過測試；本版以真實 schema 3、4 fixture 驗證歷史保留、升版與拒絕任務操作。
 
-本次結果：**74 項 Node 測試通過，Chromium 第三階段及 4A／4B／4C／4D 流程通過，48 個本機 HTTP 資源與版本清單一致。** 覆蓋重點、模擬邊界與未驗證項目見 [4D 完整驗收](docs/stage4d-acceptance.md)。[4C 歷史驗收](docs/stage4c-acceptance.md) 保留原批次證據。 4B 的實際解碼、網路模擬、第三方限制與 Windows 人工步驟見 [4B 驗收紀錄](docs/stage4b-acceptance.md)；[4A 驗收紀錄](docs/stage4a-acceptance.md) 保留展示證據；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
+本次結果：**79 項 Node 測試通過；既有第三階段與 4A–4D 瀏覽器回歸及 I-B 專屬測試見 [I-B 驗收](docs/integration-ib-acceptance.md)。54 個本機 HTTP 資源以版本清單驗證。** 覆蓋重點、模擬邊界與未驗證項目見 [4D 完整驗收](docs/stage4d-acceptance.md)。[4C 歷史驗收](docs/stage4c-acceptance.md) 保留原批次證據。 4B 的實際解碼、網路模擬、第三方限制與 Windows 人工步驟見 [4B 驗收紀錄](docs/stage4b-acceptance.md)；[4A 驗收紀錄](docs/stage4a-acceptance.md) 保留展示證據；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
 
 ## 版本與 GitHub Pages
 
@@ -149,13 +159,15 @@ npm run check:deployment
 
 `version.json` 列出每一個 HTML/CSS/JS SHA-256，測試會拒絕未更新清單。公開檢查工具連線失敗回傳 2、內容不一致回傳 1、全數一致回傳 0；合併前正式站和開發版本來就不同，不能為了通過檢查擅自發布。可用 `node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/` 檢查本機資源。
 
-目前起點 main 為 PR #6 合併的 `2.0-stage4C.0` / schema 6（ea93dd2），本次分支為 `2.0-stage4D.0` / schema 6；4D 不新增資料版本。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
+目前起點 main 為 PR #7 合併的 `2.0-stage4D.0` / schema 6（fb84a57），本次分支為 `2.0-integration-IB.0` / schema 7。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
 
 ## 原始碼分工
 
 - `index.html`、`styles/main.css`：首頁展示、四分頁設定與響應式布局。
 - `src/media/`、`src/ui/media.js`、`styles/media.css`：單一暫態播放協調器、安全網址、音訊／影片／官方 API 嵌入、Modal 與迷你列；播放器不持有 store，UI 及計時連動橋接只讀取成功保存的資料。
 - `src/library/`、`src/ui/library.js`：網址庫資料模型、命令、驗證、分類／最愛／排序／搜尋及保存偏好。
+- `src/ui/home.js`、`src/ui/overlay.js`：暫態首頁頁籤、完整內容與原生對話框協調，重用既有節點與狀態。
+- `src/display/appearance.js`、`src/ui/appearance.js`、`styles/appearance.css`、`styles/integration.css`：合法外觀模型、18 配色、預覽與集中保存、單屏／閱讀降級。
 - `src/display/`、`src/ui/display.js`、`styles/display.css`：展示偏好、驗證／命令、原生全螢幕、快捷鍵、投影隱私與單一展示控制入口。
 - `src/core/`：初始模型、版本遷移、驗證、唯一命令入口、Web Locks。
 - `src/features/classroom.js`：班級與學生；task-validation/settlement 只驗證歷史，不執行操作。
@@ -167,7 +179,7 @@ npm run check:deployment
 
 ## 已知限制及後續邊界
 
-第四階段軟體整合工作完成後停止，不開始第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
+本批次只實作 I-B，完成後停止，等待確認才可進入 I-C；不開始 I-D 或第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
 沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 
