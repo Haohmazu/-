@@ -1,0 +1,21 @@
+Class Dashboard 2.0 / 2.0-three-columns.0 / schemaVersion 7 / backup formatVersion 1
+
+Development self-test on Linux Chromium; not Windows11, physical speaker/whiteboard, or live YouTube acceptance.
+
+Base PR10 head: 8e19b1c; main: 737a5df. New branch: develop/class-dashboard-v2-three-columns
+
+npm test: exit 0; 84 passed; 0 failed. Intentional renderer failure output is an expected negative test.
+
+TEST_URL=http://127.0.0.1:8012/class-dashboard-v2/ npm run test:browser: exit 0
+
+PASS Three columns: 360 combinations (18 palettes × 5 sizes × 4 central tabs) + 192 font cases + three layouts, no root/button/card overflow; sidebar tabs and full notes/edit; shared timer pause/resume/badge/deadline; stable picker; background music same instance; four focus modes; keyboard; privacy; native fullscreen enter/exit; max24h timer bound; JSON download/invalid rejection/restore; IDs/history unchanged.
+
+PASS Three-media: real WAV/direct/local WebM; right music previous/next/preferences; category/search; central handoff; native pause retains src/time; modal Esc/fullscreen without moving media; audio/video exclusion; same single nodes; YouTube official-API double retains iframe on tab/modal, error150 visible; timer music start/pause and video pause on finish; focus-to-central handoff; schema7 and classroom history preserved.
+
+TEST_URL=http://127.0.0.1:8012/class-dashboard-v2/ npm run capture:three: exit 0; 108 screenshots, errors 0, geometry failures 0.
+
+node tools/check-deployment.mjs http://127.0.0.1:8012/class-dashboard-v2/: exit 0; all 73 assets have matching hashes.
+
+git diff --check: exit 0.
+
+GitHub GraphQL/API: Forbidden. Production Pages deployment not independently verified.

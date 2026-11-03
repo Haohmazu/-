@@ -1,4 +1,4 @@
-import {taiwanParts,timeMinutes,dateWeekday} from './time.js?v=2.0-visual.0';
+import {taiwanParts,timeMinutes,dateWeekday} from './time.js?v=2.0-three-columns.0';
 export function activeTerm(state) {return state.school.terms.find(term=>term.id===state.school.activeTermId);}
 export function lessons(state) {return [...state.school.periods].filter(p=>p.kind==='LESSON').sort((a,b)=>timeMinutes(a.start)-timeMinutes(b.start));}
 export function courseAt(state,date,periodId,term=activeTerm(state)) {

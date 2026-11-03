@@ -1,4 +1,4 @@
-import {validateItem,mediaError} from './sources.js?v=2.0-visual.0';
+import {validateItem,mediaError} from './sources.js?v=2.0-three-columns.0';
 // One runtime coordinator. It has no reference to the classroom store/localStorage.
 export function createMediaCoordinator({audio,video,youtube,createObjectURL=file=>URL.createObjectURL(file),revokeObjectURL=url=>URL.revokeObjectURL(url),newId=()=>crypto.randomUUID(),random=Math.random}){
   const queues={music:[],video:[]},owned=new Set(),listeners=new Set();
@@ -14,7 +14,7 @@ export function createMediaCoordinator({audio,video,youtube,createObjectURL=file
   function find(id){return [...queues.music,...queues.video].find(item=>item.id===id);}
   function select(item){
     if(disposed)throw Error('播放器已關閉。');epoch++;detach();current=item;if(shuffle&&item.kind==='music')shuffled.add(item.id);status=item.source==='youtube'?'EMBEDDED':'LOADING';error='';
-    if(item.source==='youtube'){try{youtube.mount(item);}catch{status='ERROR';error='無法建立 YouTube 官方播放器，請改開啟原始影片頁。';}emit();return;}
+    if(item.source==='youtube'){try{youtube.mount(item);}catch{status='ERROR';error='無法建立 YouTube 官方播放器，請改開啟原始影片頁。';}emit('selected');return;}
     const node=item.kind==='music'?audio:video,token=epoch;active=node;
     node.volume=volume;node.muted=muted;node.playbackRate=rate;node.src=item.url;node.preload='metadata';
     const valid=()=>token===epoch&&active===node;
@@ -24,13 +24,13 @@ export function createMediaCoordinator({audio,video,youtube,createObjectURL=file
     bind(node,'error',()=>{if(valid()&&node.error){status='ERROR';error=mediaError(node.error);try{node.pause();}catch{}emit();}});
     for(const event of ['loadedmetadata','durationchange','timeupdate','volumechange','ratechange'])bind(node,event,()=>{if(!valid())return;if(event==='volumechange'){volume=node.volume;muted=node.muted;}if(event==='ratechange')rate=node.playbackRate;emit(['volumechange','ratechange'].includes(event)?'native-preference':'state');});
     bind(node,'ended',()=>{if(!valid())return;if(item.kind==='music'&&repeat==='single'){node.currentTime=0;play();}else if(item.kind==='music')next(false);else{status='ENDED';emit();}});
-    node.load();emit();
+    node.load();emit('selected');
   }
   async function play(id){
     if(id!==undefined){const item=find(id);if(!item)throw Error('找不到暫存媒體，請重新選檔或加入網址。');select(item);}
     else if(current&&['STOPPED','ERROR'].includes(status))select(current);
     if(!current)throw Error('請先選擇媒體。');
-    if(current.source==='youtube'){if(id===undefined&&status!=='EMBEDDED')select(current);return;}
+    if(current.source==='youtube'){if(id===undefined&&status==='PAUSED'){try{youtube.play();status='EMBEDDED';emit();}catch{error='YouTube 控制尚未就緒，請使用官方播放按鈕。';emit();}}return;}
     if(!active)return;
     const node=active,token=epoch,attempt=++playAttempt;
     try{await node.play();if(token===epoch&&attempt===playAttempt&&!node.paused){status='PLAYING';error='';emit();}}

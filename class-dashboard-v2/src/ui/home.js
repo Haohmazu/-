@@ -1,6 +1,6 @@
-import {taiwanParts} from '../school/time.js?v=2.0-visual.0';
-import {$,el} from './dom.js?v=2.0-visual.0';
-import {openOverlay} from './overlay.js?v=2.0-visual.0';
+import {taiwanParts} from '../school/time.js?v=2.0-three-columns.0';
+import {$,el} from './dom.js?v=2.0-three-columns.0';
+import {openOverlay} from './overlay.js?v=2.0-three-columns.0';
 export function mountHome(store){
  const tabs=[$('#view-today'),$('#view-week'),$('#view-notes')],dialog=$('#content-details');let active='view-today',tableHome,tableNode;
  const restoreTable=()=>{if(tableHome){tableHome.replaceWith(tableNode);tableHome=null;tableNode=null;}};

@@ -1,6 +1,6 @@
-import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-visual.0';
-import {createFullscreenController} from '../display/fullscreen.js?v=2.0-visual.0';
-import {shortcutFor} from '../display/shortcuts.js?v=2.0-visual.0';
+import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-three-columns.0';
+import {createFullscreenController} from '../display/fullscreen.js?v=2.0-three-columns.0';
+import {shortcutFor} from '../display/shortcuts.js?v=2.0-three-columns.0';
 export function mountDisplay(store){
   let lastFocus,lastPrivacy,lastDraw,externalPrivacy=false;
   const privateNow=()=>externalPrivacy||store.getDisplayState().display.privacy;
@@ -29,13 +29,13 @@ export function mountDisplay(store){
     lastDraw=s.picker.lastId;lastPrivacy=privacy;lastFocus=d.focus;
   }
   document.addEventListener('keydown',event=>{
-    if(event.key==='Escape'&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!event.shiftKey&&document.fullscreenElement&&!document.querySelector('dialog[open]')&&!event.isComposing&&!event.target.closest?.('input,textarea,select,[contenteditable]')){document.exitFullscreen().catch(()=>{if(document.fullscreenElement)notify('暫時無法離開全螢幕，請使用瀏覽器的退出操作。',true);});return;}
-    if(event.key==='Escape'&&!event.isComposing&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&!event.shiftKey&&!document.fullscreenElement&&!document.querySelector('dialog[open]')&&store.getDisplayState().display.focus!=='home'){
+    if(event.key==='Escape'&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!event.shiftKey&&document.fullscreenElement&&!document.querySelector('dialog:modal')&&!event.isComposing&&!event.target.closest?.('input,textarea,select,[contenteditable]')){document.exitFullscreen().catch(()=>{if(document.fullscreenElement)notify('暫時無法離開全螢幕，請使用瀏覽器的退出操作。',true);});return;}
+    if(event.key==='Escape'&&!event.isComposing&&!event.ctrlKey&&!event.altKey&&!event.metaKey&&!event.shiftKey&&!document.fullscreenElement&&!document.querySelector('dialog:modal')&&store.getDisplayState().display.focus!=='home'){
       // A select's native Escape must remain available as well.
       if(event.target.closest?.('input,textarea,select,[contenteditable]'))return;
       event.preventDefault();change({focus:'home'});return;
     }
-    const s=store.getDisplayState(),action=shortcutFor(event,{dialogOpen:!!document.querySelector('dialog[open]'),focus:s.display.focus});if(!action)return;event.preventDefault();
+    const s=store.getDisplayState(),action=shortcutFor(event,{dialogOpen:!!document.querySelector('dialog:modal'),focus:s.display.focus});if(!action)return;event.preventDefault();
     if(action.type==='focus')change({focus:action.value});
     if(action.type==='fullscreen')fullscreen.toggle();
     if(action.type==='settings')openSettings();

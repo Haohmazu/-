@@ -1,0 +1,19 @@
+Class Dashboard 2.0 / 2.0-home-layout.0 / schemaVersion 7
+
+Developer self-test, Linux Chromium; not Windows11/speaker/whiteboard/external YouTube acceptance.
+
+Baseline origin/main: 737a5df; branch: develop/class-dashboard-v2-home-layout
+
+npm test: exit 0, 82 passed, 0 failed. The intentional renderer failure log is an expected negative test.
+
+TEST_URL=http://127.0.0.1:8011/class-dashboard-v2/ npm run test:browser: exit 0
+
+PASS Home layout: 270 combinations (18 palettes × 5 sizes × 3 central tabs) + 144 font cases + three layouts, no root/button/card overflow; sidebar tabs and full notes/edit; shared timer pause/resume/badge/deadline; stable picker; background music same instance; four focus modes; keyboard; privacy; native fullscreen enter/exit; max24h timer bound; JSON download/invalid rejection/restore; IDs/history unchanged.
+
+TEST_URL=http://127.0.0.1:8011/class-dashboard-v2/ npm run capture:home: exit 0, 90 screenshots, errors 0, geometry failures 0.
+
+node tools/check-deployment.mjs http://127.0.0.1:8011/class-dashboard-v2/: exit 0, 71 local HTTP asset hashes match.
+
+git diff --check: exit 0.
+
+GitHub API and reference/production site access: Forbidden / CONNECT 403, live deployment unverified.
