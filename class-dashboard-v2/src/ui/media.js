@@ -1,9 +1,9 @@
-import {openOverlay} from './overlay.js?v=2.0-integration-IB.0';
-import {mountLibrary} from './library.js?v=2.0-integration-IB.0';
-import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-integration-IB.0';
-import {$,el,button} from './dom.js?v=2.0-integration-IB.0';
-import {parseSource} from '../media/sources.js?v=2.0-integration-IB.0';
-import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-integration-IB.0';
+import {openOverlay} from './overlay.js?v=2.0-visual.0';
+import {mountLibrary} from './library.js?v=2.0-visual.0';
+import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-visual.0';
+import {$,el,button} from './dom.js?v=2.0-visual.0';
+import {parseSource} from '../media/sources.js?v=2.0-visual.0';
+import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-visual.0';
 function time(value){if(!Number.isFinite(value)||value<0)return '--:--';return `${Math.floor(value/60)}:${String(Math.floor(value%60)).padStart(2,'0')}`;}
 export function mountMedia(store){
   const dialog=$('#media-center'),audio=$('#media-audio'),video=$('#media-video'),youtubeHost=$('#youtube-host');

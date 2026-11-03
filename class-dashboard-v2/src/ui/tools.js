@@ -1,7 +1,7 @@
-import {$,el,button,run,notify} from './dom.js?v=2.0-integration-IB.0';
-import {remainingTime} from '../school/timer.js?v=2.0-integration-IB.0';
-import {taiwanParts,durationText} from '../school/time.js?v=2.0-integration-IB.0';
-import {createTimerSound} from './sound.js?v=2.0-integration-IB.0';
+import {$,el,button,run,notify} from './dom.js?v=2.0-visual.0';
+import {remainingTime} from '../school/timer.js?v=2.0-visual.0';
+import {taiwanParts,durationText} from '../school/time.js?v=2.0-visual.0';
+import {createTimerSound} from './sound.js?v=2.0-visual.0';
 export function mountTools(store){
   const sound=createTimerSound();let finishing=false,finishAttempt,noteSignature,participationSignature,timerSignature,preferenceSignature;
   const timer=type=>run(store,{type});

@@ -1,8 +1,18 @@
 # Class Dashboard 2.0｜教室日常
 
-I-B 首頁與外觀整合版本 `2.0-integration-IB.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+六風格視覺改善版本 `2.0-visual.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
 
 I-B 在 4D 基礎上整合單屏首頁、三頁籤及六風格／十八配色，沿用原時鐘、課表、倒數、抽號與播放核心。未恢復任務或水族箱，未提前開發 I-C。
+
+## 本次視覺改善
+
+六種獨立構圖、十八配色，共用同一套功能。加入專案原創 SVG 場景、人物、文具、幾何與花葉裝飾；文字及控制仍是可互動的網頁元件，沒有拿設計圖當整頁背景。高對比模式優先移除裝飾。
+
+[設計分析及素材規範](docs/visual-restoration-plan.md) · [實際截圖、差異與開發測試報告](docs/visual-restoration-report.md)。報告保留與參考圖的差異，不宣稱逐像素還原或 Windows 實機驗收。
+
+「展示控制」集中原有專注、布局、可讀性、字體、隱私與快捷鍵說明；首頁下方的快捷入口開啟既有多媒體、完整聯絡簿、學生設定及展示控制。計時器「常用時間／增減」展開預設時間及 ±1 分鐘，開始／暫停／重設維持直接操作。
+
+資料版本仍為 schemaVersion 7，沒有改寫資料模型或學生 ID。原有 I-C 卡片聚焦及新增提示音種類／試聽尚未在 main 實作，本次沒有將它們宣稱完成。
 
 ## I-B 首頁與外觀（Windows 11）
 
@@ -19,7 +29,7 @@ I-B 在 4D 基礎上整合單屏首頁、三頁籤及六風格／十八配色，
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-integration-ib`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-visual-restoration`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="clock" viewBox="0 0 48 48"><circle cx="24" cy="26" r="17"/><path d="M24 14V26L33 30M12 4L5 11M36 4L43 11M14 43L10 47M34 43L38 47"/></symbol>
+<symbol id="book" viewBox="0 0 48 48"><path d="M4 9Q14 4 24 10Q34 4 44 9V40Q34 35 24 41Q14 35 4 40ZM24 10V41M10 15L18 16M30 16L38 15"/></symbol>
+<symbol id="calendar" viewBox="0 0 48 48"><rect x="5" y="8" width="38" height="35" rx="6"/><path d="M5 18H43M15 3V13M33 3V13M13 26H18M23 26H28M33 26H37M13 34H18M23 34H28"/></symbol>
+<symbol id="timer" viewBox="0 0 48 48"><circle cx="24" cy="28" r="16"/><path d="M24 20V29L31 33M18 4H30M24 4V11M35 13L40 8"/></symbol>
+<symbol id="note" viewBox="0 0 48 48"><rect x="10" y="5" width="31" height="39" rx="4"/><path d="M4 13H15M4 23H15M4 34H15M21 15H33M21 23H33M21 31H30"/></symbol>
+<symbol id="dice" viewBox="0 0 48 48"><path d="M24 3L43 14V36L24 46L5 35V14ZM5 14L24 25L43 14M24 25V46"/><circle cx="24" cy="13" r="2"/><circle cx="13" cy="25" r="2"/><circle cx="34" cy="30" r="2"/></symbol>
+<symbol id="media" viewBox="0 0 48 48"><rect x="4" y="16" width="40" height="27" rx="5"/><path d="M5 16L3 7L40 2L43 11ZM10 6L17 14M22 4L29 12M21 23L32 29L21 36Z"/></symbol>
+<symbol id="screen" viewBox="0 0 48 48"><rect x="3" y="5" width="42" height="29" rx="4"/><path d="M24 34V43M14 44H34"/></symbol>
+<symbol id="people" viewBox="0 0 48 48"><circle cx="24" cy="14" r="8"/><circle cx="8" cy="20" r="5"/><circle cx="40" cy="20" r="5"/><path d="M11 44V36Q11 25 24 25Q37 25 37 36V44ZM2 41V34Q2 27 10 28M46 41V34Q46 27 38 28"/></symbol>
+<symbol id="palette" viewBox="0 0 48 48"><path d="M24 4C1 4 0 37 18 43Q28 47 28 37Q27 31 33 29Q48 32 44 17Q40 4 24 4Z"/><circle cx="13" cy="17" r="2"/><circle cx="24" cy="12" r="2"/><circle cx="35" cy="17" r="2"/><circle cx="11" cy="29" r="2"/></symbol>
+<symbol id="settings" viewBox="0 0 48 48"><path d="M19 3H29L31 10L37 12L43 17L39 24L43 31L37 36L31 38L29 45H19L17 38L11 36L5 31L9 24L5 17L11 12L17 10Z"/><circle cx="24" cy="24" r="8"/></symbol>
+<symbol id="fullscreen" viewBox="0 0 48 48"><path d="M5 18V5H18M30 5H43V18M43 30V43H30M18 43H5V30M5 5L18 18M43 5L30 18M43 43L30 30M5 43L18 30"/></symbol>
+</defs></svg>
