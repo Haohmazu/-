@@ -1,6 +1,6 @@
-import {$,el,button,option} from './dom.js?v=2.0-stage4C.0';
-import {OTHER_CATEGORY} from '../library/model.js?v=2.0-stage4C.0';
-import {connectTimerMedia} from '../media/timer-link.js?v=2.0-stage4C.0';
+import {$,el,button,option} from './dom.js?v=2.0-stage4D.0';
+import {OTHER_CATEGORY} from '../library/model.js?v=2.0-stage4D.0';
+import {connectTimerMedia} from '../media/timer-link.js?v=2.0-stage4D.0';
 export function mountLibrary({store,engine,playSaved,message}){
   let editId=null,itemsSignature,categoriesSignature,linkSignature,listSignature;
   const info=(text,error=false)=>{$('#library-message').textContent=text;$('#library-message').classList.toggle('error',error);};
@@ -19,7 +19,9 @@ export function mountLibrary({store,engine,playSaved,message}){
     const visible=lib.items.filter(item=>(view==='all'||view==='favorites'&&item.favorite||view===item.kind)&&(!category||item.categoryId===category)&&(!query||`${item.name} ${item.url} ${lib.categories.find(c=>c.id===item.categoryId)?.name}`.toLocaleLowerCase('zh-TW').includes(query)));
     const signature=JSON.stringify([visible,lib.categories,view,category,query]);if(signature===listSignature)return;listSignature=signature;
     $('#library-count').textContent=`顯示 ${visible.length} / ${lib.items.length} 筆；順序即保存順序。搜尋與篩選不改變播放順序。`;
-    const list=$('#library-list');list.replaceChildren();
+    const list=$('#library-list'),focused=document.activeElement,oldRow=focused?.closest('#library-list .library-row');
+    const focusId=oldRow?.dataset.id,focusAction=focused?.dataset.libraryAction,oldIndex=oldRow?[...list.children].indexOf(oldRow):0;
+    list.replaceChildren();
     for(const [index,item] of visible.entries()){
       const row=el('li');row.className='library-row';row.dataset.id=item.id;row.append(el('strong',item.name),el('span',`${item.kind==='music'?'音樂':'影片'} · ${lib.categories.find(c=>c.id===item.categoryId).name}${item.favorite?' · 最愛':''}`));
       const actions=el('div');actions.className='library-actions';
@@ -29,10 +31,15 @@ export function mountLibrary({store,engine,playSaved,message}){
       const up=button('上移',()=>command({type:'MOVE_MEDIA_ITEM',id:item.id,anchorId:visible[index-1].id,placement:'before'}));up.disabled=index===0;
       const down=button('下移',()=>command({type:'MOVE_MEDIA_ITEM',id:item.id,anchorId:visible[index+1].id,placement:'after'}));down.disabled=index===visible.length-1;
       const remove=button('刪除',async()=>{if(!confirm(`刪除「${item.name}」？目前播放此項會停止，若它是計時連動音樂，也會取消連動選擇。`))return;if(await command({type:'DELETE_MEDIA_ITEM',id:item.id,confirmed:true})&&editId===item.id)reset();});
+      for(const [control,name] of [[play,'play'],[edit,'edit'],[favorite,'favorite'],[up,'up'],[down,'down'],[remove,'remove']])control.dataset.libraryAction=name;
       actions.append(play,edit,favorite,up,down,remove);row.append(actions);
       const source=el('details');source.append(el('summary','查看來源網址'),el('p',item.url));const link=el('a','開啟原始來源（新分頁）');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.onclick=()=>engine.stop();source.append(link);row.append(source);list.append(row);
     }
     if(!visible.length)list.append(el('li','沒有符合條件的已儲存影音。'));
+    if(focusId){const rows=[...list.querySelectorAll('.library-row')],row=rows.find(r=>r.dataset.id===focusId)??rows[Math.min(oldIndex,rows.length-1)];
+      const match=row&&[...row.querySelectorAll('button')].find(b=>b.dataset.libraryAction===focusAction&&!b.disabled);
+      (match??row?.querySelector('button')??$('#library-view')).focus({preventScroll:true});}
+
   }
   function render(state){
     const lib=state.mediaLibrary,categories=JSON.stringify(lib.categories),items=JSON.stringify(lib.items);

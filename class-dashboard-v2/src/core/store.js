@@ -1,12 +1,12 @@
-import {applyLibraryCommand} from '../library/commands.js?v=2.0-stage4C.0';
-import {applyDisplayCommand} from '../display/model.js?v=2.0-stage4C.0';
-import {importRoster} from '../io/roster.js?v=2.0-stage4C.0';
-import {parseBackup} from '../io/backup.js?v=2.0-stage4C.0';
-import {applySchoolCommand} from '../school/commands.js?v=2.0-stage4C.0';
-import {createInitialState, STORAGE_KEY} from './model.js?v=2.0-stage4C.0';
-import {decodeState} from './migrations.js?v=2.0-stage4C.0';
-import {validateState} from './validation.js?v=2.0-stage4C.0';
-import {applyClassroomCommand} from '../features/classroom.js?v=2.0-stage4C.0';
+import {applyLibraryCommand} from '../library/commands.js?v=2.0-stage4D.0';
+import {applyDisplayCommand} from '../display/model.js?v=2.0-stage4D.0';
+import {importRoster} from '../io/roster.js?v=2.0-stage4D.0';
+import {parseBackup} from '../io/backup.js?v=2.0-stage4D.0';
+import {applySchoolCommand} from '../school/commands.js?v=2.0-stage4D.0';
+import {createInitialState, STORAGE_KEY} from './model.js?v=2.0-stage4D.0';
+import {decodeState} from './migrations.js?v=2.0-stage4D.0';
+import {validateState} from './validation.js?v=2.0-stage4D.0';
+import {applyClassroomCommand} from '../features/classroom.js?v=2.0-stage4D.0';
 const secureRandom=()=>crypto.getRandomValues(new Uint32Array(1))[0]/4294967296;
 export function createStore({storage,newId=()=>crypto.randomUUID(),now=()=>new Date().toISOString(),random=secureRandom}) {
   let state,locked=false,loadError=null,baseline;

@@ -1,4 +1,4 @@
-import {$,el,button,notify,run,openSettings} from './dom.js?v=2.0-stage4C.0';
+import {$,el,button,notify,run,openSettings} from './dom.js?v=2.0-stage4D.0';
 export function mountUI(store){
   let editId=null,signature;
   function resetForm(){editId=null;$('#student-form').reset();$('#student-title').textContent='新增學生';$('#save-student').textContent='新增學生';$('#cancel-edit').hidden=true;}

@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 6,
+  "revision": 30,
+  "savedAt": "2026-11-03T00:00:00.000Z",
+  "classroom": {
+    "name": "三年二班"
+  },
+  "students": [
+    {
+      "id": "stable-1",
+      "seat": 1,
+      "name": "測試同學1"
+    },
+    {
+      "id": "stable-2",
+      "seat": 2,
+      "name": "測試同學2"
+    },
+    {
+      "id": "stable-3",
+      "seat": 3,
+      "name": "測試同學3"
+    }
+  ],
+  "participation": {
+    "2026-11-02": {
+      "stable-3": false
+    }
+  },
+  "templates": [
+    {
+      "id": "reading",
+      "name": "每日閱讀"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "stable-4",
+      "templateId": "reading",
+      "name": "每日閱讀",
+      "participants": [
+        "stable-1",
+        "stable-2",
+        "stable-3"
+      ],
+      "threshold": 3,
+      "startedAt": "2026-11-02T01:00:00.000Z",
+      "endedAt": "2026-11-02T01:00:00.000Z",
+      "status": "CANCELLED",
+      "checkins": [
+        {
+          "studentId": "stable-1",
+          "at": "2026-11-02T01:00:00.000Z",
+          "source": "STUDENT"
+        }
+      ],
+      "audit": [
+        {
+          "type": "CHECK_IN",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-1",
+          "source": "STUDENT",
+          "before": []
+        },
+        {
+          "type": "CANCEL_TASK",
+          "at": "2026-11-02T01:00:00.000Z"
+        }
+      ],
+      "evolution": null,
+      "settlement": {
+        "version": 1,
+        "status": "UNSETTLED",
+        "result": null
+      }
+    },
+    {
+      "id": "stable-5",
+      "templateId": "reading",
+      "name": "每日閱讀",
+      "participants": [
+        "stable-1",
+        "stable-2",
+        "stable-3"
+      ],
+      "threshold": 3,
+      "startedAt": "2026-11-02T01:00:00.000Z",
+      "endedAt": null,
+      "status": "ACTIVE",
+      "checkins": [
+        {
+          "studentId": "stable-1",
+          "at": "2026-11-02T01:00:00.000Z",
+          "source": "STUDENT"
+        },
+        {
+          "studentId": "stable-2",
+          "at": "2026-11-02T01:00:00.000Z",
+          "source": "TEACHER"
+        }
+      ],
+      "audit": [
+        {
+          "type": "CHECK_IN",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-1",
+          "source": "STUDENT",
+          "before": []
+        },
+        {
+          "type": "CHECK_IN",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-2",
+          "source": "TEACHER",
+          "before": [
+            {
+              "studentId": "stable-1",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "STUDENT"
+            }
+          ]
+        },
+        {
+          "type": "UNCHECK",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": "stable-2",
+          "source": "TEACHER",
+          "before": [
+            {
+              "studentId": "stable-1",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "STUDENT"
+            },
+            {
+              "studentId": "stable-2",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "TEACHER"
+            }
+          ]
+        },
+        {
+          "type": "UNDO_CHECK",
+          "at": "2026-11-02T01:00:00.000Z",
+          "studentId": null,
+          "source": "TEACHER",
+          "before": [
+            {
+              "studentId": "stable-1",
+              "at": "2026-11-02T01:00:00.000Z",
+              "source": "STUDENT"
+            }
+          ]
+        }
+      ],
+      "evolution": null,
+      "settlement": {
+        "version": 1,
+        "status": "UNSETTLED",
+        "result": null
+      }
+    }
+  ],
+  "rosterImports": [],
+  "school": {
+    "periods": [
+      {
+        "id": "p1",
+        "name": "第一節",
+        "start": "08:40",
+        "end": "09:20",
+        "kind": "LESSON"
+      },
+      {
+        "id": "b1",
+        "name": "下課",
+        "start": "09:20",
+        "end": "09:30",
+        "kind": "BREAK"
+      },
+      {
+        "id": "p2",
+        "name": "第二節",
+        "start": "09:30",
+        "end": "10:10",
+        "kind": "LESSON"
+      },
+      {
+        "id": "b2",
+        "name": "下課",
+        "start": "10:10",
+        "end": "10:30",
+        "kind": "BREAK"
+      },
+      {
+        "id": "p3",
+        "name": "第三節",
+        "start": "10:30",
+        "end": "11:10",
+        "kind": "LESSON"
+      },
+      {
+        "id": "b3",
+        "name": "下課",
+        "start": "11:10",
+        "end": "11:20",
+        "kind": "BREAK"
+      },
+      {
+        "id": "p4",
+        "name": "第四節",
+        "start": "11:20",
+        "end": "12:00",
+        "kind": "LESSON"
+      },
+      {
+        "id": "lunch",
+        "name": "午餐",
+        "start": "12:00",
+        "end": "12:40",
+        "kind": "OTHER"
+      },
+      {
+        "id": "rest",
+        "name": "午休",
+        "start": "12:40",
+        "end": "13:20",
+        "kind": "BREAK"
+      },
+      {
+        "id": "p5",
+        "name": "第五節",
+        "start": "13:30",
+        "end": "14:10",
+        "kind": "LESSON"
+      },
+      {
+        "id": "b5",
+        "name": "下課",
+        "start": "14:10",
+        "end": "14:20",
+        "kind": "BREAK"
+      },
+      {
+        "id": "p6",
+        "name": "第六節",
+        "start": "14:20",
+        "end": "15:00",
+        "kind": "LESSON"
+      },
+      {
+        "id": "b6",
+        "name": "下課",
+        "start": "15:00",
+        "end": "15:10",
+        "kind": "BREAK"
+      },
+      {
+        "id": "p7",
+        "name": "第七節",
+        "start": "15:10",
+        "end": "15:50",
+        "kind": "LESSON"
+      }
+    ],
+    "activeTermId": "initial",
+    "terms": [
+      {
+        "id": "initial",
+        "year": 115,
+        "semester": 1,
+        "weekly": {
+          "1": {
+            "p1": "國語",
+            "p2": "數學"
+          }
+        },
+        "overrides": {
+          "2026-11-02": {
+            "p1": "健康"
+          }
+        }
+      }
+    ]
+  },
+  "timer": {
+    "durationMs": 120000,
+    "remainingMs": 90000,
+    "endAt": null,
+    "status": "PAUSED",
+    "generation": 3
+  },
+  "notes": [
+    {
+      "id": "stage3-2001",
+      "text": "記得帶水壺",
+      "done": false
+    },
+    {
+      "id": "stage3-2002",
+      "text": "明天美勞帶色紙",
+      "done": false
+    }
+  ],
+  "picker": {
+    "round": 1,
+    "drawn": [
+      "stable-1"
+    ],
+    "lastId": "stable-1"
+  },
+  "preferences": {
+    "timerSound": true,
+    "volume": 0.5
+  },
+  "display": {
+    "focus": "home",
+    "privacy": false,
+    "layout": "standard",
+    "font": "large",
+    "theme": "light"
+  },
+  "mediaLibrary": {
+    "categories": [
+      {
+        "id": "category-0",
+        "name": "國語"
+      },
+      {
+        "id": "category-1",
+        "name": "數學"
+      },
+      {
+        "id": "category-2",
+        "name": "英語"
+      },
+      {
+        "id": "category-3",
+        "name": "自然"
+      },
+      {
+        "id": "category-4",
+        "name": "社會"
+      },
+      {
+        "id": "category-5",
+        "name": "藝術"
+      },
+      {
+        "id": "category-6",
+        "name": "閱讀"
+      },
+      {
+        "id": "category-7",
+        "name": "晨間活動"
+      },
+      {
+        "id": "category-other",
+        "name": "其他"
+      },
+      {
+        "id": "stage4c-1",
+        "name": "教室準備"
+      }
+    ],
+    "items": [
+      {
+        "id": "stage4c-2",
+        "name": "閱讀配樂",
+        "kind": "music",
+        "source": "direct",
+        "url": "https://media.example.test/sound.wav",
+        "categoryId": "stage4c-1",
+        "favorite": true
+      },
+      {
+        "id": "stage4c-3",
+        "name": "自然影片",
+        "kind": "video",
+        "source": "direct",
+        "url": "https://media.example.test/video.webm",
+        "categoryId": "category-3",
+        "favorite": false
+      },
+      {
+        "id": "stage4c-4",
+        "name": "YouTube 教學",
+        "kind": "video",
+        "source": "youtube",
+        "videoId": "abcdefghijk",
+        "url": "https://www.youtube.com/watch?v=abcdefghijk",
+        "categoryId": "category-other",
+        "favorite": false
+      }
+    ],
+    "preferences": {
+      "volume": 0.3,
+      "muted": false,
+      "rate": 1.25,
+      "repeat": "all",
+      "shuffle": false
+    },
+    "timerLink": {
+      "enabled": true,
+      "musicId": "stage4c-2",
+      "pauseWithTimer": true,
+      "musicEnd": "pause",
+      "pauseVideoOnEnd": true
+    }
+  }
+}

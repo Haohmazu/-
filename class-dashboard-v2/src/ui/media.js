@@ -1,8 +1,8 @@
-import {mountLibrary} from './library.js?v=2.0-stage4C.0';
-import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-stage4C.0';
-import {$,el,button} from './dom.js?v=2.0-stage4C.0';
-import {parseSource} from '../media/sources.js?v=2.0-stage4C.0';
-import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-stage4C.0';
+import {mountLibrary} from './library.js?v=2.0-stage4D.0';
+import {createYouTubeAdapter} from '../media/youtube.js?v=2.0-stage4D.0';
+import {$,el,button} from './dom.js?v=2.0-stage4D.0';
+import {parseSource} from '../media/sources.js?v=2.0-stage4D.0';
+import {createMediaCoordinator} from '../media/coordinator.js?v=2.0-stage4D.0';
 function time(value){if(!Number.isFinite(value)||value<0)return '--:--';return `${Math.floor(value/60)}:${String(Math.floor(value%60)).padStart(2,'0')}`;}
 export function mountMedia(store){
   const dialog=$('#media-center'),audio=$('#media-audio'),video=$('#media-video'),youtubeHost=$('#youtube-host');
@@ -21,7 +21,7 @@ export function mountMedia(store){
     engine.closeDialog();if(document.fullscreenElement&&dialog.contains(document.fullscreenElement))document.exitFullscreen().catch(()=>{});
     if(opener?.isConnected&&!opener.closest('[hidden]'))opener.focus();else $('#open-media').focus();
   }
-  const library=mountLibrary({store,engine,playSaved:(item,{background=false}={})=>{if(!background)selectTab(item.kind);return engine.play(`saved:${item.id}`);},message});
+  const library=mountLibrary({store,engine,playSaved:(item,{background=false}={})=>{if(!background)selectTab(item.kind);message('');return engine.play(`saved:${item.id}`);},message});
   $('#open-media').onclick=open;$('#mini-open').onclick=open;$('#close-media').onclick=()=>{engine.closeDialog();dialog.close();};dialog.addEventListener('cancel',()=>engine.closeDialog());dialog.addEventListener('close',closed);
   // Native dialog cancel/Esc closes the top layer; display shortcuts already ignore open dialogs.
   function selectTab(next){if(!['music','video'].includes(next))return;tab=next;engine.switchTab(tab);for(const b of dialog.querySelectorAll('[data-media-tab]')){const selected=b.dataset.mediaTab===tab;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;}for(const panel of dialog.querySelectorAll('[data-media-panel]'))panel.hidden=panel.dataset.mediaPanel!==tab;render(engine.getState());}
