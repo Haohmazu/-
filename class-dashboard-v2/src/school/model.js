@@ -1,4 +1,4 @@
-import {taiwanParts} from './time.js?v=2.0-three-columns.0';
+import {taiwanParts} from './time.js?v=2.0-IC.0';
 export function schoolDefaults(at=Date.now()) {
   const periods = [
     ['p1','第一節','08:40','09:20','LESSON'],['b1','下課','09:20','09:30','BREAK'],
@@ -12,4 +12,4 @@ export function schoolDefaults(at=Date.now()) {
   const {date}=taiwanParts(at),year=Number(date.slice(0,4)),month=Number(date.slice(5,7));
   return {periods,activeTermId:'initial',terms:[{id:'initial',year:year-1911-(month<8?1:0),semester:month>=2&&month<8?2:1,weekly:{},overrides:{}}]};
 }
-export function toolDefaults() {return {timer:{durationMs:300000,remainingMs:300000,endAt:null,status:'IDLE',generation:0},notes:[],picker:{round:1,drawn:[],lastId:null},preferences:{timerSound:true,volume:0.5}};}
+export function toolDefaults() {return {timer:{durationMs:300000,remainingMs:300000,endAt:null,status:'IDLE',generation:0},notes:[],picker:{round:1,drawn:[],lastId:null},preferences:{timerSound:true,volume:0.5,timerSoundType:'electronic',timerSoundCount:3}};}

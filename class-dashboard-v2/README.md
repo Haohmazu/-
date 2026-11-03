@@ -1,8 +1,30 @@
 # Class Dashboard 2.0｜教室日常
 
-三欄首頁與多媒體整合版本 `2.0-three-columns.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+I-C 功能補強版本 `2.0-IC.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
 
-I-B 在 4D 基礎上整合單屏首頁、三頁籤及六風格／十八配色，沿用原時鐘、課表、倒數、抽號與播放核心。未恢復任務或水族箱，未提前開發 I-C。
+沿用既有三欄、六風格／十八配色及時鐘、課表、倒數、抽號與影音核心，本次只補I-C提示音與聚焦；未恢復任務或水族箱。
+
+## I-C：提示音與通用卡片聚焦
+
+以最新 main 820ed7a（已合併 PR #11）增量開發，保留既有三欄、18 配色、四專注及影片放大。
+
+- 倒數卡「提示音設定」與「教師設定 → 教室工具」共用同一份設定，自動保存。提供明確開關、電子提示音／柔和鐘聲／清脆鈴聲、0～100%音量、1／2／3次及試聽。關閉提示音仍可試聽，0%顯示靜音。
+- 提示音使用一個共用 Web Audio 引擎，原創合成無素材授權依賴；新試聽先取消前次提示音，音量不改背景影音。試聽不啟動／改變倒數；到時先保存結果再提示，音訊失敗仍顯示時間到。
+- 左側課程事項、中央展示、右側工具各有放大入口。原有 DOM 直接進入原生模態上層，背景淡化且不可誤操作，Tab／Shift+Tab留在視窗，Esc／關閉返回原入口。不複製資料或媒體；中央影片仍使用原影片放大。
+- 「放大」是暫時視窗；「專注展示」是原有保存的顯示模式。切入舊專注會先關閉通用聚焦，管理／影音視窗亦共用單一模態協調。
+- 資料升級 schema 7→8，僅新增 `preferences.timerSoundType`、`preferences.timerSoundCount`。保留舊開關、音量，預設電子音3次，原學生ID、課表、事項、影音與歷史不變。JSON formatVersion仍為1。
+
+升級前先備份、關閉其他舊分頁。舊schema7程式無法讀取schema8，回退時須使用升級前備份與相容程式，不要手動改版本號。遷移載入不立即改寫，首次成功操作才保存schema8；Web Locks及過期分頁保護沿用。
+
+[操作、90張截圖、測試結果與修改檔案](docs/ic-completion-report.md) · [Windows11操作指南](docs/windows11-guide.md)。目前是開發分支，不合併main或部署；不是I-D完整獨立驗收。
+
+```sh
+npm test
+TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run test:browser
+TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:ic
+```
+
+測試需從repository根目錄啟動HTTP，再在專案目錄執行；瀏覽器測試需Playwright與Chromium。教師日常不需命令列。`test:ic`只跑I-C專屬流程；`test:browser`加跑現有三欄與影音回歸。Windows／喇叭／白板及外部平台實播仍需實機驗證。
 
 ## 三欄首頁與多媒體整合
 
@@ -15,9 +37,9 @@ I-B 在 4D 基礎上整合單屏首頁、三頁籤及六風格／十八配色，
 - 切離中央影片頁籤會暫停同一來源並保留原生播放進度；YouTube API 就緒時送出暫停並保留 iframe。API 未就緒且無法確認暫停時沿用安全停止，明示原因，不保證此情況的進度。
 - 「放大置中」開原生模態展示，Esc／還原回中央；「全螢幕播放」使用 Fullscreen API 的影片容器。過程不重新掛載媒體節點。停止影片會清理來源，且不自動恢復音樂。改播其他來源仍沿用原引擎停止舊來源規則。
 - 倒數仍是原時間戳核心，切頁保留提示；抽號不重置。計時器原有音樂／影片連動有效。四專注、原全螢幕、投影隱私、六風格18配色仍可用；三布局偏好小幅調整三欄比例。
-- schemaVersion 7、JSON 格式 1 不變。沒有改學生 ID、課表、事項或影音資料模型，不清空 localStorage；Web Locks 與過期頁保護保留。
+- 目前schemaVersion 8、JSON格式1；遷移只增提示音欄位，沒有改學生ID、課表、事項或影音資料模型，不清空 localStorage；Web Locks 與過期頁保護保留。
 
-[截圖、差異、測試、修改檔案與限制](docs/three-columns-report.md) · [Windows11 操作指南](docs/windows11-guide.md)。本分支基於尚未合併的 PR #10 最新提交 8e19b1c，包含其成果；沒有並行重寫或自行合併／部署。
+[截圖、差異、測試、修改檔案與限制](docs/three-columns-report.md) · [Windows11 操作指南](docs/windows11-guide.md)。三欄版原由PR #10延伸；目前PR #11已合併main，本次I-C以其成果為基準。
 
 ### 開發測試
 
@@ -36,7 +58,7 @@ TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:three
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-three-columns`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-ic-completion`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
@@ -92,7 +114,7 @@ TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:three
 
 完整圖文前的文字操作流程見 [Windows 11 操作與人工驗收](docs/windows11-guide.md)；發布與路徑確認見 [GitHub Pages 部署說明](docs/github-pages.md)。
 
-用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 I-B。** 新版頁尾應顯示 `2.0-integration-IB.0`。
+用最新版 Chrome / Edge 開啟正式網址。**正式站不會因開啟PR自動更新。** 本次核准部署後頁尾應顯示 `2.0-IC.0`。
 
 ### 4A 快速操作（Windows 11）
 
@@ -128,7 +150,7 @@ CSV 使用 UTF-8；範本含 BOM，適合 Windows Excel。XLSX 支援第一張�
 
 ## 資料版本及保護
 
-資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 7`。版本 1→2→3→4 的既有遷移鏈保留，4→5 新增 display 展示偏好，5→6 只新增 mediaLibrary 網址庫、分類、偏好與預設停用的計時連動；6→7 僅新增 appearance 外觀配對（預設 legacy/default），保留原 display 與 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
+資料鍵仍為 `class-dashboard-v2`，目前 `schemaVersion: 8`。版本 1→2→3→4 的既有遷移鏈保留，4→5 新增 display 展示偏好，5→6 只新增 mediaLibrary 網址庫、分類、偏好與預設停用的計時連動；6→7新增appearance外觀配對（預設legacy/default），7→8新增提示音種類與次數（預設電子音3次），保留原 display 與 students、templates、rounds、participation、rosterImports 與其他既有欄位。舊網站的 `aquarium-classroom-v1` 鍵不讀寫。
 
 讀取及記憶體升版不會寫回。重要變更依序為命令 → 計算下一狀態 → 全部驗證 → localStorage 寫入成功 → 更新畫面。失敗不宣告成功。Web Locks 使用同一個 `class-dashboard-v2-write` 名稱；還會比對原始資料快照，拒絕過期分頁、同 revision 外部改寫及過期匯入預覽。舊版無法解析新版 schema，不能交互覆蓋；升級前後仍建議關閉其他舊分頁並保留備份。
 
@@ -176,7 +198,7 @@ npm run check:deployment
 
 `version.json` 列出每一個 HTML/CSS/JS SHA-256，測試會拒絕未更新清單。公開檢查工具連線失敗回傳 2、內容不一致回傳 1、全數一致回傳 0；合併前正式站和開發版本來就不同，不能為了通過檢查擅自發布。可用 `node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/` 檢查本機資源。
 
-目前起點 main 為 PR #7 合併的 `2.0-stage4D.0` / schema 6（fb84a57），本次分支為 `2.0-integration-IB.0` / schema 7。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
+目前main基準820ed7a是PR #11合併的2.0-three-columns.0／schema7；本次分支2.0-IC.0／schema8。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
 
 ## 原始碼分工
 
@@ -196,7 +218,7 @@ npm run check:deployment
 
 ## 已知限制及後續邊界
 
-本批次只實作 I-B，完成後停止，等待確認才可進入 I-C；不開始 I-D 或第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
+本批次只補強I-C，完成後停止等待確認；不開始I-D完整整合驗收或第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
 沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 

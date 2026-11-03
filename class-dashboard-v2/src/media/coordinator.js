@@ -1,4 +1,4 @@
-import {validateItem,mediaError} from './sources.js?v=2.0-three-columns.0';
+import {validateItem,mediaError} from './sources.js?v=2.0-IC.0';
 // One runtime coordinator. It has no reference to the classroom store/localStorage.
 export function createMediaCoordinator({audio,video,youtube,createObjectURL=file=>URL.createObjectURL(file),revokeObjectURL=url=>URL.revokeObjectURL(url),newId=()=>crypto.randomUUID(),random=Math.random}){
   const queues={music:[],video:[]},owned=new Set(),listeners=new Set();

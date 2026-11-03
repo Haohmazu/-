@@ -1,6 +1,6 @@
-import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-three-columns.0';
-import {createFullscreenController} from '../display/fullscreen.js?v=2.0-three-columns.0';
-import {shortcutFor} from '../display/shortcuts.js?v=2.0-three-columns.0';
+import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-IC.0';
+import {createFullscreenController} from '../display/fullscreen.js?v=2.0-IC.0';
+import {shortcutFor} from '../display/shortcuts.js?v=2.0-IC.0';
 export function mountDisplay(store){
   let lastFocus,lastPrivacy,lastDraw,externalPrivacy=false;
   const privateNow=()=>externalPrivacy||store.getDisplayState().display.privacy;

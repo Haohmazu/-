@@ -1,7 +1,7 @@
-import {activeTerm} from './schedule.js?v=2.0-three-columns.0';
-import {validatePeriods} from './validation.js?v=2.0-three-columns.0';
-import {dateWeekday,taiwanParts} from './time.js?v=2.0-three-columns.0';
-import {applyTimerCommand} from './timer.js?v=2.0-three-columns.0';
+import {activeTerm} from './schedule.js?v=2.0-IC.0';
+import {validatePeriods} from './validation.js?v=2.0-IC.0';
+import {dateWeekday,taiwanParts} from './time.js?v=2.0-IC.0';
+import {applyTimerCommand} from './timer.js?v=2.0-IC.0';
 export function applySchoolCommand(s,c,newId,at,random) {
   if(c.expectedRevision!==undefined&&c.expectedRevision!==s.revision)throw Error('預覽後資料已變更，請重新預覽。');
   if(c.type.startsWith('TIMER_'))return applyTimerCommand(s,c,at);
@@ -58,7 +58,7 @@ export function applySchoolCommand(s,c,newId,at,random) {
     case 'RESET_PICKER':
       if(c.confirmed!==true)throw Error('請確認重新開始抽號。');s.picker={round:s.picker.round+1,drawn:[],lastId:null};break;
     case 'SET_SOUND':
-      s.preferences={timerSound:c.enabled,volume:c.volume};break;
+      s.preferences={...s.preferences,timerSound:c.enabled,volume:c.volume,timerSoundType:c.soundType===undefined?s.preferences.timerSoundType:c.soundType,timerSoundCount:c.repeatCount===undefined?s.preferences.timerSoundCount:c.repeatCount};break;
     default:throw Error('任務功能已暫停，或此操作不受支援。');
   }
   return s;

@@ -1,0 +1,4 @@
+export const SOUND_TYPES=['electronic','bell','ring'];
+export function validateSound(p){if(!p||typeof p.timerSound!=='boolean'||typeof p.volume!=='number'||!Number.isFinite(p.volume)||p.volume<0||p.volume>1||!SOUND_TYPES.includes(p.timerSoundType)||![1,2,3].includes(p.timerSoundCount))throw Error('提示音設定不正確，請選擇有效音效、音量及1～3次。');return p;}
+// Original Web Audio synthesis; each group is one audible signal, not a media file.
+export function soundPlan(p){validateSound(p);const shapes={electronic:{gap:.3,notes:[[784,0,.16,'sine',.15]]},bell:{gap:.95,notes:[[523.25,0,.8,'sine',.15],[1046.5,0,.6,'sine',.05]]},ring:{gap:.65,notes:[[880,0,.38,'triangle',.1],[1320,.05,.32,'sine',.06],[1760,.1,.28,'sine',.035]]}};const shape=shapes[p.timerSoundType];return Array.from({length:p.timerSoundCount},(_,group)=>shape.notes.map(([frequency,start,duration,wave,gain])=>({group,frequency,start:start+group*shape.gap,duration,wave,gain:gain*p.volume}))).flat();}
