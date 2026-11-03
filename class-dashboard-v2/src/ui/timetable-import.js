@@ -1,7 +1,7 @@
-import {$,el,button,download,notify} from './dom.js?v=2.0-stage4D.0';
-import {parseCSV,csvText} from '../io/roster.js?v=2.0-stage4D.0';
-import {readXlsx,writeXlsx} from '../io/xlsx.js?v=2.0-stage4D.0';
-import {rowsToTimetable,timetableTemplate,WEEKDAYS} from '../io/timetable.js?v=2.0-stage4D.0';
+import {$,el,button,download,notify} from './dom.js?v=2.0-integration-IB.0';
+import {parseCSV,csvText} from '../io/roster.js?v=2.0-integration-IB.0';
+import {readXlsx,writeXlsx} from '../io/xlsx.js?v=2.0-integration-IB.0';
+import {rowsToTimetable,timetableTemplate,WEEKDAYS} from '../io/timetable.js?v=2.0-integration-IB.0';
 export function mountTimetableImport(store){
   const host=$('#timetable-import');host.append(el('h3','課表匯入與範本'),el('p','標準三欄：星期、節次、科目。只更新預覽列出的課程，其他課程保留；科目時間一律引用作息。'));
   const buttons=el('div');buttons.className='import-buttons';

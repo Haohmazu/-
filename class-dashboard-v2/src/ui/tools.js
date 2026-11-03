@@ -1,7 +1,7 @@
-import {$,el,button,run,notify} from './dom.js?v=2.0-stage4D.0';
-import {remainingTime} from '../school/timer.js?v=2.0-stage4D.0';
-import {taiwanParts,durationText} from '../school/time.js?v=2.0-stage4D.0';
-import {createTimerSound} from './sound.js?v=2.0-stage4D.0';
+import {$,el,button,run,notify} from './dom.js?v=2.0-integration-IB.0';
+import {remainingTime} from '../school/timer.js?v=2.0-integration-IB.0';
+import {taiwanParts,durationText} from '../school/time.js?v=2.0-integration-IB.0';
+import {createTimerSound} from './sound.js?v=2.0-integration-IB.0';
 export function mountTools(store){
   const sound=createTimerSound();let finishing=false,finishAttempt,noteSignature,participationSignature,timerSignature,preferenceSignature;
   const timer=type=>run(store,{type});
@@ -17,8 +17,9 @@ export function mountTools(store){
     paintTimer(s);
     const notes=JSON.stringify(s.notes);if(notes!==noteSignature){noteSignature=notes;$('#notes-display').replaceChildren();$('#note-editor').replaceChildren();
       if(!s.notes.length)$('#notes-display').append(el('li','尚無聯絡事項。'));
+      $('#notes-summary').textContent=`共 ${s.notes.length} 項 · 未完成 ${s.notes.filter(n=>!n.done).length} 項。此處顯示摘要，完整內容請按下方按鈕。`;
       for(const [index,n] of s.notes.entries()){
-        const item=el('li',n.text);item.classList.toggle('done',n.done);$('#notes-display').append(item);
+        if(index<2){const item=el('li',n.text.length>60?n.text.slice(0,60)+'…（查看完整內容）':n.text);item.classList.toggle('done',n.done);$('#notes-display').append(item);}
         const row=el('div');row.className='note-row';const check=el('input');check.type='checkbox';check.checked=n.done;check.setAttribute('aria-label',`完成事項 ${index+1}`);check.onchange=()=>run(store,{type:'TOGGLE_NOTE',id:n.id,done:check.checked});
         const field=el('input');field.type='text';field.value=n.text;field.maxLength=300;field.setAttribute('aria-label',`聯絡事項 ${index+1}`);
         const up=button('上移',()=>run(store,{type:'MOVE_NOTE',id:n.id,direction:-1})),down=button('下移',()=>run(store,{type:'MOVE_NOTE',id:n.id,direction:1}));up.disabled=index===0;down.disabled=index===s.notes.length-1;
@@ -29,7 +30,7 @@ export function mountTools(store){
     const pref=JSON.stringify(s.preferences);if(pref!==preferenceSignature){preferenceSignature=pref;$('#sound-enabled').checked=s.preferences.timerSound;$('#sound-volume').value=s.preferences.volume;}
     const date=taiwanParts().date,signature=JSON.stringify([s.students,s.participation[date],date]);if(signature!==participationSignature){participationSignature=signature;$('#participation-date').textContent=`今日 ${date}：取消勾選代表不參與抽號。`;$('#participation-editor').replaceChildren();for(const student of [...s.students].sort((a,b)=>a.seat-b.seat)){const label=el('label');label.className='checkbox-label';const check=el('input');check.type='checkbox';check.checked=s.participation[date]?.[student.id]!==false;check.setAttribute('aria-label',`${student.seat} 號今日參與`);check.onchange=()=>run(store,{type:'SET_PARTICIPATION',studentId:student.id,participating:check.checked});label.append(check,document.createTextNode(`${student.seat} 號`));$('#participation-editor').append(label);}}
     const eligible=s.students.filter(st=>s.participation[date]?.[st.id]!==false&&!s.picker.drawn.includes(st.id));
-    const seat=id=>s.students.find(st=>st.id===id)?.seat;$('#draw-result').textContent=s.picker.lastId?String(seat(s.picker.lastId)).padStart(2,'0'):'—';$('#picker-remaining').textContent=`第 ${s.picker.round} 輪 · 剩餘 ${eligible.length} 人${eligible.length?'':' · 請重新開始或檢查參與設定'}`;$('#picker-drawn').textContent=`已抽：${s.picker.drawn.map(seat).join('、')||'尚無'}`;$('#draw-student').disabled=!eligible.length;
+    const seat=id=>s.students.find(st=>st.id===id)?.seat;$('#draw-result').textContent=s.picker.lastId?String(seat(s.picker.lastId)).padStart(2,'0'):'—';$('#picker-remaining').textContent=`第 ${s.picker.round} 輪 · 剩餘 ${eligible.length} 人${eligible.length?'':' · 請重新開始或檢查參與設定'}`;$('#picker-drawn').textContent=`已抽：${s.picker.drawn.slice(-6).map(seat).join('、')+(s.picker.drawn.length>6?`（共 ${s.picker.drawn.length} 人，查看全部）`:'')||'尚無'}`;$('#draw-student').disabled=!eligible.length;
   }
   function paintTimer(s,at=Date.now()){const t=s.timer,remaining=remainingTime(t,at);$('#timer-display').textContent=durationText(remaining);const progress=$('#timer-progress');if(progress){progress.max=t.durationMs;progress.value=Math.min(t.durationMs,remaining);progress.setAttribute('aria-valuetext',`剩餘 ${Math.round(Math.min(1,remaining/t.durationMs)*100)}%`);}$('#timer-status').textContent=t.status==='RUNNING'?(remaining?'計時中':'時間到，正在保存結果…'):{IDLE:'準備就緒',PAUSED:'已暫停',FINISHED:'時間到！'}[t.status];$('#timer-status').classList.toggle('finished',t.status==='FINISHED');$('#timer-start').textContent=t.status==='PAUSED'?'繼續':'開始';$('#timer-start').disabled=!['IDLE','PAUSED'].includes(t.status)||!remaining;$('#timer-pause').disabled=t.status!=='RUNNING';
   }

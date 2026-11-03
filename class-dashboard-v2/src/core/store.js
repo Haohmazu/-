@@ -1,12 +1,13 @@
-import {applyLibraryCommand} from '../library/commands.js?v=2.0-stage4D.0';
-import {applyDisplayCommand} from '../display/model.js?v=2.0-stage4D.0';
-import {importRoster} from '../io/roster.js?v=2.0-stage4D.0';
-import {parseBackup} from '../io/backup.js?v=2.0-stage4D.0';
-import {applySchoolCommand} from '../school/commands.js?v=2.0-stage4D.0';
-import {createInitialState, STORAGE_KEY} from './model.js?v=2.0-stage4D.0';
-import {decodeState} from './migrations.js?v=2.0-stage4D.0';
-import {validateState} from './validation.js?v=2.0-stage4D.0';
-import {applyClassroomCommand} from '../features/classroom.js?v=2.0-stage4D.0';
+import {applyAppearanceCommand} from '../display/appearance.js?v=2.0-integration-IB.0';
+import {applyLibraryCommand} from '../library/commands.js?v=2.0-integration-IB.0';
+import {applyDisplayCommand} from '../display/model.js?v=2.0-integration-IB.0';
+import {importRoster} from '../io/roster.js?v=2.0-integration-IB.0';
+import {parseBackup} from '../io/backup.js?v=2.0-integration-IB.0';
+import {applySchoolCommand} from '../school/commands.js?v=2.0-integration-IB.0';
+import {createInitialState, STORAGE_KEY} from './model.js?v=2.0-integration-IB.0';
+import {decodeState} from './migrations.js?v=2.0-integration-IB.0';
+import {validateState} from './validation.js?v=2.0-integration-IB.0';
+import {applyClassroomCommand} from '../features/classroom.js?v=2.0-integration-IB.0';
 const secureRandom=()=>crypto.getRandomValues(new Uint32Array(1))[0]/4294967296;
 export function createStore({storage,newId=()=>crypto.randomUUID(),now=()=>new Date().toISOString(),random=secureRandom}) {
   let state,locked=false,loadError=null,baseline;
@@ -31,7 +32,7 @@ export function createStore({storage,newId=()=>crypto.randomUUID(),now=()=>new D
         if(command.expectedRevision!==state.revision)throw Error('預覽後資料已變更，請重新預覽。');
         next=parseBackup(command.text).state;
       }else{
-        const handler=['SAVE_MEDIA_ITEM','DELETE_MEDIA_ITEM','FAVORITE_MEDIA_ITEM','MOVE_MEDIA_ITEM','SAVE_MEDIA_CATEGORY','DELETE_MEDIA_CATEGORY','SET_MEDIA_PREFERENCES','SET_TIMER_MEDIA_LINK'].includes(command?.type)?applyLibraryCommand:command?.type==='SET_DISPLAY'?applyDisplayCommand:command?.type==='IMPORT_STUDENTS'?importRoster:['SET_CLASS_NAME','ADD_STUDENT','UPDATE_STUDENT'].includes(command?.type)?applyClassroomCommand:applySchoolCommand;
+        const handler=command?.type==='SET_APPEARANCE'?applyAppearanceCommand:['SAVE_MEDIA_ITEM','DELETE_MEDIA_ITEM','FAVORITE_MEDIA_ITEM','MOVE_MEDIA_ITEM','SAVE_MEDIA_CATEGORY','DELETE_MEDIA_CATEGORY','SET_MEDIA_PREFERENCES','SET_TIMER_MEDIA_LINK'].includes(command?.type)?applyLibraryCommand:command?.type==='SET_DISPLAY'?applyDisplayCommand:command?.type==='IMPORT_STUDENTS'?importRoster:['SET_CLASS_NAME','ADD_STUDENT','UPDATE_STUDENT'].includes(command?.type)?applyClassroomCommand:applySchoolCommand;
         next=handler(structuredClone(state),command,newId,at,random);
       }
       next.revision=state.revision+1;next.savedAt=at;validateState(next);

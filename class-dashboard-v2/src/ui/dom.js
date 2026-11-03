@@ -1,3 +1,4 @@
+import {openOverlay} from './overlay.js?v=2.0-integration-IB.0';
 export const $=selector=>document.querySelector(selector);
 export function el(tag,text){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;}
 export function button(text,action){const b=el('button',text);b.type='button';b.onclick=action;return b;}
@@ -9,7 +10,7 @@ export function openSettings(id='class-settings'){
   if(!settingsAccess()){notify('投影隱私已開啟。請先明確關閉投影隱私，再進入教師設定。',true);return false;}
   document.querySelectorAll('[data-settings-panel]').forEach(panel=>panel.hidden=panel.id!==id);
   document.querySelectorAll('[data-panel]').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.panel===id));b.tabIndex=b.dataset.panel===id?0:-1;});
-  if(!$('#settings').open)$('#settings').showModal();$('#settings').scrollTop=0;
+  openOverlay($('#settings'));$('#settings').scrollTop=0;
 }
 export function option(value,text){const node=el('option',text);node.value=value;return node;}
 export function download(data,name,type){const url=URL.createObjectURL(new Blob([data],{type})),a=el('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
