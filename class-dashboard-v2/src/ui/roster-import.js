@@ -1,5 +1,5 @@
-import {TEMPLATE_ROWS,parseCSV,rowsToRoster,planRoster,csvText} from '../io/roster.js?v=2.0-visual.0';
-import {readXlsx,writeXlsx} from '../io/xlsx.js?v=2.0-visual.0';
+import {TEMPLATE_ROWS,parseCSV,rowsToRoster,planRoster,csvText} from '../io/roster.js?v=2.0-home-layout.0';
+import {readXlsx,writeXlsx} from '../io/xlsx.js?v=2.0-home-layout.0';
 function download(data,name,type){const url=URL.createObjectURL(new Blob([data],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 export function mountRosterImport(store){
  const host=document.querySelector('#roster-import');

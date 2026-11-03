@@ -1,4 +1,4 @@
-import {parseSource} from '../media/sources.js?v=2.0-visual.0';
+import {parseSource} from '../media/sources.js?v=2.0-home-layout.0';
 export const OTHER_CATEGORY='category-other';
 export function libraryDefaults(){return {
   categories:['國語','數學','英語','自然','社會','藝術','閱讀','晨間活動','其他'].map((name,i)=>({id:i===8?OTHER_CATEGORY:`category-${i}`,name})),

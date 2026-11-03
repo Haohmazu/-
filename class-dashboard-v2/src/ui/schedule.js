@@ -1,7 +1,7 @@
-import {$,el,button,option,run} from './dom.js?v=2.0-visual.0';
-import {activeTerm,lessons,courseAt,currentSchoolTime,todaySchedule} from '../school/schedule.js?v=2.0-visual.0';
-import {taiwanParts,durationText} from '../school/time.js?v=2.0-visual.0';
-import {WEEKDAYS} from '../io/timetable.js?v=2.0-visual.0';
+import {$,el,button,option,run} from './dom.js?v=2.0-home-layout.0';
+import {activeTerm,lessons,courseAt,currentSchoolTime,todaySchedule} from '../school/schedule.js?v=2.0-home-layout.0';
+import {taiwanParts,durationText} from '../school/time.js?v=2.0-home-layout.0';
+import {WEEKDAYS} from '../io/timetable.js?v=2.0-home-layout.0';
 export function mountSchedule(store){
   let mode='today',schoolSignature,viewSignature;
   const fillCourses=()=>{const s=store.getState(),term=activeTerm(s);$('#course-subject').value=term.weekly[$('#course-weekday').value]?.[$('#course-period').value]??'';};

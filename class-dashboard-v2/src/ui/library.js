@@ -1,6 +1,6 @@
-import {$,el,button,option} from './dom.js?v=2.0-visual.0';
-import {OTHER_CATEGORY} from '../library/model.js?v=2.0-visual.0';
-import {connectTimerMedia} from '../media/timer-link.js?v=2.0-visual.0';
+import {$,el,button,option} from './dom.js?v=2.0-home-layout.0';
+import {OTHER_CATEGORY} from '../library/model.js?v=2.0-home-layout.0';
+import {connectTimerMedia} from '../media/timer-link.js?v=2.0-home-layout.0';
 export function mountLibrary({store,engine,playSaved,message}){
   let editId=null,itemsSignature,categoriesSignature,linkSignature,listSignature;
   const info=(text,error=false)=>{$('#library-message').textContent=text;$('#library-message').classList.toggle('error',error);};
