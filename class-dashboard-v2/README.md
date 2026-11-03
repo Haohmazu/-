@@ -1,13 +1,15 @@
 # Class Dashboard 2.0｜教室日常
 
-4C 影音清單與智慧播放版本 `2.0-stage4C.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+第四階段整合驗收版本 `2.0-stage4D.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+
+4D 沿用 4A 展示、4B 單一播放協調器及 4C 網址庫，補齊資料安全、資源與操作回歸；修正 YouTube 暫時載入失敗可重試、改播清單項目清除舊錯誤，以及收藏／排序後的鍵盤焦點。未恢復任務或水族箱。
 
 ## 正式專案與發布規則
 
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-stage4c`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-stage4d`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
@@ -61,7 +63,9 @@
 
 ## Windows 11 日常操作
 
-用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 4C。** 新版頁尾應顯示 `2.0-stage4C.0`。
+完整圖文前的文字操作流程見 [Windows 11 操作與人工驗收](docs/windows11-guide.md)；發布與路徑確認見 [GitHub Pages 部署說明](docs/github-pages.md)。
+
+用最新版 Chrome / Edge 開啟正式網址。**尚未合併此分支前，正式站不會因開啟 PR 自動變成 4D。** 新版頁尾應顯示 `2.0-stage4D.0`。
 
 ### 4A 快速操作（Windows 11）
 
@@ -131,7 +135,7 @@ npm run test:browser
 
 Edge 可改為 `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`，依實際位置調整。Linux 預設 `/usr/bin/chromium`，可用 `TEST_URL` 指定測試網址。舊任務 UI／命令測試保留為 `tests/legacy/` 的歷史文字，不算本版通過測試；本版以真實 schema 3、4 fixture 驗證歷史保留、升版與拒絕任務操作。
 
-本次結果：**66 項 Node 測試通過，Chromium 第三階段、4A、4B 及 4C 流程通過，48 個本機 HTTP 資源與版本清單一致。** 詳細批次證據見 [4C 驗收紀錄](docs/stage4c-acceptance.md)。 4B 的實際解碼、網路模擬、第三方限制與 Windows 人工步驟見 [4B 驗收紀錄](docs/stage4b-acceptance.md)；[4A 驗收紀錄](docs/stage4a-acceptance.md) 保留展示證據；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
+本次結果：**74 項 Node 測試通過，Chromium 第三階段及 4A／4B／4C／4D 流程通過，48 個本機 HTTP 資源與版本清單一致。** 覆蓋重點、模擬邊界與未驗證項目見 [4D 完整驗收](docs/stage4d-acceptance.md)。[4C 歷史驗收](docs/stage4c-acceptance.md) 保留原批次證據。 4B 的實際解碼、網路模擬、第三方限制與 Windows 人工步驟見 [4B 驗收紀錄](docs/stage4b-acceptance.md)；[4A 驗收紀錄](docs/stage4a-acceptance.md) 保留展示證據；[第三階段歷史驗收](docs/stage3-acceptance.md) 保留原版本證據。測試日誌的 intentional renderer failure 是故意模擬 UI listener 失敗，並非未解釋的失敗。
 
 ## 版本與 GitHub Pages
 
@@ -145,7 +149,7 @@ npm run check:deployment
 
 `version.json` 列出每一個 HTML/CSS/JS SHA-256，測試會拒絕未更新清單。公開檢查工具連線失敗回傳 2、內容不一致回傳 1、全數一致回傳 0；合併前正式站和開發版本來就不同，不能為了通過檢查擅自發布。可用 `node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/` 檢查本機資源。
 
-目前起點 main 為 PR #5 合併的 `2.0-stage4B.0` / schema 5（2ab1baa），本次分支為 `2.0-stage4C.0` / schema 6。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
+目前起點 main 為 PR #6 合併的 `2.0-stage4C.0` / schema 6（ea93dd2），本次分支為 `2.0-stage4D.0` / schema 6；4D 不新增資料版本。使用者核准 PR 並合併後，由既有 main/root Pages 來源發布；本次沒有修改 Pages 設定。環境無法連線公開 Pages/API，所以未獨立驗證正式站即時資源版本，詳見驗收紀錄。原有 `.nojekyll` 保留不動。
 
 ## 原始碼分工
 
@@ -163,7 +167,7 @@ npm run check:deployment
 
 ## 已知限制及後續邊界
 
-本次只交付 4C，完成後停止，不自行進入 4D。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
+第四階段軟體整合工作完成後停止，不開始第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
 沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 

@@ -1,15 +1,28 @@
-import {youtubeEmbed} from './sources.js?v=2.0-stage4C.0';
+import {youtubeEmbed} from './sources.js?v=2.0-stage4D.0';
 let apiPromise;
 export function loadYouTubeAPI(){
   if(window.YT?.Player)return Promise.resolve(window.YT);
   if(apiPromise)return apiPromise;
-  apiPromise=new Promise((resolve,reject)=>{
+  const pending=new Promise((resolve,reject)=>{
     const previous=window.onYouTubeIframeAPIReady;
-    const timeout=setTimeout(()=>reject(Error('YouTube API 載入逾時，仍可嘗試官方播放器內的控制。')),12000);
-    window.onYouTubeIframeAPIReady=()=>{clearTimeout(timeout);try{previous?.();}catch{}resolve(window.YT);};
-    const script=document.createElement('script');script.src='https://www.youtube.com/iframe_api';script.async=true;script.onerror=()=>{clearTimeout(timeout);reject(Error('無法連線 YouTube 控制 API，請檢查網路。'));};document.head.append(script);
+    const script=document.createElement('script');let settled=false;
+    const finish=(error)=>{
+      if(settled)return;settled=true;clearTimeout(timeout);
+      if(window.onYouTubeIframeAPIReady===ready)window.onYouTubeIframeAPIReady=previous;
+      script.onerror=null;
+      if(error){script.remove();reject(error);}else resolve(window.YT);
+    };
+    const ready=()=>{try{previous?.();}catch{}finish(window.YT?.Player?null:Error('YouTube API 尚未就緒，請重新點選影片重試。'));};
+    const timeout=setTimeout(()=>finish(Error('YouTube API 載入逾時，可重新點選影片重試，或使用官方播放器控制。')),12000);
+    window.onYouTubeIframeAPIReady=ready;
+    script.src='https://www.youtube.com/iframe_api';script.async=true;
+    script.onerror=()=>finish(Error('無法連線 YouTube 控制 API，請檢查網路後重新點選影片。'));
+    document.head.append(script);
   });
-  return apiPromise;
+  apiPromise=pending;
+  // A transient network failure must not poison every subsequent play attempt.
+  pending.catch(()=>{if(apiPromise===pending)apiPromise=undefined;});
+  return pending;
 }
 export function createYouTubeAdapter(host,onWarning){
   let generation=0,player,ready=false;
