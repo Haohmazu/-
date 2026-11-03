@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 const root=fileURLToPath(new URL('../',import.meta.url));
-const version='2.0-home-layout.0';
+const version='2.0-three-columns.0';
 async function walk(folder){const files=[];for(const entry of await readdir(path.join(root,folder),{withFileTypes:true})){const name=path.posix.join(folder,entry.name);if(entry.isDirectory())files.push(...await walk(name));else files.push(name);}return files;}
 const sources=(await walk('src')).filter(name=>name.endsWith('.js')).sort();
 for(const file of sources){let text=await readFile(path.join(root,file),'utf8');text=text.replace(/(from\s+['"]\.{1,2}\/[^'"?]+\.js)(?:\?v=[^'"]+)?(['"])/g,`$1?v=${version}$2`);await writeFile(path.join(root,file),text);}

@@ -1,4 +1,4 @@
-import {openOverlay} from './overlay.js?v=2.0-home-layout.0';
+import {openOverlay} from './overlay.js?v=2.0-three-columns.0';
 export const $=selector=>document.querySelector(selector);
 export function el(tag,text){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;}
 export function button(text,action){const b=el('button',text);b.type='button';b.onclick=action;return b;}

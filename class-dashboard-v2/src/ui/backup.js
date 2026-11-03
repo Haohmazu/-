@@ -1,11 +1,11 @@
-import {STYLES} from '../display/appearance.js?v=2.0-home-layout.0';
-import {taiwanParts} from '../school/time.js?v=2.0-home-layout.0';
-import {$,el,button,download,notify} from './dom.js?v=2.0-home-layout.0';
-import {makeBackup,parseBackup} from '../io/backup.js?v=2.0-home-layout.0';
+import {STYLES} from '../display/appearance.js?v=2.0-three-columns.0';
+import {taiwanParts} from '../school/time.js?v=2.0-three-columns.0';
+import {$,el,button,download,notify} from './dom.js?v=2.0-three-columns.0';
+import {makeBackup,parseBackup} from '../io/backup.js?v=2.0-three-columns.0';
 export function mountBackup(store){
   let token=0;
   const render=s=>{
-    $('#data-summary').textContent=`網站版本：2.0-home-layout.0\n資料版本：${s.schemaVersion}\n學生：${s.students.length} 位 · 學期：${s.school.terms.length} 份\n最近儲存：${s.savedAt?new Date(s.savedAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false}):'尚無'}\n儲存狀態：${store.loadError?'原資料異常，寫入已鎖定':'可用（實際寫入仍需成功才算保存）'}`;
+    $('#data-summary').textContent=`網站版本：2.0-three-columns.0\n資料版本：${s.schemaVersion}\n學生：${s.students.length} 位 · 學期：${s.school.terms.length} 份\n最近儲存：${s.savedAt?new Date(s.savedAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false}):'尚無'}\n儲存狀態：${store.loadError?'原資料異常，寫入已鎖定':'可用（實際寫入仍需成功才算保存）'}`;
     $('#export-json').disabled=!!store.loadError;$('#export-recovery').hidden=!store.loadError||typeof store.getRecoveryText()!=='string';
   };
   $('#export-json').onclick=()=>{if(store.loadError)return;download(makeBackup(store.getState()),`班級儀表板備份_${taiwanParts().date}_${String(Math.floor(taiwanParts().milliseconds/1000)).padStart(5,'0')}.json`,'application/json');$('#backup-message').textContent='已交由瀏覽器下載，請確認檔案已保存；這不是遠端同步。';};

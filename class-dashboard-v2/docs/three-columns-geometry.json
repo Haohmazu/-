@@ -1,0 +1,6073 @@
+{
+  "version": "2.0-three-columns.0",
+  "syntheticData": true,
+  "errors": [],
+  "results": [
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 866,
+          "scroll": 866,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "timer",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-timer-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 866,
+          "scroll": 866,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "picker",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-picker-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 866,
+          "scroll": 866,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "video",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-video-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-ocean-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 866,
+          "scroll": 866,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-forest-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 866,
+          "scroll": 866,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 930,
+          "scroll": 930,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 868,
+          "scroll": 868,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "timer",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-timer-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 868,
+          "scroll": 868,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "picker",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-picker-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 868,
+          "scroll": 868,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "video",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-video-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-mint-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 868,
+          "scroll": 868,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-berry-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 868,
+          "scroll": 868,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 932,
+          "scroll": 932,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 870,
+          "scroll": 870,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "timer",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-timer-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 870,
+          "scroll": 870,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "picker",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-picker-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 870,
+          "scroll": 870,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "video",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-video-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-cream-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 870,
+          "scroll": 870,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sage-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 870,
+          "scroll": 870,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 934,
+          "scroll": 934,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "timer",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-timer-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "picker",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-picker-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "video",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-video-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-cyber-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-aurora-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "timer",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-timer-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "picker",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-picker-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "video",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-video-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-cool-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-graphite-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 19.1875,
+            "y": 86.5,
+            "width": 372.3125,
+            "height": 939.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 874,
+          "scroll": 874,
+          "box": {
+            "x": 401.5,
+            "y": 150.5,
+            "width": 1116.984375,
+            "height": 875.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 938,
+          "scroll": 938,
+          "box": {
+            "x": 1528.484375,
+            "y": 86.5,
+            "width": 372.328125,
+            "height": 939.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 19.1875,
+            "y": 87.5,
+            "width": 372.3125,
+            "height": 938.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 871,
+          "scroll": 871,
+          "box": {
+            "x": 401.5,
+            "y": 151.5,
+            "width": 1116.984375,
+            "height": 874.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 1528.484375,
+            "y": 87.5,
+            "width": 372.328125,
+            "height": 938.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "timer",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-timer-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 19.1875,
+            "y": 87.5,
+            "width": 372.3125,
+            "height": 938.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 871,
+          "scroll": 871,
+          "box": {
+            "x": 401.5,
+            "y": 151.5,
+            "width": 1116.984375,
+            "height": 874.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 1528.484375,
+            "y": 87.5,
+            "width": 372.328125,
+            "height": 938.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "picker",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-picker-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 19.1875,
+            "y": 87.5,
+            "width": 372.3125,
+            "height": 938.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 871,
+          "scroll": 871,
+          "box": {
+            "x": 401.5,
+            "y": 151.5,
+            "width": 1116.984375,
+            "height": 874.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 1528.484375,
+            "y": 87.5,
+            "width": 372.328125,
+            "height": 938.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "video",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-video-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 19.1875,
+            "y": 87.5,
+            "width": 372.3125,
+            "height": 938.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 1528.484375,
+            "y": 87.5,
+            "width": 372.328125,
+            "height": 938.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-blue-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 19.1875,
+            "y": 87.5,
+            "width": 372.3125,
+            "height": 938.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 871,
+          "scroll": 871,
+          "box": {
+            "x": 401.5,
+            "y": 151.5,
+            "width": 1116.984375,
+            "height": 874.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 1528.484375,
+            "y": 87.5,
+            "width": 372.328125,
+            "height": 938.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "mode": "clock",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-sakura-clock-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "columnWidths": [
+        372.3125,
+        1116.984375,
+        372.328125
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 19.1875,
+            "y": 87.5,
+            "width": 372.3125,
+            "height": 938.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 871,
+          "scroll": 871,
+          "box": {
+            "x": 401.5,
+            "y": 151.5,
+            "width": 1116.984375,
+            "height": 874.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 935,
+          "scroll": 935,
+          "box": {
+            "x": 1528.484375,
+            "y": 87.5,
+            "width": 372.328125,
+            "height": 938.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 558,
+          "scroll": 558,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "timer",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-timer-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 558,
+          "scroll": 558,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "picker",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-picker-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 558,
+          "scroll": 558,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "video",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-video-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-ocean-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 558,
+          "scroll": 558,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-forest-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 558,
+          "scroll": 558,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 622,
+          "scroll": 622,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 560,
+          "scroll": 560,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "timer",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-timer-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 560,
+          "scroll": 560,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "picker",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-picker-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 560,
+          "scroll": 560,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "video",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-video-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "study-mint-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 560,
+          "scroll": 560,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "study-berry-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 560,
+          "scroll": 560,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 624,
+          "scroll": 624,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 562,
+          "scroll": 562,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "timer",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-timer-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 562,
+          "scroll": 562,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "picker",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-picker-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 562,
+          "scroll": 562,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "video",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-video-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-cream-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 562,
+          "scroll": 562,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sage-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 562,
+          "scroll": 562,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 626,
+          "scroll": 626,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "timer",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-timer-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "picker",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-picker-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "video",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-video-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-cyber-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-aurora-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "timer",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-timer-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "picker",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-picker-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "video",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-video-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-cool-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-graphite-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 566,
+          "scroll": 566,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 564,
+          "scroll": 564,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "timer",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-timer-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 564,
+          "scroll": 564,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "picker",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-picker-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 564,
+          "scroll": 564,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "video",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-video-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-blue-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 564,
+          "scroll": 564,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "mode": "clock",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-sakura-clock-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "columnWidths": [
+        263.734375,
+        791.203125,
+        263.734375
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 13.65625,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 564,
+          "scroll": 564,
+          "box": {
+            "x": 287.390625,
+            "y": 146.5,
+            "width": 791.203125,
+            "height": 567.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 1088.59375,
+            "y": 82.5,
+            "width": 263.734375,
+            "height": 631.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 572,
+          "scroll": 572,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "timer",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-timer-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 572,
+          "scroll": 572,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "picker",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-picker-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 572,
+          "scroll": 572,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "video",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-video-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-ocean-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 572,
+          "scroll": 572,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-forest-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 572,
+          "scroll": 572,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 628,
+          "scroll": 628,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 574,
+          "scroll": 574,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "timer",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-timer-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 574,
+          "scroll": 574,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "picker",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-picker-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 574,
+          "scroll": 574,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "video",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-video-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "study-mint-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 574,
+          "scroll": 574,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "study-berry-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 574,
+          "scroll": 574,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 630,
+          "scroll": 630,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 576,
+          "scroll": 576,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "timer",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-timer-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 576,
+          "scroll": 576,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "picker",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-picker-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 576,
+          "scroll": 576,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "video",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-video-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-cream-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 576,
+          "scroll": 576,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sage-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 576,
+          "scroll": 576,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 632,
+          "scroll": 632,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "timer",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-timer-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "picker",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-picker-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "video",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-video-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-cyber-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-aurora-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "timer",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-timer-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "picker",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-picker-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "video",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-video-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-cool-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-graphite-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 10.234375,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 580,
+          "scroll": 580,
+          "box": {
+            "x": 220.234375,
+            "y": 132.5,
+            "width": 583.53125,
+            "height": 581.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 636,
+          "scroll": 636,
+          "box": {
+            "x": 813.765625,
+            "y": 76.5,
+            "width": 200,
+            "height": 637.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 10.234375,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 577,
+          "scroll": 577,
+          "box": {
+            "x": 220.234375,
+            "y": 133.5,
+            "width": 583.53125,
+            "height": 580.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 813.765625,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "timer",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-timer-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 10.234375,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 577,
+          "scroll": 577,
+          "box": {
+            "x": 220.234375,
+            "y": 133.5,
+            "width": 583.53125,
+            "height": 580.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 813.765625,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "picker",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-picker-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 10.234375,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 577,
+          "scroll": 577,
+          "box": {
+            "x": 220.234375,
+            "y": 133.5,
+            "width": 583.53125,
+            "height": 580.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 813.765625,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "video",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-video-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 10.234375,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 813.765625,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-blue-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 10.234375,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 577,
+          "scroll": 577,
+          "box": {
+            "x": 220.234375,
+            "y": 133.5,
+            "width": 583.53125,
+            "height": 580.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 813.765625,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "mode": "clock",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-sakura-clock-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "columnWidths": [
+        200,
+        583.53125,
+        200
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 10.234375,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        },
+        {
+          "class": "card time-course-card",
+          "height": 577,
+          "scroll": 577,
+          "box": {
+            "x": 220.234375,
+            "y": 133.5,
+            "width": 583.53125,
+            "height": 580.5
+          }
+        },
+        {
+          "class": "card",
+          "height": 633,
+          "scroll": 633,
+          "box": {
+            "x": 813.765625,
+            "y": 77.5,
+            "width": 200,
+            "height": 636.5
+          }
+        }
+      ],
+      "badButtons": []
+    }
+  ]
+}

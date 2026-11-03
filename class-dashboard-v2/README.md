@@ -1,41 +1,42 @@
 # Class Dashboard 2.0｜教室日常
 
-首頁左右展示布局版本 `2.0-home-layout.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+三欄首頁與多媒體整合版本 `2.0-three-columns.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
 
 I-B 在 4D 基礎上整合單屏首頁、三頁籤及六風格／十八配色，沿用原時鐘、課表、倒數、抽號與播放核心。未恢復任務或水族箱，未提前開發 I-C。
 
-## 本次首頁布局重整
+## 三欄首頁與多媒體整合
 
-左側「今日課表／整週課表／班級事項」；中央「教室時鐘／課堂倒數／隨機抽號」；底部緊湊工具列。中央時鐘畫面同時顯示目前節次、科目、下課剩餘時間及下一節。頂部集中班級、日期、外觀、展示控制、全螢幕及教師設定。
+標準桌面以左 20%／中 60%／右 20% 為目標：左側今日／整週／班級事項，中央時間與課程／倒數／抽號／教學影片，右側音樂／影片清單／其他工具。時鐘與課程使用同一張卡片，寬螢幕左右並排、窄螢幕上下排列。
 
-- 班級事項是電子聯絡簿的唯一首頁入口，保留摘要、查看完整及編輯；移除重複卡片與快捷按鈕，資料及完成狀態不變。
-- 中央頁籤只改暫時顯示；切頁不保存另一份計時或抽號狀態。倒數執行／暫停／到時時，其他中央頁籤顯示可點擊提示。重新整理預設回到時鐘，原計時、抽號及聯絡簿資料仍恢復。
-- 底部提供多媒體、目前內容的專注展示、班級與學生、課堂工具；不重複外觀／教師設定／全螢幕。音樂維持原播放器；影片依既有關閉規則停止。
-- 六種風格／18 配色及原創 SVG 不變，這次依新規格統一操作構圖。原三種布局偏好調整左右區域比例；字級、高對比、投影隱私、四種專注及全螢幕仍可用。
-- 一般桌面以單屏顯示。寬不足 960 或高不足 620 時以可讀可操作為優先，採可捲動布局。完整內容、教師設定及多媒體視窗允許內部捲動。
-- 沿用 schemaVersion 7，沒有新資料欄位、學生 ID 更動或初始化重設。Web Locks、過期頁保護、完整 JSON 驗證仍保留。
-- main 沒有 I-C 新增卡片聚焦與提示音種類／試聽；這次保留既有專注及完整內容視窗，不宣稱補完未實作的 I-C。
+- 班級事項沿用唯一聯絡簿資料、完成狀態、完整檢視與編輯，不增加第二張卡片或重複入口。
+- 右側音樂有播放／暫停、上一首／下一首、音量／靜音，完整清單可管理原有網址及本機媒體。切中央頁籤不停止背景音樂。
+- 右側影片清單可搜尋、分類及「中央播放」；本機檔案從完整多媒體加入，僅本次頁面有效。右側不放大型影片。
+- 影片與 YouTube 容器從初始化起固定在中央，只有一個 audio／video／YouTube adapter。原生影片使用瀏覽器控制進度、音量、播放；YouTube 使用官方控制。
+- 切離中央影片頁籤會暫停同一來源並保留原生播放進度；YouTube API 就緒時送出暫停並保留 iframe。API 未就緒且無法確認暫停時沿用安全停止，明示原因，不保證此情況的進度。
+- 「放大置中」開原生模態展示，Esc／還原回中央；「全螢幕播放」使用 Fullscreen API 的影片容器。過程不重新掛載媒體節點。停止影片會清理來源，且不自動恢復音樂。改播其他來源仍沿用原引擎停止舊來源規則。
+- 倒數仍是原時間戳核心，切頁保留提示；抽號不重置。計時器原有音樂／影片連動有效。四專注、原全螢幕、投影隱私、六風格18配色仍可用；三布局偏好小幅調整三欄比例。
+- schemaVersion 7、JSON 格式 1 不變。沒有改學生 ID、課表、事項或影音資料模型，不清空 localStorage；Web Locks 與過期頁保護保留。
 
-[新舊畫面差異、90 張截圖及測試報告](docs/home-layout-report.md) · [Windows11 操作](docs/windows11-guide.md)。
+[截圖、差異、測試、修改檔案與限制](docs/three-columns-report.md) · [Windows11 操作指南](docs/windows11-guide.md)。本分支基於尚未合併的 PR #10 最新提交 8e19b1c，包含其成果；沒有並行重寫或自行合併／部署。
 
-### 測試及截圖
+### 開發測試
 
-先以 HTTP 服務 repository 根目錄。在專案內：
+以 HTTP 服務 repository 根目錄，專案內執行：
 
 ```sh
 npm test
 TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run test:browser
-TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:home
+TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:three
 ```
 
-後兩項需要 Playwright 與 Chromium，`CHROMIUM_PATH` 可指定瀏覽器路徑。這是開發者操作，日常教師不需命令列。`test:browser`／`test:home` 執行新布局流程；`test:browser:previous-layout`、原 I-B／visual／Stage4 各瀏覽器腳本保留為舊布局歷史測試，應在舊提交執行，不宣稱它們在新 UI 已重新全部通過。所有核心 Node 回歸測試仍執行。
+瀏覽器測試需 Playwright 與 Chromium（CHROMIUM_PATH 可指定）；這是開發者操作，教師日常不需命令列。`test:browser` 執行三欄及影音流程；舊雙欄流程保留為 `test:browser:two-columns`，更早卡片布局為 `test:browser:previous-layout`，其他舊 UI 腳本須在對應歷史提交執行，不冒稱新 UI 也全部通過。全部核心 Node 測試仍執行。
 
 ## 正式專案與發布規則
 
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-home-layout`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`develop/class-dashboard-v2-three-columns`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。

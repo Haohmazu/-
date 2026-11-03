@@ -1,5 +1,5 @@
-import {parseSource} from '../media/sources.js?v=2.0-home-layout.0';
-import {OTHER_CATEGORY,validateLibrary} from './model.js?v=2.0-home-layout.0';
+import {parseSource} from '../media/sources.js?v=2.0-three-columns.0';
+import {OTHER_CATEGORY,validateLibrary} from './model.js?v=2.0-three-columns.0';
 export function applyLibraryCommand(state,c,newId){
   const lib=state.mediaLibrary;
   const item=()=>{const found=lib.items.find(item=>item.id===c.id);if(!found)throw Error('找不到已保存的影音，請重新整理。');return found;};

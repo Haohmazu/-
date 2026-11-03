@@ -5,7 +5,7 @@
   "scripts": {
     "version:prepare": "node tools/release.mjs",
     "test": "node --test tests/*.test.js",
-    "test:browser": "node tests/home-layout-browser.cjs",
+    "test:browser": "node tests/three-columns-browser.cjs && node tests/three-media-browser.cjs",
     "check:deployment": "node tools/check-deployment.mjs",
     "test:4a": "node tests/stage4a-browser.cjs",
     "test:4b": "node tests/stage4b-browser.cjs",
@@ -16,6 +16,9 @@
     "capture:visual": "node tools/capture-visual.cjs",
     "test:browser:previous-layout": "node tests/stage3-browser.cjs && node tests/stage4a-browser.cjs && node tests/stage4b-browser.cjs && node tests/stage4c-browser.cjs && node tests/stage4d-browser.cjs && node tests/integration-ib-browser.cjs && node tests/visual-browser.cjs",
     "capture:home": "node tools/capture-home-layout.cjs",
-    "test:home": "node tests/home-layout-browser.cjs"
+    "test:home": "node tests/home-layout-browser.cjs",
+    "test:browser:two-columns": "node tests/home-layout-browser.cjs",
+    "test:three-media": "node tests/three-media-browser.cjs",
+    "capture:three": "node tools/capture-three-columns.cjs"
   }
 }
