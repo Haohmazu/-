@@ -1,4 +1,5 @@
-import {$,el,button} from './dom.js?v=2.0-three-columns.0';
+import {restoreCardFocus} from './card-focus.js?v=2.0-IC.0';
+import {$,el,button} from './dom.js?v=2.0-IC.0';
 export function mountWidgets({store,media,stage}){
  const {engine}=media,tabs=['music','videos','tools'],viewer=$('#video-viewer');let listSignature,categorySignature;
  // These existing buttons move exactly once before any playback; media nodes never move.
@@ -17,7 +18,7 @@ export function mountWidgets({store,media,stage}){
  }
  $('#widget-search').oninput=renderList;$('#widget-category').onchange=renderList;store.subscribe(renderList);
  function restore(){if(viewer.matches(':modal'))viewer.close();}
- $('#video-enlarge').onclick=()=>{viewer.close();viewer.showModal();$('#video-enlarge').hidden=true;$('#video-restore').hidden=false;$('#video-restore').focus();};
+ $('#video-enlarge').onclick=()=>{restoreCardFocus();viewer.close();viewer.showModal();$('#video-enlarge').hidden=true;$('#video-restore').hidden=false;$('#video-restore').focus();};
  $('#video-restore').onclick=restore;
  viewer.addEventListener('close',()=>{if(viewer.matches(':modal'))return;if(!viewer.open)viewer.show();$('#video-enlarge').hidden=false;$('#video-restore').hidden=true;$('#video-enlarge').focus();});
  $('#central-play').onclick=()=>safe(()=>media.play());$('#central-pause').onclick=()=>engine.pause();$('#central-stop').onclick=()=>engine.stop();

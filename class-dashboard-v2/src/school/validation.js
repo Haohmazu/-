@@ -1,4 +1,5 @@
-import {timeMinutes,validDate,dateWeekday} from './time.js?v=2.0-three-columns.0';
+import {validateSound} from './sound-model.js?v=2.0-IC.0';
+import {timeMinutes,validDate,dateWeekday} from './time.js?v=2.0-IC.0';
 export function validatePeriods(periods) {
   if(!Array.isArray(periods)||!periods.length||periods.length>40)throw Error('作息需有 1–40 個時段。');
   const ids=new Set(),lessonNames=new Set();
@@ -26,5 +27,5 @@ export function validateSchool(s) {
   if(t.status==='RUNNING'?(!Number.isSafeInteger(t.endAt)||t.endAt<=0):t.endAt!==null)throw Error('計時結束時間不正確。');if(t.status==='FINISHED'&&t.remainingMs!==0)throw Error('計時狀態不一致。');
   const noteIds=new Set();if(!Array.isArray(s.notes)||s.notes.length>100)throw Error('聯絡簿最多 100 項。');for(const n of s.notes){if(!n||typeof n.id!=='string'||!n.id||noteIds.has(n.id)||typeof n.text!=='string'||!n.text.trim()||n.text.length>300||typeof n.done!=='boolean')throw Error('聯絡簿資料不正確。');noteIds.add(n.id);}
   const studentIds=new Set(s.students.map(s=>s.id));const p=s.picker;if(!p||!Number.isInteger(p.round)||p.round<1||!Array.isArray(p.drawn)||new Set(p.drawn).size!==p.drawn.length||p.drawn.some(id=>!studentIds.has(id))||(p.lastId!==null&&(!p.drawn.includes(p.lastId)||p.lastId!==p.drawn.at(-1))))throw Error('抽號資料不正確。');
-  if(!s.preferences||typeof s.preferences.timerSound!=='boolean'||typeof s.preferences.volume!=='number'||!Number.isFinite(s.preferences.volume)||s.preferences.volume<0||s.preferences.volume>1)throw Error('提示音設定不正確。');
+  validateSound(s.preferences);
 }

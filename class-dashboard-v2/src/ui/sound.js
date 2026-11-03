@@ -1,6 +1,9 @@
-export function createTimerSound(){
-  let context;
-  const unlock=()=>{try{const Audio=window.AudioContext||window.webkitAudioContext;if(Audio){context??=new Audio();if(context.state==='suspended')context.resume().catch(()=>{});}}catch{/* Visual countdown remains authoritative. */}};
-  window.addEventListener('pointerdown',unlock,{once:true});window.addEventListener('keydown',unlock,{once:true});
-  return preferences=>{if(!preferences.timerSound||preferences.volume===0)return;try{if(!context||context.state!=='running')return;for(let i=0;i<3;i++){const oscillator=context.createOscillator(),gain=context.createGain();oscillator.frequency.value=784;gain.gain.value=preferences.volume*0.15;oscillator.connect(gain);gain.connect(context.destination);oscillator.start(context.currentTime+i*0.3);oscillator.stop(context.currentTime+i*0.3+0.16);oscillator.onended=()=>{oscillator.disconnect();gain.disconnect();};}}catch{/* Audio errors never modify persisted data. */}};
+import {soundPlan} from '../school/sound-model.js?v=2.0-IC.0';
+export function createTimerSound({host=window,Audio=()=>host.AudioContext||host.webkitAudioContext}={}){
+ let context,serial=0;const voices=new Set();
+ function stop(){serial++;for(const voice of voices){try{voice.oscillator.stop();}catch{}try{voice.oscillator.disconnect();voice.gain.disconnect();}catch{}}voices.clear();}
+ async function ready(){const Constructor=Audio();if(!Constructor)throw Error('此瀏覽器不支援提示音。');context??=new Constructor();if(context.state==='suspended')await context.resume();if(context.state!=='running')throw Error('瀏覽器尚未允許聲音，請直接點按試聽或檢查網站音效權限。');return context;}
+ const unlock=()=>{ready().catch(()=>{});};host.addEventListener('pointerdown',unlock,{once:true});host.addEventListener('keydown',unlock,{once:true});
+ async function play(p,{preview=false}={}){stop();const ticket=serial;if((!preview&&!p.timerSound)||p.volume===0)return {played:false,skipped:true};try{const plan=soundPlan(p),ctx=await ready();if(ticket!==serial)return {played:false,skipped:true};for(const tone of plan){const oscillator=ctx.createOscillator(),gain=ctx.createGain(),start=ctx.currentTime+tone.start;oscillator.type=tone.wave;oscillator.frequency.value=tone.frequency;gain.gain.setValueAtTime(.0001,start);gain.gain.exponentialRampToValueAtTime(Math.max(.0001,tone.gain),start+.008);gain.gain.exponentialRampToValueAtTime(.0001,start+tone.duration);oscillator.connect(gain);gain.connect(ctx.destination);const voice={oscillator,gain};voices.add(voice);oscillator.onended=()=>{try{oscillator.disconnect();gain.disconnect();}catch{}voices.delete(voice);};oscillator.start(start);oscillator.stop(start+tone.duration);}return {played:true};}catch(e){if(ticket!==serial)return {played:false,skipped:true};stop();return {played:false,error:e.name==='NotAllowedError'?'瀏覽器未允許提示音，請直接點按試聽或檢查網站音效權限。':`提示音播放失敗：${e.message||'請檢查瀏覽器音效權限。'}`};}}
+ const sound=p=>play(p);sound.preview=p=>play(p,{preview:true});sound.stop=stop;return sound;
 }

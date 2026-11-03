@@ -1,0 +1,25 @@
+Class Dashboard 2.0 / 2.0-IC.0 / schemaVersion 8 / JSON formatVersion 1
+
+I-C development self-test only, not I-D independent acceptance. Linux Chromium; Windows11/physical speaker/whiteboard/live YouTube not verified.
+
+Baseline main: 820ed7a; branch: develop/class-dashboard-v2-ic-completion
+
+npm test: exit 0; 90 passed, 0 failed. Intentional renderer failure output is an expected negative test.
+
+TEST_URL=http://127.0.0.1:8013/class-dashboard-v2/ npm run test:browser: exit 0
+
+PASS Three columns: 360 combinations (18 palettes × 5 sizes × 4 central tabs) + 192 font cases + three layouts, no root/button/card overflow; sidebar tabs and full notes/edit; shared timer pause/resume/badge/deadline; stable picker; background music same instance; four focus modes; keyboard; privacy; native fullscreen enter/exit; max24h timer bound; JSON download/invalid rejection/restore; IDs/history unchanged.
+
+PASS Three-media: real WAV/direct/local WebM; right music previous/next/preferences; category/search; central handoff; native pause retains src/time; modal Esc/fullscreen without moving media; audio/video exclusion; same single nodes; YouTube official-API double retains iframe on tab/modal, error150 visible; timer music start/pause and video pause on finish; focus-to-central handoff; schema8 and classroom history preserved.
+
+PASS I-C: 9 tone/count previews, one sound context, disabled/zero/failure/rollback, schema7 readonly→8/reload/JSON; 378 focused palette/size/region cases, native modal bounds/Tab/Esc/touch, unchanged state, one media pair, finished timer despite audio denial. Mock audio is not physical speaker acceptance.
+
+PASS I-C real WebAudio browser API: electronic/bell/ring previews scheduled without API errors. Physical speaker output/timbre is NOT verified.
+
+TEST_URL=http://127.0.0.1:8013/class-dashboard-v2/ npm run capture:ic: exit 0, 90 screenshots, errors 0, geometry failures 0.
+
+node tools/check-deployment.mjs http://127.0.0.1:8013/class-dashboard-v2/: exit 0, 77 asset hashes match.
+
+git diff --check: exit 0.
+
+Schema7 load is readonly; first successful change persists schema8. Close old tabs and retain a pre-upgrade JSON backup.
