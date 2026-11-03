@@ -3,15 +3,15 @@
 唯一專案：https://github.com/haohmazu/- 中的 `class-dashboard-v2/`。
 正式入口：https://haohmazu.github.io/-/class-dashboard-v2/index.html （資料夾網址亦可）。
 
-本次為 `develop/class-dashboard-v2-ic-completion` / `2.0-IC.0` / schema 8。main為820ed7a，已合併PR #11三欄版。本次新分支補強I-C。本批次沒有改其他網站、Pages 設定或正式分支；開發分支存在不代表正式站已更新。
+本次為 `review/class-dashboard-v2-integration-id` / `2.0-ID.0` / schema 8。main為90fa70b，已合併PR #12的I-C。本次分支為I-D驗收與兩項顯示修正。本批次沒有改其他網站、Pages 設定或正式分支；開發分支存在不代表正式站已更新。
 
 ## 教師確認後的發布流程
 
 1. 先下載目前正式站完整 JSON 備份。
-2. 開啟本次首頁布局 PR，閱讀變更與 [驗收紀錄](ic-completion-report.md)。若自動建立 PR 因環境權限失敗，可從分支的 Compare & pull request 建立，base 必須是 main。
+2. 開啟本次首頁布局 PR，閱讀變更與 [驗收紀錄](id-integration-report.md)。若自動建立 PR 因環境權限失敗，可從分支的 Compare & pull request 建立，base 必須是 main。
 3. 教師確認後才合併 main。Codex 本次不代為合併或觸發正式發布。
 4. 到 repository 的 Actions 查看既有 Pages 部署，等待成功。保留原有發布來源，不更改根目錄其他網站、不以子目錄內容取代整個 repository。
-5. 開啟上述正式網址，Ctrl＋F5；頁尾／資料管理應顯示 `2.0-IC.0`、資料版本8。關閉其他舊分頁，確認原學生與教室資料存在。
+5. 開啟上述正式網址，Ctrl＋F5；頁尾／資料管理應顯示 `2.0-ID.0`、資料版本8。關閉其他舊分頁，確認原學生與教室資料存在。
 
 原設定曾由使用者畫面顯示 main / root branch deploy；本環境目前無法讀取 Pages API，因此不能把歷史資訊當成已核實的即時設定。如網站沒有更新，先在 Settings → Pages 確認當前來源，再看部署所用提交；不要直接亂改來源或清除網站資料。
 
@@ -70,3 +70,8 @@ I-B 由 schema 6 升至 7，僅增加外觀配對，舊 display 設定與所有�
 基準main 820ed7a；分支develop/class-dashboard-v2-ic-completion，版本2.0-IC.0／schema8。本次不修改Pages來源或main。資源版本清單77項，均使用專案相對路徑；審查JPEG不被首頁載入。
 
 升級前下載schema7完整備份，關閉舊分頁。schema8新增提示音類型與次數；舊schema7程式不能讀schema8，回退需相容程式與升級前備份，不可只改資料版本號。試用分支請使用獨立本機來源，不與正式站同源混寫。未經使用者確認不發布。
+
+
+## I-D交付
+
+版本2.0-ID.0，資料8不變，基準main90fa70b。沒有修改部署設定或正式站。GitHub API及正式Pages HTTP仍Forbidden／CONNECT403，無法核實當前公開站內容；本機HTTP77項資源雜湊一致不能當成正式已部署證據。使用者確認PR後再決定是否合併，Codex不自行發布。

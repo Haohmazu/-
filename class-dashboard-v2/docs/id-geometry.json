@@ -1,0 +1,1897 @@
+{
+  "version": "2.0-ID.0",
+  "syntheticData": true,
+  "errors": [],
+  "shots": [
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "home",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-home-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": null
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-ocean-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-forest-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "home",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-home-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": null
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-mint-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-berry-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "home",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-home-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": null
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-cream-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sage-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "home",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-home-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": null
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-cyber-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-aurora-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "home",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-home-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": null
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-cool-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-graphite-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "home",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-home-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": null
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-blue-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "mode": "timer-focus-sound",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-sakura-timer-focus-sound-1920x1080.jpg",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "root": [
+        1920,
+        1080
+      ],
+      "modal": {
+        "x": 260,
+        "y": 64.796875,
+        "width": 1400,
+        "height": 950.390625
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "home",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-home-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "clock-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-clock-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "notes-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-notes-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "widget-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-widget-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-ocean-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-forest-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "home",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-home-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "clock-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-clock-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "notes-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-notes-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "widget-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-widget-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "study-mint-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "study-berry-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "home",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-home-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "clock-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-clock-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "notes-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-notes-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "widget-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-widget-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-cream-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sage-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "home",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-home-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "clock-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-clock-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "notes-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-notes-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "widget-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-widget-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-cyber-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-aurora-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "home",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-home-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "clock-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-clock-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "notes-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-notes-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "widget-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-widget-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-cool-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-graphite-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "home",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-home-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "clock-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-clock-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "notes-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-notes-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "widget-focus",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-widget-focus-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-blue-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "mode": "timer-focus-sound",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-sakura-timer-focus-sound-1366x768.jpg",
+      "viewport": [
+        1366,
+        768
+      ],
+      "root": [
+        1366,
+        768
+      ],
+      "modal": {
+        "x": 40.984375,
+        "y": 46.078125,
+        "width": 1284.03125,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "home",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-home-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-ocean-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-forest-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "home",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-home-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "study-mint-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "study-berry-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "home",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-home-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-cream-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sage-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "home",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-home-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-cyber-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-aurora-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "home",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-home-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-cool-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-graphite-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "home",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-home-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": null
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-blue-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "mode": "timer-focus-sound",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-sakura-timer-focus-sound-1024x768.jpg",
+      "viewport": [
+        1024,
+        768
+      ],
+      "root": [
+        1024,
+        768
+      ],
+      "modal": {
+        "x": 30.71875,
+        "y": 46.078125,
+        "width": 962.546875,
+        "height": 675.828125
+      }
+    }
+  ]
+}

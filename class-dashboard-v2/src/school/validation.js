@@ -1,5 +1,5 @@
-import {validateSound} from './sound-model.js?v=2.0-IC.0';
-import {timeMinutes,validDate,dateWeekday} from './time.js?v=2.0-IC.0';
+import {validateSound} from './sound-model.js?v=2.0-ID.0';
+import {timeMinutes,validDate,dateWeekday} from './time.js?v=2.0-ID.0';
 export function validatePeriods(periods) {
   if(!Array.isArray(periods)||!periods.length||periods.length>40)throw Error('作息需有 1–40 個時段。');
   const ids=new Set(),lessonNames=new Set();

@@ -1,4 +1,4 @@
-import {$} from './dom.js?v=2.0-IC.0';
+import {$} from './dom.js?v=2.0-ID.0';
 // View state only. Timer, picker, schedule and media keep their existing authorities.
 export function mountStage(store){
  const modes=['clock','timer','picker','video'];let selected='clock',leaveVideo=()=>{},previousActive;

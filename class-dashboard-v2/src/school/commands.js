@@ -1,7 +1,7 @@
-import {activeTerm} from './schedule.js?v=2.0-IC.0';
-import {validatePeriods} from './validation.js?v=2.0-IC.0';
-import {dateWeekday,taiwanParts} from './time.js?v=2.0-IC.0';
-import {applyTimerCommand} from './timer.js?v=2.0-IC.0';
+import {activeTerm} from './schedule.js?v=2.0-ID.0';
+import {validatePeriods} from './validation.js?v=2.0-ID.0';
+import {dateWeekday,taiwanParts} from './time.js?v=2.0-ID.0';
+import {applyTimerCommand} from './timer.js?v=2.0-ID.0';
 export function applySchoolCommand(s,c,newId,at,random) {
   if(c.expectedRevision!==undefined&&c.expectedRevision!==s.revision)throw Error('預覽後資料已變更，請重新預覽。');
   if(c.type.startsWith('TIMER_'))return applyTimerCommand(s,c,at);

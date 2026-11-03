@@ -1,5 +1,5 @@
-import {restoreCardFocus} from './card-focus.js?v=2.0-IC.0';
-import {$,el,button} from './dom.js?v=2.0-IC.0';
+import {restoreCardFocus} from './card-focus.js?v=2.0-ID.0';
+import {$,el,button} from './dom.js?v=2.0-ID.0';
 export function mountWidgets({store,media,stage}){
  const {engine}=media,tabs=['music','videos','tools'],viewer=$('#video-viewer');let listSignature,categorySignature;
  // These existing buttons move exactly once before any playback; media nodes never move.

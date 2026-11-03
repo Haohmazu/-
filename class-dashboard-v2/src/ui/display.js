@@ -1,6 +1,6 @@
-import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-IC.0';
-import {createFullscreenController} from '../display/fullscreen.js?v=2.0-IC.0';
-import {shortcutFor} from '../display/shortcuts.js?v=2.0-IC.0';
+import {$,notify,run,openSettings,setSettingsAccess} from './dom.js?v=2.0-ID.0';
+import {createFullscreenController} from '../display/fullscreen.js?v=2.0-ID.0';
+import {shortcutFor} from '../display/shortcuts.js?v=2.0-ID.0';
 export function mountDisplay(store){
   let lastFocus,lastPrivacy,lastDraw,externalPrivacy=false;
   const privateNow=()=>externalPrivacy||store.getDisplayState().display.privacy;
@@ -20,7 +20,7 @@ export function mountDisplay(store){
     document.body.dataset.focus=d.focus;document.body.dataset.layout=d.layout;document.body.dataset.font=d.font;document.body.dataset.theme=d.theme;document.body.dataset.privacy=String(privacy);
     $('#focus-mode').value=d.focus;$('#display-layout').value=d.layout;$('#display-font').value=d.font;$('#display-theme').value=d.theme;$('#return-home').hidden=d.focus==='home';
     $('#projection-privacy').textContent=privacy?'關閉投影隱私':'開啟投影隱私';$('#projection-privacy').setAttribute('aria-pressed',String(privacy));
-    for(const selector of ['#open-settings','#open-roster','[data-open]'])document.querySelectorAll(selector).forEach(b=>b.disabled=privacy);
+    for(const selector of ['#open-settings','#open-roster','#visual-roster-link','[data-open]'])document.querySelectorAll(selector).forEach(b=>b.disabled=privacy);
     if(privacy){if($('#settings').open)$('#settings').close();if(lastPrivacy!==privacy){$('#notice').textContent='';$('#form-error').textContent='';notify('投影隱私已開啟。請先明確關閉投影隱私，才能查看名單、匯入預覽及還原明細。');}}
     if(d.focus==='schedule'&&lastFocus!==d.focus)$('#view-today').click();
     if(lastDraw!==undefined&&s.picker.lastId&&lastDraw!==s.picker.lastId&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
