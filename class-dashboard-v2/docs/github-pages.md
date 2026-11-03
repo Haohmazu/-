@@ -40,3 +40,12 @@ node tools/check-deployment.mjs http://localhost:8000/class-dashboard-v2/
 ## 更新與復原
 
 I-B 由 schema 6 升至 7，僅增加外觀配對，舊 display 設定與所有正式資料保留。schema 3/4/5/6 經既有遷移到 7，讀取不自動寫回。學生 ID、歷史與所有教室資料保留。schema 6（及更舊）的程式不能編輯 schema 7 資料，勿把回退程式版本誤當資料還原。若需要回退，先保留完整 JSON 與原始副本，由教師確認相容性，不透過刪除 localStorage 修復。
+
+
+## 視覺改善分支
+
+版本 `2.0-visual.0`，資料版本 7；分支 `develop/class-dashboard-v2-visual-restoration`。所有資源使用專案內相對路徑；`version:prepare` 同步快取版本並產生含 SVG 雜湊的 69 項清單。
+
+本次沒有修改 Pages 來源、main 或正式站。此環境 GitHub API／正式站 HTTP 存取受限，無法獨立核實目前正式部署提交；不可把本機成功當成已發布。Git 推送與建立 PR 的結果另列交付報告。
+
+使用者確認 PR 後才自行決定合併；Pages 應維持 main / root，網址仍是 `https://haohmazu.github.io/-/class-dashboard-v2/index.html`。發布後先看新版本號，必要時 Ctrl+F5；勿清除網站資料解決快取問題。`docs/screenshots/visual` 是審查用 JPEG，不被首頁載入。

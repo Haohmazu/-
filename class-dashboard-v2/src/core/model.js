@@ -1,7 +1,7 @@
-import {appearanceDefaults} from '../display/appearance.js?v=2.0-integration-IB.0';
-import {libraryDefaults} from '../library/model.js?v=2.0-integration-IB.0';
-import {displayDefaults} from '../display/model.js?v=2.0-integration-IB.0';
-import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-integration-IB.0';
+import {appearanceDefaults} from '../display/appearance.js?v=2.0-visual.0';
+import {libraryDefaults} from '../library/model.js?v=2.0-visual.0';
+import {displayDefaults} from '../display/model.js?v=2.0-visual.0';
+import {schoolDefaults,toolDefaults} from '../school/model.js?v=2.0-visual.0';
 export const DATA_VERSION = 7;
 export const STORAGE_KEY = 'class-dashboard-v2';
 export function createInitialState() {

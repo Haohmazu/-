@@ -1,6 +1,6 @@
-import {taiwanParts} from '../school/time.js?v=2.0-integration-IB.0';
-import {$,el} from './dom.js?v=2.0-integration-IB.0';
-import {openOverlay} from './overlay.js?v=2.0-integration-IB.0';
+import {taiwanParts} from '../school/time.js?v=2.0-visual.0';
+import {$,el} from './dom.js?v=2.0-visual.0';
+import {openOverlay} from './overlay.js?v=2.0-visual.0';
 export function mountHome(store){
  const tabs=[$('#view-today'),$('#view-week'),$('#view-notes')],dialog=$('#content-details');let active='view-today',tableHome,tableNode;
  const restoreTable=()=>{if(tableHome){tableHome.replaceWith(tableNode);tableHome=null;tableNode=null;}};
@@ -13,7 +13,7 @@ export function mountHome(store){
  $('#open-system-status').onclick=()=>openOverlay($('#system-status'));$('#close-system-status').onclick=()=>$('#system-status').close();
  let pending=false,lastLayout;
  function checkFit(){pending=false;if(document.body.dataset.focus!=='home'||innerWidth<960||innerHeight<620||document.body.dataset.readableflow==='true')return;
-   const box=$('.clock-card').getBoundingClientRect();const overflow=document.documentElement.scrollHeight>innerHeight+1||document.documentElement.scrollWidth>innerWidth+1||['#clock','#current-period','#current-course','#school-countdown','#next-course'].some(id=>{const r=$(id).getBoundingClientRect();return r.left<box.left-1||r.right>box.right+1||r.top<box.top-1||r.bottom>box.bottom+1;});
+   const overflow=document.documentElement.scrollHeight>innerHeight+1||document.documentElement.scrollWidth>innerWidth+1||['#clock','#current-period','#current-course','#school-countdown','#next-course'].some(id=>{const node=$(id),box=node.closest('.clock-card,.course-card').getBoundingClientRect(),r=node.getBoundingClientRect();return r.left<box.left-1||r.right>box.right+1||r.top<box.top-1||r.bottom>box.bottom+1;});
    if(overflow){document.body.dataset.readableflow='true';$('#layout-fallback').hidden=false;}
  }
  const scheduleFit=()=>{if(!pending){pending=true;requestAnimationFrame(checkFit);}};

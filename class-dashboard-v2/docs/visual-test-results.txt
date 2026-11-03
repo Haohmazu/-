@@ -1,0 +1,31 @@
+Class Dashboard 2.0 / 2.0-visual.0 / schemaVersion 7
+
+Developer self-test; Linux Chromium. Windows11 / speaker / external platform playback not verified.
+
+TEST_URL=http://127.0.0.1:8011/class-dashboard-v2/
+
+npm test: exit 0; 82 passed, 0 failed. Intentional renderer-failure output belongs to an expected negative test.
+
+npm run test:browser: exit 0; seven browser suites passed.
+
+PASS: 舊資料唯讀升版與歷史保留、任務模組未載入且命令拒絕、30人CSV/XLSX名單、固定/今日/整週課表、CSV/XLSX課表、調課取消、重疊拒絕、學期沿用、聯絡簿、時間戳計時重整/暫停/到時、抽號29次不重複、JSON下載/預覽/還原、損壞資料恢復、五種尺寸與離線保存。
+
+PASS 4A: 四種專注、原生全螢幕/ESC、投影隱私及跨分頁關閉、輸入/IME安全快捷鍵、三布局三主題四字體、六尺寸特大字、觸控抽號不重複、備份相容、拒絕/儲存失敗提示、reduced-motion。
+
+PASS 4B: 真實 WAV/MP3/WebM/MP4 解碼、控制/循環/進度/影片全螢幕、背景迷你列、關閉影片清理、HTTPS路由與官方iframe流程模擬、互斥、錯誤持續、五尺寸、教室權威資料不變、偏好可保存。
+
+PASS 4C: schema5唯讀升6、網址CRUD/穩定ID/排序/搜尋/最愛/分類、原生播放與偏好保存/重載、單一播放器互斥、計時開始暫停繼續/結束三選項與直接影片、官方API暫停替身、JSON下載預覽還原/無效拒絕、過期頁/Quota保護、五尺寸、學生課表歷史保留。
+
+PASS 4D: schema6唯讀保留、清單鍵盤焦點/Tab陷阱/Esc、來源錯誤恢復、YouTube API網路重試/100/101/150錯誤與延遲回呼替身、16次真實WAV/MP4切換/事件上限/Blob釋放、六尺寸特大字×三主題布局/觸控、隱私與歷史完整。
+
+PASS I-B: schema6→7唯讀相容、預覽/取消/確認/失敗回復、18配色×8尺寸×3布局×4字體=1728組無頁面捲軸及按鈕/卡片邊界、六風格結構差異、高對比、頁籤鍵盤/100事項完整內容、單一播放器不中斷、deadline與抽號不變、草稿保留、JSON與手機降級。
+
+PASS Visual: 18配色逐項切頁/事項視窗/真實抽號/隱私/展示控制、54組角色文字對比、6種不同構圖、背景音樂與deadline不變、原生影音互斥/影片關閉、單一播放器、舊學生/課表/提示音/收藏/歷史保留。
+
+npm run capture:visual: exit 0; 54 screenshots; page errors 0; geometry failures 0.
+
+node tools/check-deployment.mjs http://127.0.0.1:8011/class-dashboard-v2/: exit 0; 69 asset hashes match.
+
+git diff --check: exit 0.
+
+GitHub API / Pages API: Forbidden. Production deployment could not be independently verified.

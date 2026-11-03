@@ -1,4 +1,4 @@
-import {youtubeEmbed} from './sources.js?v=2.0-integration-IB.0';
+import {youtubeEmbed} from './sources.js?v=2.0-visual.0';
 let apiPromise;
 export function loadYouTubeAPI(){
   if(window.YT?.Player)return Promise.resolve(window.YT);

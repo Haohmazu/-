@@ -1,3 +1,4 @@
+const {choosePresentation,pressPrivacy,choosePreset,adjustTimer}=require('./browser-helpers.cjs');
 const {chromium}=require('playwright');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 const old=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures','stage4a-state.json'),'utf8'));const base=process.env.TEST_URL||'http://127.0.0.1:8000/class-dashboard-v2/';
 const fixture=name=>path.join(__dirname,'fixtures',name);

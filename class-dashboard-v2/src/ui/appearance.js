@@ -1,6 +1,6 @@
-import {$,el,button,option} from './dom.js?v=2.0-integration-IB.0';
-import {openOverlay} from './overlay.js?v=2.0-integration-IB.0';
-import {STYLES,appearanceTokens} from '../display/appearance.js?v=2.0-integration-IB.0';
+import {$,el,button,option} from './dom.js?v=2.0-visual.0';
+import {openOverlay} from './overlay.js?v=2.0-visual.0';
+import {STYLES,appearanceTokens} from '../display/appearance.js?v=2.0-visual.0';
 const tokenKeys=['page','card','text','muted','border','surface','clock','accent','error','feedback','button-text'];
 export function mountAppearance(store){
  const dialog=$('#appearance-dialog');let draft=null;

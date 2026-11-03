@@ -1,0 +1,4597 @@
+{
+  "version": "2.0-visual.0",
+  "syntheticData": true,
+  "errors": [],
+  "results": [
+    {
+      "style": "playful",
+      "palette": "candy",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-candy-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 554,
+          "scroll": 554,
+          "box": {
+            "x": 38.390625,
+            "y": 454.015625,
+            "width": 592.984375,
+            "height": 563.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 649.375,
+            "y": 99,
+            "width": 621.234375,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 592.984375,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 1288.609375,
+            "y": 99,
+            "width": 593,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 367,
+          "scroll": 367,
+          "box": {
+            "x": 1288.609375,
+            "y": 454.015625,
+            "width": 593,
+            "height": 377.46875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 367,
+          "scroll": 367,
+          "box": {
+            "x": 649.375,
+            "y": 454.015625,
+            "width": 621.234375,
+            "height": 377.46875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-ocean-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 554,
+          "scroll": 554,
+          "box": {
+            "x": 38.390625,
+            "y": 454.015625,
+            "width": 592.984375,
+            "height": 563.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 649.375,
+            "y": 99,
+            "width": 621.234375,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 592.984375,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 1288.609375,
+            "y": 99,
+            "width": 593,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 367,
+          "scroll": 367,
+          "box": {
+            "x": 1288.609375,
+            "y": 454.015625,
+            "width": 593,
+            "height": 377.46875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 367,
+          "scroll": 367,
+          "box": {
+            "x": 649.375,
+            "y": 454.015625,
+            "width": 621.234375,
+            "height": 377.46875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "width": 1920,
+      "height": 1080,
+      "file": "playful-forest-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 554,
+          "scroll": 554,
+          "box": {
+            "x": 38.390625,
+            "y": 454.015625,
+            "width": 592.984375,
+            "height": 563.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 649.375,
+            "y": 99,
+            "width": 621.234375,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 592.984375,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 327,
+          "scroll": 327,
+          "box": {
+            "x": 1288.609375,
+            "y": 99,
+            "width": 593,
+            "height": 337.015625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 367,
+          "scroll": 367,
+          "box": {
+            "x": 1288.609375,
+            "y": 454.015625,
+            "width": 593,
+            "height": 377.46875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 367,
+          "scroll": 367,
+          "box": {
+            "x": 649.375,
+            "y": 454.015625,
+            "width": 621.234375,
+            "height": 377.46875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-sun-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 38.390625,
+            "y": 436.0625,
+            "width": 558.515625,
+            "height": 425.09375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 610.90625,
+            "y": 99,
+            "width": 698.171875,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 558.515625,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 1323.078125,
+            "y": 99,
+            "width": 558.53125,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 1323.078125,
+            "y": 436.0625,
+            "width": 558.53125,
+            "height": 425.09375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 610.90625,
+            "y": 436.0625,
+            "width": 698.171875,
+            "height": 425.09375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-mint-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 38.390625,
+            "y": 436.0625,
+            "width": 558.515625,
+            "height": 425.09375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 610.90625,
+            "y": 99,
+            "width": 698.171875,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 558.515625,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 1323.078125,
+            "y": 99,
+            "width": 558.53125,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 1323.078125,
+            "y": 436.0625,
+            "width": 558.53125,
+            "height": 425.09375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 610.90625,
+            "y": 436.0625,
+            "width": 698.171875,
+            "height": 425.09375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "width": 1920,
+      "height": 1080,
+      "file": "study-berry-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 38.390625,
+            "y": 436.0625,
+            "width": 558.515625,
+            "height": 425.09375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 610.90625,
+            "y": 99,
+            "width": 698.171875,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 558.515625,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 315,
+          "scroll": 315,
+          "box": {
+            "x": 1323.078125,
+            "y": 99,
+            "width": 558.53125,
+            "height": 323.0625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 1323.078125,
+            "y": 436.0625,
+            "width": 558.53125,
+            "height": 425.09375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 417,
+          "scroll": 417,
+          "box": {
+            "x": 610.90625,
+            "y": 436.0625,
+            "width": 698.171875,
+            "height": 425.09375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sky-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 743,
+          "scroll": 743,
+          "box": {
+            "x": 1391.953125,
+            "y": 99,
+            "width": 489.65625,
+            "height": 748.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 489.578125,
+            "y": 99,
+            "width": 888.375,
+            "height": 346.6875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 437.1875,
+            "height": 346.6875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 38.390625,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 940.765625,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 489.578125,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-cream-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 743,
+          "scroll": 743,
+          "box": {
+            "x": 1391.953125,
+            "y": 99,
+            "width": 489.65625,
+            "height": 748.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 489.578125,
+            "y": 99,
+            "width": 888.375,
+            "height": 346.6875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 437.1875,
+            "height": 346.6875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 38.390625,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 940.765625,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 489.578125,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "width": 1920,
+      "height": 1080,
+      "file": "fresh-sage-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 743,
+          "scroll": 743,
+          "box": {
+            "x": 1391.953125,
+            "y": 99,
+            "width": 489.65625,
+            "height": 748.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 489.578125,
+            "y": 99,
+            "width": 888.375,
+            "height": 346.6875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 437.1875,
+            "height": 346.6875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 38.390625,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 940.765625,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 382,
+          "scroll": 382,
+          "box": {
+            "x": 489.578125,
+            "y": 459.6875,
+            "width": 437.1875,
+            "height": 388.296875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-electric-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 732,
+          "scroll": 732,
+          "box": {
+            "x": 1407.65625,
+            "y": 99,
+            "width": 473.953125,
+            "height": 733.640625
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 583.453125,
+            "y": 99,
+            "width": 810.203125,
+            "height": 342.6875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 152.390625,
+            "y": 99,
+            "width": 417.0625,
+            "height": 342.6875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 152.390625,
+            "y": 455.6875,
+            "width": 417.0625,
+            "height": 376.953125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 995.5625,
+            "y": 455.6875,
+            "width": 398.09375,
+            "height": 376.953125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 583.453125,
+            "y": 455.6875,
+            "width": 398.109375,
+            "height": 376.953125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-cyber-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 732,
+          "scroll": 732,
+          "box": {
+            "x": 1407.65625,
+            "y": 99,
+            "width": 473.953125,
+            "height": 733.640625
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 583.453125,
+            "y": 99,
+            "width": 810.203125,
+            "height": 342.6875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 152.390625,
+            "y": 99,
+            "width": 417.0625,
+            "height": 342.6875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 152.390625,
+            "y": 455.6875,
+            "width": 417.0625,
+            "height": 376.953125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 995.5625,
+            "y": 455.6875,
+            "width": 398.09375,
+            "height": 376.953125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 583.453125,
+            "y": 455.6875,
+            "width": 398.109375,
+            "height": 376.953125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "width": 1920,
+      "height": 1080,
+      "file": "tech-aurora-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 732,
+          "scroll": 732,
+          "box": {
+            "x": 1407.65625,
+            "y": 99,
+            "width": 473.953125,
+            "height": 733.640625
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 583.453125,
+            "y": 99,
+            "width": 810.203125,
+            "height": 342.6875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 341,
+          "scroll": 341,
+          "box": {
+            "x": 152.390625,
+            "y": 99,
+            "width": 417.0625,
+            "height": 342.6875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 152.390625,
+            "y": 455.6875,
+            "width": 417.0625,
+            "height": 376.953125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 995.5625,
+            "y": 455.6875,
+            "width": 398.09375,
+            "height": 376.953125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 375,
+          "scroll": 375,
+          "box": {
+            "x": 583.453125,
+            "y": 455.6875,
+            "width": 398.109375,
+            "height": 376.953125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-warm-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 967,
+            "y": 99,
+            "width": 914.609375,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 539.875,
+            "y": 99,
+            "width": 413.125,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 487.484375,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 38.390625,
+            "y": 479.875,
+            "width": 487.484375,
+            "height": 386.53125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 967,
+            "y": 479.875,
+            "width": 914.609375,
+            "height": 386.53125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 539.875,
+            "y": 479.875,
+            "width": 413.125,
+            "height": 386.53125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-cool-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 967,
+            "y": 99,
+            "width": 914.609375,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 539.875,
+            "y": 99,
+            "width": 413.125,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 487.484375,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 38.390625,
+            "y": 479.875,
+            "width": 487.484375,
+            "height": 386.53125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 967,
+            "y": 479.875,
+            "width": 914.609375,
+            "height": 386.53125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 539.875,
+            "y": 479.875,
+            "width": 413.125,
+            "height": 386.53125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "width": 1920,
+      "height": 1080,
+      "file": "minimal-graphite-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 967,
+            "y": 99,
+            "width": 914.609375,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 539.875,
+            "y": 99,
+            "width": 413.125,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 365,
+          "scroll": 365,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 487.484375,
+            "height": 366.875
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 38.390625,
+            "y": 479.875,
+            "width": 487.484375,
+            "height": 386.53125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 967,
+            "y": 479.875,
+            "width": 914.609375,
+            "height": 386.53125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 385,
+          "scroll": 385,
+          "box": {
+            "x": 539.875,
+            "y": 479.875,
+            "width": 413.125,
+            "height": 386.53125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-purple-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 540,
+          "scroll": 540,
+          "box": {
+            "x": 38.390625,
+            "y": 473.59375,
+            "width": 573.71875,
+            "height": 544.390625
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 353,
+          "scroll": 353,
+          "box": {
+            "x": 630.109375,
+            "y": 99,
+            "width": 659.765625,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 351,
+          "scroll": 351,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 573.71875,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 353,
+          "scroll": 353,
+          "box": {
+            "x": 1307.875,
+            "y": 99,
+            "width": 573.71875,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 336,
+          "scroll": 336,
+          "box": {
+            "x": 1307.875,
+            "y": 473.59375,
+            "width": 573.71875,
+            "height": 339.609375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 336,
+          "scroll": 336,
+          "box": {
+            "x": 630.109375,
+            "y": 473.59375,
+            "width": 659.765625,
+            "height": 339.609375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-royal-blue-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 540,
+          "scroll": 540,
+          "box": {
+            "x": 38.390625,
+            "y": 473.59375,
+            "width": 573.71875,
+            "height": 544.390625
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 353,
+          "scroll": 353,
+          "box": {
+            "x": 630.109375,
+            "y": 99,
+            "width": 659.765625,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 351,
+          "scroll": 351,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 573.71875,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 353,
+          "scroll": 353,
+          "box": {
+            "x": 1307.875,
+            "y": 99,
+            "width": 573.71875,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 336,
+          "scroll": 336,
+          "box": {
+            "x": 1307.875,
+            "y": 473.59375,
+            "width": 573.71875,
+            "height": 339.609375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 336,
+          "scroll": 336,
+          "box": {
+            "x": 630.109375,
+            "y": 473.59375,
+            "width": 659.765625,
+            "height": 339.609375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "width": 1920,
+      "height": 1080,
+      "file": "elegant-sakura-1920x1080.jpg",
+      "root": [
+        1920,
+        1080
+      ],
+      "viewport": [
+        1920,
+        1080
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 540,
+          "scroll": 540,
+          "box": {
+            "x": 38.390625,
+            "y": 473.59375,
+            "width": 573.71875,
+            "height": 544.390625
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 353,
+          "scroll": 353,
+          "box": {
+            "x": 630.109375,
+            "y": 99,
+            "width": 659.765625,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 351,
+          "scroll": 351,
+          "box": {
+            "x": 38.390625,
+            "y": 99,
+            "width": 573.71875,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 353,
+          "scroll": 353,
+          "box": {
+            "x": 1307.875,
+            "y": 99,
+            "width": 573.71875,
+            "height": 356.59375
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 336,
+          "scroll": 336,
+          "box": {
+            "x": 1307.875,
+            "y": 473.59375,
+            "width": 573.71875,
+            "height": 339.609375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 336,
+          "scroll": 336,
+          "box": {
+            "x": 630.109375,
+            "y": 473.59375,
+            "width": 659.765625,
+            "height": 339.609375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-candy-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 378,
+          "scroll": 378,
+          "box": {
+            "x": 20.484375,
+            "y": 319.578125,
+            "width": 428.203125,
+            "height": 388.421875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 458.6875,
+            "y": 76,
+            "width": 448.609375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 428.203125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 917.296875,
+            "y": 76,
+            "width": 428.203125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 917.296875,
+            "y": 319.578125,
+            "width": 428.203125,
+            "height": 261.625
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 458.6875,
+            "y": 319.578125,
+            "width": 448.609375,
+            "height": 261.625
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-ocean-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 378,
+          "scroll": 378,
+          "box": {
+            "x": 20.484375,
+            "y": 319.578125,
+            "width": 428.203125,
+            "height": 388.421875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 458.6875,
+            "y": 76,
+            "width": 448.609375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 428.203125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 917.296875,
+            "y": 76,
+            "width": 428.203125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 917.296875,
+            "y": 319.578125,
+            "width": 428.203125,
+            "height": 261.625
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 458.6875,
+            "y": 319.578125,
+            "width": 448.609375,
+            "height": 261.625
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "width": 1366,
+      "height": 768,
+      "file": "playful-forest-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 378,
+          "scroll": 378,
+          "box": {
+            "x": 20.484375,
+            "y": 319.578125,
+            "width": 428.203125,
+            "height": 388.421875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 458.6875,
+            "y": 76,
+            "width": 448.609375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 428.203125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 917.296875,
+            "y": 76,
+            "width": 428.203125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 917.296875,
+            "y": 319.578125,
+            "width": 428.203125,
+            "height": 261.625
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 458.6875,
+            "y": 319.578125,
+            "width": 448.609375,
+            "height": 261.625
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "width": 1366,
+      "height": 768,
+      "file": "study-sun-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 20.484375,
+            "y": 307.90625,
+            "width": 401.546875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 432.03125,
+            "y": 76,
+            "width": 501.921875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 401.546875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 943.953125,
+            "y": 76,
+            "width": 401.546875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 943.953125,
+            "y": 307.90625,
+            "width": 401.546875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 432.03125,
+            "y": 307.90625,
+            "width": 501.921875,
+            "height": 291.984375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "width": 1366,
+      "height": 768,
+      "file": "study-mint-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 20.484375,
+            "y": 307.90625,
+            "width": 401.546875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 432.03125,
+            "y": 76,
+            "width": 501.921875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 401.546875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 943.953125,
+            "y": 76,
+            "width": 401.546875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 943.953125,
+            "y": 307.90625,
+            "width": 401.546875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 432.03125,
+            "y": 307.90625,
+            "width": 501.921875,
+            "height": 291.984375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "width": 1366,
+      "height": 768,
+      "file": "study-berry-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 20.484375,
+            "y": 307.90625,
+            "width": 401.546875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 432.03125,
+            "y": 76,
+            "width": 501.921875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 401.546875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 943.953125,
+            "y": 76,
+            "width": 401.546875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 943.953125,
+            "y": 307.90625,
+            "width": 401.546875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 432.03125,
+            "y": 307.90625,
+            "width": 501.921875,
+            "height": 291.984375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sky-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 509,
+          "scroll": 509,
+          "box": {
+            "x": 998.0625,
+            "y": 76,
+            "width": 347.453125,
+            "height": 514.828125
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 346.34375,
+            "y": 76,
+            "width": 641.71875,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 315.859375,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 20.484375,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 672.203125,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 346.34375,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-cream-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 509,
+          "scroll": 509,
+          "box": {
+            "x": 998.0625,
+            "y": 76,
+            "width": 347.453125,
+            "height": 514.828125
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 346.34375,
+            "y": 76,
+            "width": 641.71875,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 315.859375,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 20.484375,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 672.203125,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 346.34375,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "width": 1366,
+      "height": 768,
+      "file": "fresh-sage-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 509,
+          "scroll": 509,
+          "box": {
+            "x": 998.0625,
+            "y": 76,
+            "width": 347.453125,
+            "height": 514.828125
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 346.34375,
+            "y": 76,
+            "width": 641.71875,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 315.859375,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 20.484375,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 672.203125,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 346.34375,
+            "y": 324.125,
+            "width": 315.859375,
+            "height": 266.703125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-electric-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 502,
+          "scroll": 502,
+          "box": {
+            "x": 1004.765625,
+            "y": 76,
+            "width": 340.75,
+            "height": 504.296875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 412.328125,
+            "y": 76,
+            "width": 582.4375,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 102.484375,
+            "y": 76,
+            "width": 299.84375,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 102.484375,
+            "y": 321.375,
+            "width": 299.84375,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 708.546875,
+            "y": 321.375,
+            "width": 286.21875,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 412.328125,
+            "y": 321.375,
+            "width": 286.21875,
+            "height": 258.921875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-cyber-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 502,
+          "scroll": 502,
+          "box": {
+            "x": 1004.765625,
+            "y": 76,
+            "width": 340.75,
+            "height": 504.296875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 412.328125,
+            "y": 76,
+            "width": 582.4375,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 102.484375,
+            "y": 76,
+            "width": 299.84375,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 102.484375,
+            "y": 321.375,
+            "width": 299.84375,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 708.546875,
+            "y": 321.375,
+            "width": 286.21875,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 412.328125,
+            "y": 321.375,
+            "width": 286.21875,
+            "height": 258.921875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "width": 1366,
+      "height": 768,
+      "file": "tech-aurora-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 502,
+          "scroll": 502,
+          "box": {
+            "x": 1004.765625,
+            "y": 76,
+            "width": 340.75,
+            "height": 504.296875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 412.328125,
+            "y": 76,
+            "width": 582.4375,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 102.484375,
+            "y": 76,
+            "width": 299.84375,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 102.484375,
+            "y": 321.375,
+            "width": 299.84375,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 708.546875,
+            "y": 321.375,
+            "width": 286.21875,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 412.328125,
+            "y": 321.375,
+            "width": 286.21875,
+            "height": 258.921875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-warm-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 688,
+            "y": 76,
+            "width": 657.515625,
+            "height": 252
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 380.96875,
+            "y": 76,
+            "width": 297.03125,
+            "height": 252
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 350.484375,
+            "height": 252
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 20.484375,
+            "y": 338,
+            "width": 350.484375,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 688,
+            "y": 338,
+            "width": 657.515625,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 380.96875,
+            "y": 338,
+            "width": 297.03125,
+            "height": 265.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-cool-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 688,
+            "y": 76,
+            "width": 657.515625,
+            "height": 252
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 380.96875,
+            "y": 76,
+            "width": 297.03125,
+            "height": 252
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 350.484375,
+            "height": 252
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 20.484375,
+            "y": 338,
+            "width": 350.484375,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 688,
+            "y": 338,
+            "width": 657.515625,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 380.96875,
+            "y": 338,
+            "width": 297.03125,
+            "height": 265.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "width": 1366,
+      "height": 768,
+      "file": "minimal-graphite-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 688,
+            "y": 76,
+            "width": 657.515625,
+            "height": 252
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 380.96875,
+            "y": 76,
+            "width": 297.03125,
+            "height": 252
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 20.484375,
+            "y": 76,
+            "width": 350.484375,
+            "height": 252
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 20.484375,
+            "y": 338,
+            "width": 350.484375,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 688,
+            "y": 338,
+            "width": 657.515625,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 380.96875,
+            "y": 338,
+            "width": 297.03125,
+            "height": 265.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-purple-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 370,
+          "scroll": 370,
+          "box": {
+            "x": 20.484375,
+            "y": 333.75,
+            "width": 414.28125,
+            "height": 374.25
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 444.765625,
+            "y": 77,
+            "width": 476.453125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 241,
+          "scroll": 241,
+          "box": {
+            "x": 20.484375,
+            "y": 77,
+            "width": 414.28125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 931.21875,
+            "y": 77,
+            "width": 414.28125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 931.21875,
+            "y": 333.75,
+            "width": 414.28125,
+            "height": 235
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 444.765625,
+            "y": 333.75,
+            "width": 476.453125,
+            "height": 235
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-royal-blue-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 370,
+          "scroll": 370,
+          "box": {
+            "x": 20.484375,
+            "y": 333.75,
+            "width": 414.28125,
+            "height": 374.25
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 444.765625,
+            "y": 77,
+            "width": 476.453125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 241,
+          "scroll": 241,
+          "box": {
+            "x": 20.484375,
+            "y": 77,
+            "width": 414.28125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 931.21875,
+            "y": 77,
+            "width": 414.28125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 931.21875,
+            "y": 333.75,
+            "width": 414.28125,
+            "height": 235
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 444.765625,
+            "y": 333.75,
+            "width": 476.453125,
+            "height": 235
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "width": 1366,
+      "height": 768,
+      "file": "elegant-sakura-1366x768.jpg",
+      "root": [
+        1366,
+        768
+      ],
+      "viewport": [
+        1366,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 370,
+          "scroll": 370,
+          "box": {
+            "x": 20.484375,
+            "y": 333.75,
+            "width": 414.28125,
+            "height": 374.25
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 444.765625,
+            "y": 77,
+            "width": 476.453125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 241,
+          "scroll": 241,
+          "box": {
+            "x": 20.484375,
+            "y": 77,
+            "width": 414.28125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 931.21875,
+            "y": 77,
+            "width": 414.28125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 931.21875,
+            "y": 333.75,
+            "width": 414.28125,
+            "height": 235
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 444.765625,
+            "y": 333.75,
+            "width": 476.453125,
+            "height": 235
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "candy",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-candy-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 378,
+          "scroll": 378,
+          "box": {
+            "x": 15.359375,
+            "y": 319.578125,
+            "width": 319.34375,
+            "height": 388.421875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 344.703125,
+            "y": 76,
+            "width": 334.578125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 319.34375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 689.28125,
+            "y": 76,
+            "width": 319.359375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 689.28125,
+            "y": 319.578125,
+            "width": 319.359375,
+            "height": 261.625
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 344.703125,
+            "y": 319.578125,
+            "width": 334.578125,
+            "height": 261.625
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "ocean",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-ocean-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 378,
+          "scroll": 378,
+          "box": {
+            "x": 15.359375,
+            "y": 319.578125,
+            "width": 319.34375,
+            "height": 388.421875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 344.703125,
+            "y": 76,
+            "width": 334.578125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 319.34375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 689.28125,
+            "y": 76,
+            "width": 319.359375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 689.28125,
+            "y": 319.578125,
+            "width": 319.359375,
+            "height": 261.625
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 344.703125,
+            "y": 319.578125,
+            "width": 334.578125,
+            "height": 261.625
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "playful",
+      "palette": "forest",
+      "width": 1024,
+      "height": 768,
+      "file": "playful-forest-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 378,
+          "scroll": 378,
+          "box": {
+            "x": 15.359375,
+            "y": 319.578125,
+            "width": 319.34375,
+            "height": 388.421875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 344.703125,
+            "y": 76,
+            "width": 334.578125,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 319.34375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 224,
+          "scroll": 224,
+          "box": {
+            "x": 689.28125,
+            "y": 76,
+            "width": 319.359375,
+            "height": 233.578125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 689.28125,
+            "y": 319.578125,
+            "width": 319.359375,
+            "height": 261.625
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 252,
+          "scroll": 252,
+          "box": {
+            "x": 344.703125,
+            "y": 319.578125,
+            "width": 334.578125,
+            "height": 261.625
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "sun",
+      "width": 1024,
+      "height": 768,
+      "file": "study-sun-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 15.359375,
+            "y": 307.90625,
+            "width": 299.46875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 324.828125,
+            "y": 76,
+            "width": 374.328125,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 299.46875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 709.15625,
+            "y": 76,
+            "width": 299.484375,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 709.15625,
+            "y": 307.90625,
+            "width": 299.484375,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 324.828125,
+            "y": 307.90625,
+            "width": 374.328125,
+            "height": 291.984375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "mint",
+      "width": 1024,
+      "height": 768,
+      "file": "study-mint-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 15.359375,
+            "y": 307.90625,
+            "width": 299.46875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 324.828125,
+            "y": 76,
+            "width": 374.328125,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 299.46875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 709.15625,
+            "y": 76,
+            "width": 299.484375,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 709.15625,
+            "y": 307.90625,
+            "width": 299.484375,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 324.828125,
+            "y": 307.90625,
+            "width": 374.328125,
+            "height": 291.984375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "study",
+      "palette": "berry",
+      "width": 1024,
+      "height": 768,
+      "file": "study-berry-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 15.359375,
+            "y": 307.90625,
+            "width": 299.46875,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 324.828125,
+            "y": 76,
+            "width": 374.328125,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 299.46875,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 214,
+          "scroll": 214,
+          "box": {
+            "x": 709.15625,
+            "y": 76,
+            "width": 299.484375,
+            "height": 221.90625
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 709.15625,
+            "y": 307.90625,
+            "width": 299.484375,
+            "height": 291.984375
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 284,
+          "scroll": 284,
+          "box": {
+            "x": 324.828125,
+            "y": 307.90625,
+            "width": 374.328125,
+            "height": 291.984375
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sky",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sky-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 509,
+          "scroll": 509,
+          "box": {
+            "x": 750.1875,
+            "y": 76,
+            "width": 258.453125,
+            "height": 514.828125
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 260.296875,
+            "y": 76,
+            "width": 479.890625,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 234.9375,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 15.359375,
+            "y": 324.125,
+            "width": 234.9375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 505.25,
+            "y": 324.125,
+            "width": 234.9375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 260.296875,
+            "y": 324.125,
+            "width": 234.953125,
+            "height": 266.703125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "cream",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-cream-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 509,
+          "scroll": 509,
+          "box": {
+            "x": 750.1875,
+            "y": 76,
+            "width": 258.453125,
+            "height": 514.828125
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 260.296875,
+            "y": 76,
+            "width": 479.890625,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 234.9375,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 15.359375,
+            "y": 324.125,
+            "width": 234.9375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 505.25,
+            "y": 324.125,
+            "width": 234.9375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 260.296875,
+            "y": 324.125,
+            "width": 234.953125,
+            "height": 266.703125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "fresh",
+      "palette": "sage",
+      "width": 1024,
+      "height": 768,
+      "file": "fresh-sage-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 509,
+          "scroll": 509,
+          "box": {
+            "x": 750.1875,
+            "y": 76,
+            "width": 258.453125,
+            "height": 514.828125
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 260.296875,
+            "y": 76,
+            "width": 479.890625,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 232,
+          "scroll": 232,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 234.9375,
+            "height": 238.125
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 15.359375,
+            "y": 324.125,
+            "width": 234.9375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 505.25,
+            "y": 324.125,
+            "width": 234.9375,
+            "height": 266.703125
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 261,
+          "scroll": 261,
+          "box": {
+            "x": 260.296875,
+            "y": 324.125,
+            "width": 234.953125,
+            "height": 266.703125
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "electric",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-electric-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 502,
+          "scroll": 502,
+          "box": {
+            "x": 758.78125,
+            "y": 76,
+            "width": 249.84375,
+            "height": 504.296875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 322.375,
+            "y": 76,
+            "width": 426.40625,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 83.359375,
+            "y": 76,
+            "width": 229.015625,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 83.359375,
+            "y": 321.375,
+            "width": 229.015625,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 540.578125,
+            "y": 321.375,
+            "width": 208.203125,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 322.375,
+            "y": 321.375,
+            "width": 208.203125,
+            "height": 258.921875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "cyber",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-cyber-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 502,
+          "scroll": 502,
+          "box": {
+            "x": 758.78125,
+            "y": 76,
+            "width": 249.84375,
+            "height": 504.296875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 322.375,
+            "y": 76,
+            "width": 426.40625,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 83.359375,
+            "y": 76,
+            "width": 229.015625,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 83.359375,
+            "y": 321.375,
+            "width": 229.015625,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 540.578125,
+            "y": 321.375,
+            "width": 208.203125,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 322.375,
+            "y": 321.375,
+            "width": 208.203125,
+            "height": 258.921875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "tech",
+      "palette": "aurora",
+      "width": 1024,
+      "height": 768,
+      "file": "tech-aurora-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 502,
+          "scroll": 502,
+          "box": {
+            "x": 758.78125,
+            "y": 76,
+            "width": 249.84375,
+            "height": 504.296875
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 322.375,
+            "y": 76,
+            "width": 426.40625,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 233,
+          "scroll": 233,
+          "box": {
+            "x": 83.359375,
+            "y": 76,
+            "width": 229.015625,
+            "height": 235.375
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 83.359375,
+            "y": 321.375,
+            "width": 229.015625,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 540.578125,
+            "y": 321.375,
+            "width": 208.203125,
+            "height": 258.921875
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 257,
+          "scroll": 257,
+          "box": {
+            "x": 322.375,
+            "y": 321.375,
+            "width": 208.203125,
+            "height": 258.921875
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "warm",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-warm-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 517,
+            "y": 76,
+            "width": 491.640625,
+            "height": 252
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 286.0625,
+            "y": 76,
+            "width": 220.9375,
+            "height": 252
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 260.703125,
+            "height": 252
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 15.359375,
+            "y": 338,
+            "width": 260.703125,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 517,
+            "y": 338,
+            "width": 491.640625,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 286.0625,
+            "y": 338,
+            "width": 220.9375,
+            "height": 265.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "cool",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-cool-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 517,
+            "y": 76,
+            "width": 491.640625,
+            "height": 252
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 286.0625,
+            "y": 76,
+            "width": 220.9375,
+            "height": 252
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 260.703125,
+            "height": 252
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 15.359375,
+            "y": 338,
+            "width": 260.703125,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 517,
+            "y": 338,
+            "width": 491.640625,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 286.0625,
+            "y": 338,
+            "width": 220.9375,
+            "height": 265.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "minimal",
+      "palette": "graphite",
+      "width": 1024,
+      "height": 768,
+      "file": "minimal-graphite-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 517,
+            "y": 76,
+            "width": 491.640625,
+            "height": 252
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 286.0625,
+            "y": 76,
+            "width": 220.9375,
+            "height": 252
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 250,
+          "scroll": 250,
+          "box": {
+            "x": 15.359375,
+            "y": 76,
+            "width": 260.703125,
+            "height": 252
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 15.359375,
+            "y": 338,
+            "width": 260.703125,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 517,
+            "y": 338,
+            "width": 491.640625,
+            "height": 265.5
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 264,
+          "scroll": 264,
+          "box": {
+            "x": 286.0625,
+            "y": 338,
+            "width": 220.9375,
+            "height": 265.5
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-purple",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-purple-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 370,
+          "scroll": 370,
+          "box": {
+            "x": 15.359375,
+            "y": 333.75,
+            "width": 308.96875,
+            "height": 374.25
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 334.328125,
+            "y": 77,
+            "width": 355.328125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 241,
+          "scroll": 241,
+          "box": {
+            "x": 15.359375,
+            "y": 77,
+            "width": 308.96875,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 699.65625,
+            "y": 77,
+            "width": 308.984375,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 699.65625,
+            "y": 333.75,
+            "width": 308.984375,
+            "height": 235
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 334.328125,
+            "y": 333.75,
+            "width": 355.328125,
+            "height": 235
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "royal-blue",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-royal-blue-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 370,
+          "scroll": 370,
+          "box": {
+            "x": 15.359375,
+            "y": 333.75,
+            "width": 308.96875,
+            "height": 374.25
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 334.328125,
+            "y": 77,
+            "width": 355.328125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 241,
+          "scroll": 241,
+          "box": {
+            "x": 15.359375,
+            "y": 77,
+            "width": 308.96875,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 699.65625,
+            "y": 77,
+            "width": 308.984375,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 699.65625,
+            "y": 333.75,
+            "width": 308.984375,
+            "height": 235
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 334.328125,
+            "y": 333.75,
+            "width": 355.328125,
+            "height": 235
+          }
+        }
+      ],
+      "badButtons": []
+    },
+    {
+      "style": "elegant",
+      "palette": "sakura",
+      "width": 1024,
+      "height": 768,
+      "file": "elegant-sakura-1024x768.jpg",
+      "root": [
+        1024,
+        768
+      ],
+      "viewport": [
+        1024,
+        768
+      ],
+      "flow": false,
+      "cards": [
+        {
+          "class": "card timetable-card",
+          "height": 370,
+          "scroll": 370,
+          "box": {
+            "x": 15.359375,
+            "y": 333.75,
+            "width": 308.96875,
+            "height": 374.25
+          }
+        },
+        {
+          "class": "card course-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 334.328125,
+            "y": 77,
+            "width": 355.328125,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card clock-card",
+          "height": 241,
+          "scroll": 241,
+          "box": {
+            "x": 15.359375,
+            "y": 77,
+            "width": 308.96875,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card timer-card",
+          "height": 243,
+          "scroll": 243,
+          "box": {
+            "x": 699.65625,
+            "y": 77,
+            "width": 308.984375,
+            "height": 246.75
+          }
+        },
+        {
+          "class": "card picker-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 699.65625,
+            "y": 333.75,
+            "width": 308.984375,
+            "height": 235
+          }
+        },
+        {
+          "class": "card home-notes-card",
+          "height": 231,
+          "scroll": 231,
+          "box": {
+            "x": 334.328125,
+            "y": 333.75,
+            "width": 355.328125,
+            "height": 235
+          }
+        }
+      ],
+      "badButtons": []
+    }
+  ]
+}

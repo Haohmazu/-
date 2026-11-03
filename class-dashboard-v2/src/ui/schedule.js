@@ -1,7 +1,7 @@
-import {$,el,button,option,run} from './dom.js?v=2.0-integration-IB.0';
-import {activeTerm,lessons,courseAt,currentSchoolTime,todaySchedule} from '../school/schedule.js?v=2.0-integration-IB.0';
-import {taiwanParts,durationText} from '../school/time.js?v=2.0-integration-IB.0';
-import {WEEKDAYS} from '../io/timetable.js?v=2.0-integration-IB.0';
+import {$,el,button,option,run} from './dom.js?v=2.0-visual.0';
+import {activeTerm,lessons,courseAt,currentSchoolTime,todaySchedule} from '../school/schedule.js?v=2.0-visual.0';
+import {taiwanParts,durationText} from '../school/time.js?v=2.0-visual.0';
+import {WEEKDAYS} from '../io/timetable.js?v=2.0-visual.0';
 export function mountSchedule(store){
   let mode='today',schoolSignature,viewSignature;
   const fillCourses=()=>{const s=store.getState(),term=activeTerm(s);$('#course-subject').value=term.weekly[$('#course-weekday').value]?.[$('#course-period').value]??'';};
@@ -31,6 +31,7 @@ export function mountSchedule(store){
     $('#term-label').textContent=`${term.year} 學年度 第 ${term.semester} 學期`;
     $('#current-period').textContent=now.period?`${now.period.name} · ${now.period.start}–${now.period.end}`:now.status;
     $('#current-course').textContent=now.current?`${now.current.subject}${now.current.temporary?'（臨時調課）':''}`:now.status;
+    $('#current-course').classList.toggle('course-long', $('#current-course').textContent.length>5);
     $('#school-countdown').textContent=now.period?`${now.current?'距離下課':'本時段剩餘'} ${durationText(now.remainingMs)}`:'依學校作息自動顯示';
     $('#next-course').textContent=now.next?`下一節 ${now.next.start} · ${now.next.subject}${now.next.temporary?'（臨時調課）':''}`:(parts.weekday===0||parts.weekday===6?'週末不套用平日課表':'今日沒有下一節課');
     const scheduleNext=$('#schedule-next-course');if(scheduleNext)scheduleNext.textContent=$('#next-course').textContent;

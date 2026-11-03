@@ -1,4 +1,4 @@
-import {zipStore,unzipXlsx} from './zip.js?v=2.0-integration-IB.0';
+import {zipStore,unzipXlsx} from './zip.js?v=2.0-visual.0';
 const NS='http://schemas.openxmlformats.org/spreadsheetml/2006/main';
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 export function writeXlsx(rows,sheetName='學生名單'){

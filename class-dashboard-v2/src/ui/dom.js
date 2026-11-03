@@ -1,8 +1,8 @@
-import {openOverlay} from './overlay.js?v=2.0-integration-IB.0';
+import {openOverlay} from './overlay.js?v=2.0-visual.0';
 export const $=selector=>document.querySelector(selector);
 export function el(tag,text){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;}
 export function button(text,action){const b=el('button',text);b.type='button';b.onclick=action;return b;}
-export function notify(text,error=false){$('#notice').textContent=text;$('#notice').classList.toggle('error',error);$('#form-error').textContent=text;$('#form-error').classList.toggle('error',error);const quick=$('#quick-notice');if(quick){quick.textContent=text;quick.classList.toggle('error',error);}}
+export function notify(text,error=false){$('#notice').textContent=text;$('#notice').classList.toggle('error',error);$('#form-error').textContent=text;$('#form-error').classList.toggle('error',error);const presentation=$('#presentation-message');if(presentation){presentation.textContent=text;presentation.classList.toggle('error',error);}const quick=$('#quick-notice');if(quick){quick.textContent=text;quick.classList.toggle('error',error);}}
 export async function run(store,command,text='操作已儲存。'){try{await store.dispatch(command);notify(text);return true;}catch(error){notify(error.message,true);return false;}}
 let settingsAccess=()=>true;
 export function setSettingsAccess(check){settingsAccess=check;}
