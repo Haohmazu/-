@@ -1,0 +1,31 @@
+I-D 可重複執行測試紀錄
+版本 2.0-ID.0 / schemaVersion 8
+環境 Linux Chromium / Node
+
+
+id-unit-final
+ℹ tests 90
+ℹ suites 0
+ℹ pass 90
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 481.970726
+
+id-regression-final
+PASS Three columns: 360 combinations (18 palettes × 5 sizes × 4 central tabs) + 192 font cases + three layouts, no root/button/card overflow; sidebar tabs and full notes/edit; shared timer pause/resume/badge/deadline; stable picker; background music same instance; four focus modes; keyboard; privacy; native fullscreen enter/exit; max24h timer bound; JSON download/invalid rejection/restore; IDs/history unchanged.
+PASS Three-media: real WAV/direct/local WebM; right music previous/next/preferences; category/search; central handoff; native pause retains src/time; modal Esc/fullscreen without moving media; audio/video exclusion; same single nodes; YouTube official-API double retains iframe on tab/modal, error150 visible; timer music start/pause and video pause on finish; focus-to-central handoff; schema8 and classroom history preserved.
+PASS I-C: 9 tone/count previews, one sound context, disabled/zero/failure/rollback, schema7 readonly→8/reload/JSON; 378 focused palette/size/region cases, native modal bounds/Tab/Esc/touch, unchanged state, one media pair, finished timer despite audio denial. Mock audio is not physical speaker acceptance.
+PASS I-C real WebAudio browser API: electronic/bell/ring previews scheduled without API errors. Physical speaker output/timbre is NOT verified.
+
+id-suite-final
+PASS I-D classroom: 舊資料唯讀升版與歷史保留、任務模組未載入且命令拒絕、30人CSV/XLSX名單、固定/今日/整週課表、CSV/XLSX課表、調課取消、重疊拒絕、學期沿用、聯絡簿、時間戳計時重整/暫停/到時、抽號29次不重複、JSON下載/預覽/還原、損壞資料恢復、五種尺寸與離線保存。
+PASS I-D display: {"homes":648,"modals":486,"management":108,"readableFallbackSizes":3,"stability":{"same":true,"sameHandler":true,"listeners":[10,10],"excludedToolListeners":13,"audio":1,"video":1},"timingIncludesUiAutomation":true,"timingsMs":{"median":117,"p95":145,"max":181},"errors":[]}
+PASS I-D lifecycle: preview cancellation ordering, real two-page stale write rejection/privacy broadcast, 30 focus/tab cycles preserve saved state and original nodes.
+PASS I-D media resources: 16 real WAV/MP3/WebM/MP4 switches, single media pair, bounded <=10 source handlers, 4 Blob URLs revoked exactly once after clear; YouTube API failure/retry/100/101/150/delayed-ready doubles cleaned, data unchanged. No live platform playback claim.
+PASS I-D long class name: {
+
+截圖：90 張，capture 腳本 errors=[] / failures=[]。
+本機版本清單：77 個資源雜湊一致。
+未驗證：Windows 11 Chrome/Edge、實體喇叭/白板、YouTube 真實平台播放及正式 Pages 版本（網路 403）。

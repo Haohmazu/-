@@ -1,0 +1,24 @@
+{
+  "homes": 648,
+  "modals": 486,
+  "management": 108,
+  "readableFallbackSizes": 3,
+  "stability": {
+    "same": true,
+    "sameHandler": true,
+    "listeners": [
+      10,
+      10
+    ],
+    "excludedToolListeners": 13,
+    "audio": 1,
+    "video": 1
+  },
+  "timingIncludesUiAutomation": true,
+  "timingsMs": {
+    "median": 117,
+    "p95": 145,
+    "max": 181
+  },
+  "errors": []
+}

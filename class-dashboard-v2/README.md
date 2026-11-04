@@ -1,8 +1,23 @@
 # Class Dashboard 2.0｜教室日常
 
-I-C 功能補強版本 `2.0-IC.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
+I-D 驗收修正版本 `2.0-ID.0`：臺灣國民小學日常教室資訊與班級管理儀表板。原生 HTML / CSS / JavaScript ES Modules，無後端、資料庫、登入帳號、付費 API；YouTube 選用官方 IFrame API。
 
-沿用既有三欄、六風格／十八配色及時鐘、課表、倒數、抽號與影音核心，本次只補I-C提示音與聚焦；未恢復任務或水族箱。
+沿用既有三欄、六風格／十八配色及時鐘、課表、倒數、抽號與影音核心，I-C提示音與聚焦已完成；本次I-D進行回歸驗收及兩項小修正，不增加新功能、任務或水族箱。
+
+## I-D整合驗收
+
+以已合併PR #12的main `90fa70b`為基準。保留三欄、六風格18配色、資料版本8與全部既有功能。本次只修正兩個顯示問題：取消的舊試聽回呼不再覆蓋最新訊息；跨分頁啟用隱私時，右側學生入口同步停用。原資料與媒體／計時核心不變。
+
+[完整驗收報告、問題等級、測試矩陣、90張截圖與限制](docs/id-integration-report.md)。工具可驗證的範圍通過，未發現未修復的重大阻礙；Windows11、實體喇叭／白板、外部平台實播及正式Pages即時版本仍未驗證，不能等同實機全面驗收。
+
+```sh
+npm test
+TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run test:browser
+TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run test:id
+TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:id
+```
+
+瀏覽器測試需Playwright與Chromium，先由repository根目錄啟動HTTP，再於專案目錄執行。I-D結束停止，不自動開始第五階段，不合併main或部署。以下保留I-C及既有功能說明。
 
 ## I-C：提示音與通用卡片聚焦
 
@@ -58,7 +73,7 @@ TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:three
 - Repository：https://github.com/haohmazu/-
 - 唯一開發目錄：`class-dashboard-v2/`；不修改根目錄其他網站。
 - 正式網站：https://haohmazu.github.io/-/class-dashboard-v2/index.html
-- 開發分支：`develop/class-dashboard-v2-ic-completion`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
+- 開發分支：`review/class-dashboard-v2-integration-id`。測試後以 PR 審查；使用者確認前不合併 main、不更新正式網站。
 - 第一版 `ckj1022-art/classdashboard` 只作歷史參考，不是提交目的地。
 
 **本次產品調整：水族箱、魚種、進化及其後續開發取消。任務管理暫停使用，舊資料保留。** 首頁及設定沒有任務操作入口；原始碼移到 `src/legacy/`，正式 app/store 不載入任務操作模組，命令入口也拒絕任務命令。不是只用 CSS 隱藏。
@@ -114,7 +129,7 @@ TEST_URL=http://127.0.0.1:8000/class-dashboard-v2/ npm run capture:three
 
 完整圖文前的文字操作流程見 [Windows 11 操作與人工驗收](docs/windows11-guide.md)；發布與路徑確認見 [GitHub Pages 部署說明](docs/github-pages.md)。
 
-用最新版 Chrome / Edge 開啟正式網址。**正式站不會因開啟PR自動更新。** 本次核准部署後頁尾應顯示 `2.0-IC.0`。
+用最新版 Chrome / Edge 開啟正式網址。**正式站不會因開啟PR自動更新。** 本次核准部署後頁尾應顯示 `2.0-ID.0`。
 
 ### 4A 快速操作（Windows 11）
 
@@ -218,7 +233,7 @@ npm run check:deployment
 
 ## 已知限制及後續邊界
 
-本批次只補強I-C，完成後停止等待確認；不開始I-D完整整合驗收或第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
+本批次已進行I-D可支援的整合驗收及必要修正，完成後停止等待確認，不開始第五階段。Windows 實機、第三方影音與正式 Pages 的環境驗收仍待執行，不能等同所有部署與設備皆已通過。選配的獨立瀏覽器視窗延後，不影響網頁內多媒體中心使用。完整 CSV 報表、學期封存及進階診斷留待第五階段。水族箱相關後續開發已取消；任務僅保留歷史相容性。
 
 沒有真正教師登入；投影時請關閉設定。已載入資源後可離線使用，尚無 Service Worker，離線首次開啟或重整不保證。提示音需瀏覽器允許並有可用音效設備；時間到一定顯示文字。時間依教室電腦系統時鐘換算臺灣時間，系統時間若不準需先在 Windows 校正。作息限同一天，不支援跨午夜。預設作息是可編輯範例，使用前請確認符合學校時間。
 

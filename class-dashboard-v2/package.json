@@ -21,6 +21,8 @@
     "test:three-media": "node tests/three-media-browser.cjs",
     "capture:three": "node tools/capture-three-columns.cjs",
     "test:ic": "node tests/ic-browser.cjs && node tests/ic-real-audio-browser.cjs",
-    "capture:ic": "node tools/capture-ic.cjs"
+    "capture:ic": "node tools/capture-ic.cjs",
+    "test:id": "node tests/id-classroom-browser.cjs && node tests/id-display-browser.cjs && node tests/id-lifecycle-browser.cjs && node tests/id-media-resources-browser.cjs && node tests/id-edge-browser.cjs",
+    "capture:id": "node tools/capture-id.cjs"
   }
 }
